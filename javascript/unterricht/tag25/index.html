@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <title>JS - Grundlagen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../bootstrap5/css/bootstrap.css">
+  <link rel="stylesheet" href="master.css">
+  <script src="../../../jQuery/jquery-3.6.0.js"></script>
+  <script src="../../../jQuery/jquery.validate.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="container bg-dark">
+    <h1 class="btn-info p-5 m-0 display-5 fw-bolder">jQuery</h1>
+
+
+    <div class="row list-group-item-primary">
+      <div class="col-12 py-5">
+        <form class="col-md-6 p-3 bg-info">
+          <div class="mb-1 p-2">
+            <input type="text" class="form-control" id="nachname" placeholder="Nachname" title="Nachname ist ein Pflichtfeld, darf nicht fehlen, NUR Buchstaben sind erlaubt">
+          </div>
+          <div class="mb-1 p-2">
+            <input type="text" class="form-control" id="vorname" placeholder="Vorname" title="Vorname ist ein Pflichtfeld, darf nicht fehlen, NUR Buchstaben sind erlaubt">
+          </div>
+          <div class="mb-1 p-2">
+            <input type="text" class="form-control" id="ort" placeholder="Wohnort" title="Wohnort ist ein Pflichtfeld, darf nicht fehlen, NUR Buchstaben sind erlaubt">
+          </div>
+          <button type="submit" id="anmelden" class="btn btn-success w-100 fw-bold py-2 my-1">anmelden</button>
+          <button type="reset" id="reset" class="btn btn-danger w-100 fw-bold py-2 my-1">löschen</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row list-group-item-warning">
+      <div class="col-12 py-5">
+        <form class="col-md-6 list-group-item-info p-3" id="form1">
+          <div class="mb-1">
+            <input type="text" class="form-control" name="nachname" placeholder="Nachname">
+          </div>
+          <div class="mb-1">
+            <input type="text" class="form-control" name="vorname" placeholder="Vorname">
+          </div>
+          <div class="mb-1">
+            <input type="text" class="form-control" name="ort" placeholder="Wohnort">
+          </div>
+          <button type="submit" class="btn btn-success w-100 fw-bold py-2 my-1">anmelden</button>
+          <button type="reset" class="btn btn-danger w-100 fw-bold py-2 my-1">löschen</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row list-group-item-info">
+      <div class="col-12 py-5">
+        <form class="col-md-6 list-group-item-warning p-3" id="form2">
+          <div class="mb-1">
+            <input type="text" class="form-control" name="nname" placeholder="Nachname">
+          </div>
+          <div class="mb-1">
+            <input type="text" class="form-control" name="vname" placeholder="Vorname">
+          </div>
+          <div class="mb-1">
+            <input type="text" class="form-control" name="plz" placeholder="PLZ">
+          </div>
+          <div class="mb-1">
+            <input type="text" class="form-control" name="mail" placeholder="E-Mail">
+          </div>
+          <div class="mb-1">
+            <input type="text" class="form-control" name="url" placeholder="URL">
+          </div>
+          <div class="mb-1">
+            <input type="text" class="form-control" name="pwd1" id="pwd1" placeholder="Passwort">
+          </div>
+          <div class="mb-1">
+            <input type="text" class="form-control" name="pwd2" placeholder="Passwort wiederholen">
+          </div>
+          <div class="mb-1">
+            <input type="text" class="form-control" name="city" placeholder="Wohnort">
+          </div>
+          <div class="mb-1">
+            <input type="text" class="form-control" name="geb" placeholder="Geburtstag">
+          </div>
+          <button type="submit" class="btn btn-success w-100 fw-bold py-2 my-1">anmelden</button>
+          <button type="reset" class="btn btn-danger w-100 fw-bold py-2 my-1">löschen</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row list-group-item-light">
+      <div class="col-12 py-5">
+
+      </div>
+    </div>
+
+    <noscript>
+      <p>Bitte JS einschalten</p>
+    </noscript>
+  </div>
+</body>
+
+</html>

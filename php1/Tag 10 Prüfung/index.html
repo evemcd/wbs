@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Big Kahuna Burger</title>
+</head>
+
+<body>
+
+    <form action="auswertung.php" method="POST">
+        <p>Welchen Burger möchten Sie?<br>
+            <select name="burger">
+                <option value="b0">Premium Beef, 6&euro;</option>
+                <option value="b1">Wagyu Beef, 10&euro;</option>
+                <option value="b2">Chicken Breast, 7&euro;</option>
+                <option value="b3">Portobello Vegan, 5&euro;</option>
+            </select>
+        </p>
+
+        <p>optionale Extras<br>
+            <input type="checkbox" name="cheese">Cheddar-Cheese, 1&euro;<br>
+            <input type="checkbox" name="bacon">Bacon, 2&euro;<br>
+            <input type="checkbox" name="onion">Onion-Rings, 1,5&euro;<br>
+            <input type="checkbox" name="ananas">Ananas, 1,5&euro;<br>
+            <input type="checkbox" name="salsa">Hot Salsa, 2&euro;<br>
+            <input type="checkbox" name="gurke">Gewürzgurken, 1,5&euro;<br>
+            <input type="checkbox" name="jala">Jalapeno, 1,5&euro;<br>
+        </p>
+
+        <p>Welche Side-Order möchten Sie?<br>
+            <select name="side">
+                <option value="s0">French Fries, 0&euro;</option>
+                <option value="s1">Sweet-Potato-Fries, 1&euro;</option>
+                <option value="s2">Vegetable Fries, 2&euro;</option>
+            </select>
+        </p>
+
+        <p>
+            <input type="text" name="name" required>Name<br>
+            <input type="text" name="adresse" required>Adresse<br>
+            <input type="number" name="tel" required>Telefonnummer<br>
+        </p>
+        <p>Wie möchten Sie bezahlen?<br>
+            <select name="pay">
+                <option value="p0">Bar bei Lieferung</option>
+                <option value="p1">Kreditkarte</option>
+                <option value="p2">PayPal</option>
+            </select>
+        </p>
+
+        <input type="submit">
+
+
+    </form>
+
+</body>
+
+</html>

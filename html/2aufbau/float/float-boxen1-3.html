@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float Beispiele</title>
+  <style>
+    div{
+      outline:1px solid #000;
+    }
+    /* umschließender Container*/
+    .cont-0{
+      background:lightblue;
+       min-height:50px; 
+       /* overflow:hidden; */
+    }
+    .box-1,.box-2,.box-3{
+      background:#ffc;
+      width:200px;
+      min-height:200px;
+      float:left;
+    }
+
+    .float-r{
+      float:right;
+    }
+    .clear:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+
+    #two_col0 .box-1{
+      width:40%;
+    }
+    #two_col0 .box-3,
+    #two_col0 .box-2{
+      width:60%;
+    }
+
+
+    #two_col1{}
+    #two_col1 .box-1,
+    #two_col1 .box-2{
+      width:60%;
+    }
+    #two_col1 .box-3{
+      width:40%;
+      float:none;
+    }
+   
+  </style>
+</head>
+<body>
+  <div class="cont-0 clear">
+    <div class="box-1">spalte 1</div>
+    <div class="box-2">spalte 2</div>
+    <div class="box-3">spalte 3</div>
+    <!--clear-->
+  </div>
+
+  <div class="cont-0 clear">
+    <div class="box-1">spalte 1</div>
+    <div class="box-2 float-r">spalte 2</div>
+    <div class="box-3">spalte 3</div>
+    <!--clear-->
+  </div>
+
+  <h3>2 Spalter</h3>
+  <div class="cont-0 clear" id="two_col0">
+    <div class="box-1">spalte 1</div>
+    <div class="box-2 float-r">spalte 2</div>
+    <div class="box-3 float-r">spalte 3</div>
+    <!--clear-->
+  </div>
+
+  <div class="cont-0 clear" id="two_col1">
+    <div class="box-1 float-r">spalte 1</div>
+    <div class="box-2 float-r">spalte 2</div>
+    <div class="box-3">spalte 3</div>
+    <!--clear-->
+  </div>
+</body>
+</html>

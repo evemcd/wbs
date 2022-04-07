@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Standard Inputtypen und Pseudoklassen</title>
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    label {
+      width: 160px;
+      display: inline-block;
+    }
+
+    div {
+      margin-bottom: 1em;
+    }
+
+    /*Basics*/
+    input,
+    textarea,
+    select {
+      width: 10em;
+      border: 1px solid;
+    }
+
+    input:hover,
+    textarea:hover,
+    select:hover {
+      border: 1px solid #ccc;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border: 1px solid green;
+    }
+
+    [type="radio"],
+    [type="checkbox"] {
+      width: auto;
+    }
+
+    [type="color"] {
+      background: none;
+      padding: 0 2px;
+    }
+
+    [type="submit"],
+    [type="reset"],
+    button {
+      background: none;
+      border: 1px solid green;
+    }
+
+    [type="submit"]:hover,
+    [type="reset"]:hover,
+    button:hover {
+      background: none;
+      border: 1px solid red;
+    }
+
+    [type="submit"]:focus,
+    [type="reset"]:focus,
+    button:focus {
+      background: none;
+      border: 1px solid #ccc;
+      background: #ccc;
+    }
+
+    /*Radio*/
+    [type="radio"] {
+      display: none;
+    }
+
+    [type="radio"]:checked+label {
+      /* background: red; */
+    }
+
+    [type="radio"]+label:before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: lightblue;
+      border-radius: 50%;
+      border-radius: 5px solid black;
+    }
+
+    [type="radio"]:checked+label:before {
+      border: 15px double #000;
+      width: 10px;
+      height: 10px;
+    }
+
+
+    /* div{float:left;width:49%;}
+    fieldset{overflow:hidden;} */
+
+    /* input:focus~#title{
+      background:red;
+    } */
+    /* :optional{background:#ffc;}
+    :invalid{background:purple;}
+    :valid{background:green;}
+    :required{background:orange;} */
+    .required label:before {
+      content: "*"" ";
+      color: red;
+    }
+
+    @media speech {
+      .required label:before {
+        content: "";
+        /* display:none;*/
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>HTML5-Inputtypen und Formular-Pseudoklassen </h1>
+
+  <article>
+    <h2>Neue HTML5 Inputtypen</h2>
+    <section>
+      <h3>type="email"</h3>
+      <p>Zur Eingabe einer E-Mail-Adresse oder einer Liste von E-Mail-Adressen.Bei Verwendung des Attributs multiple
+        können mehrere, durch Komma getrennte E-Mail-Adressen eingegeben werden.</p>
+    </section>
+    <section>
+      <h3>type="url"</h3>
+      <p>Zur Eingabe einer einzelnen , <span title="(Protokoll-basierenden)">absoluten URL</span> bestimmt, die einen
+        sehr großen <span title="Protokolle wie http://,https://,ftp:// uvm.">Wertebereich</span> abdeckt.</p>
+    </section>
+    <section>
+      <h3>type="tel"</h3>
+      <p>Zur Eingabe einer Telefonnummer tel setzt keine bestimmte Syntax voraus, wenn also ein bestimmtes Format
+        eingehalten werden soll, können Sie zusätzlich pattern oder setCustomValidity() verwenden.</p>
+    </section>
+    <section>
+      <h3>type="search"</h3>
+      <p>Fordert Nutzer zur Eingabe von Text auf, nach dem gesucht werden soll - Der Unterschied zwischen search und
+        text ist in erster Linie stilistischer Natur. Durch Verwendung des Eingabetyps search wird der Stil des
+        Eingabefelds möglicherweise an die Suchfelder dieser Plattform angeglichen.</p>
+    </section>
+    <section>
+      <h3>type="number"</h3>
+      <p>Für numerische Anzahl-Eingaben gültige Werte sind Gleitkommazahlen.</p>
+    </section>
+    <section>
+      <h3>type="color"</h3>
+      <p>Zur Auswahl einer Farbe über ein entsprechendes Steuerungselement. Der Wert muss eine gültige einfache Farbe in
+        Kleinbuchstaben sein, zum Beispiel #ffffff</p>
+    </section>
+    <section>
+      <h3>type="range"</h3>
+      <p>Für numerische Eingaben, bei denen, im Gegensatz zu number, der tatsächliche Wert nicht von Bedeutung ist In
+        den meisten Browsern, die diesen Eingabetyp unterstützen, erfolgt die Implementierung in Form eines
+        Schiebereglers.</p>
+    </section>
+    <section>
+      <h3>Date-inputtypen</h3>
+      <p><a href="#dateinput" title="zu den Dateinputtypen">Erklärungen zu den möglichen Datums- und
+          Zeitangabefeldern</a> finden Sie weiter <a href="#dateinput" title="zu den Dateinputtypen">unten</a> im
+        Dokument. </p>
+    </section>
+  </article>
+
+  <form>
+    <fieldset>
+      <legend>Beispiel Standardinputtypen</legend>
+      <div>
+        <label for="vorname">Vorname</label>
+        <input name="vorname" value="" id="vorname">
+      </div>
+
+      <div class="required">
+        <label for="nachname">Nachname</label>
+        <input name="nachname" id="nachname" title="erweiterte Beschreibung" required>
+      </div>
+      <div>
+        <label for="plz">PLZ</label>
+        <input name="plz" id="plz" inputmode="numeric" pattern="[0-9]{5}">
+      </div>
+
+      <div>
+        <h3>Radio</h3>
+        <input type="radio" name="radiogroup" value="radio 1" id="radio1">
+        <label for="radio1">Radio 1</label>
+        <input type="radio" name="radiogroup" value="radio 2" id="radio2">
+        <label for="radio2">Radio 2</label>
+      </div>
+
+      <div>
+        <h3>Checkbox</h3>
+        <input type="checkbox" name="checkboxgroup" value="auswahl 1" id="auswahl1">
+        <label for="auswahl1">Auswahl 1</label>
+        <input type="checkbox" name="checkboxgroup" value="auswahl 2" id="auswahl2" checked>
+        <label for="auswahl2">Auswahl 2</label>
+      </div>
+
+      <div>
+        <label for="kommentar">Hinterlassen Sie einen Kommentar</label>
+        <textarea name="kommentar" cols="25" rows="5" id="kommentar"></textarea>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>HTML5 Inputtypen</legend>
+      <div class="required">
+        <label for="email">Email </label>
+        <input type="email" name="email" id="email" placeholder="a@a" title="name@domainname" aria-describedby="title"
+          required>
+        <!-- title="name@domainname" nachfolgend alternativ statt title-Attribut  -->
+        <p id="title">Bitte Email in folgendem Format angeben: name@domainname</p>
+      </div>
+      <div>
+        <!-- inputmode="numeric" -->
+        <label for="number">Number(Anzahl)</label>
+        <input type="number" id="number" name="number">
+      </div>
+      <div class="required">
+        <!-- <span aria-hidden="true">*</span> -->
+        <label for="tel">Tel</label>
+        <!-- inputmode="tel" -->
+        <input type="tel" id="tel" name="tel" placeholder="+49 1234 567890"
+          pattern="((^\+[\d]{2}|^\+[\d]{2}\(0\)|^\(\+[\d]{2}\)\(0\)|^00[\d]{2}|^0)([\d]{9}$|[\d\-\.\s]{7,}$)|(^[1-9]{1}[\d]{5,}$))"
+          required>
+        <!--
+      +49
+      0049
+      +49 30 rufnummer
+      +49(0)30 rufnummer
+      030 rufnummer
+      (030) rufnummer
+      030/rufnummer-durchwahl
+      12 34 56 7
+      310-234-23
+      310.234.23
+      12345-(0)
+      -->
+      </div>
+      <div class="required">
+        <!-- www.google.de -->
+        <!-- protokoll voreinstellen - https:// -->
+        <label for="url">Url</label>
+        <input type="url" name="url" id="url" onfocus="if(this.value=='')this.value='https://'"
+          onblur="if(this.value=='https://')this.value=''" value="" required>
+      </div>
+      <div>
+        <label for="color">Farbe</label>
+        <input type="color" name="color" id="color" value="#f0f000">
+      </div>
+      <div>
+        <label for="search">search</label>
+        <input type="search" name="search" id="search" list="vorschlaege">
+        <!-- inputmode="search" -->
+        <datalist id="vorschlaege">
+          <option>Dennis</option>
+          <option>Eve</option>
+          <option>Justine</option>
+          <option>Hans</option>
+          <option>Halil</option>
+        </datalist>
+      </div>
+      <div>
+        <!--Type range - Browserkompatibilität-->
+        <label for="range">Range</label>
+        <input type="range" name="range" id="range" min="10" max="80" onchange="output.value = range.value">
+        <output for="range" id="output">0</output>
+      </div>
+    </fieldset>
+    <fieldset id="dateinput">
+      <legend>Date-Inputtypen</legend>
+      <div>
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date">
+      </div>
+      <div>
+        <label for="date_lc">Datetime-Local</label>
+        <input name="date_lc" type="datetime-local" id="date_lc">
+      </div>
+      <div>
+        <label for="month">Month</label>
+        <input type="month" name="month" id="month">
+      </div>
+      <div>
+        <label for="week">Week</label>
+        <input type="week" name="week" id="week">
+      </div>
+      <div>
+        <label for="time">Time</label>
+        <input type="time" name="time" id="time">
+      </div>
+      <h2>alternative zu Date -inputtypen </h2>
+      <p>Zum jetzigen Zeitpunkt bieten nur moderne Webkit-basierende Browser eine Standardfunktionalität zur
+        Datumsauswahl. Eine alterntive dazu sind Auswahllisten. Diese ermöglichen ebenso eine einfache Datumsauswahl. Es
+        gibt auch eine vielzahl von fertigen Javascripten mit denen eine Datumsauswahl über ein Kalenderblatt möglich
+        ist.</p>
+      <select name="tag" id="">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+        <option value="" selected>6</option>
+        <option value="">7</option>
+        <option value="">8</option>
+        <option value="">9</option>
+        <option value="">10</option>
+        <option value="">11</option>
+        <option value="">12</option>
+        <option value="">13</option>
+        <option value="">14</option>
+        <option value="">15</option>
+        <option value="">16</option>
+        <option value="">17</option>
+        <option value="">18</option>
+        <option value="">19</option>
+        <option value="">20</option>
+        <option value="">21</option>
+        <option value="">22</option>
+        <option value="">23</option>
+        <option value="">24</option>
+        <option value="">25</option>
+        <option value="">26</option>
+        <option value="">27</option>
+        <option value="">28</option>
+        <option value="">29</option>
+        <option value="">30</option>
+        <option value="">31</option>
+      </select>
+
+      <select name="monat" id="">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+        <option value="">6</option>
+        <option value="">7</option>
+        <option value="">8</option>
+        <option value="" selected>9</option>
+        <option value="">10</option>
+        <option value="">11</option>
+        <option value="">12</option>
+      </select>
+
+      <select name="jahr" id="">
+        <option value="">2019</option>
+        <option value="">2020</option>
+        <option value="" selected>2021</option>
+        <option value="">2022</option>
+        <option value="">2023</option>
+        <option value="">2024</option>
+      </select>
+    </fieldset>
+    <input type="submit" value="absenden">
+    <button>Button-Element</button>
+  </form>
+  <!-- neue HTML5-Attribute für Formularelemente:
+autofocus
+Richtet den Fokus der Eingabe auf das Element, sobald die Seite geladen wurde 	autofocus kann auf Eingabe, Auswahl, Textbereich oder Schaltfläche angewendet werden.
+
+placeholder
+Gibt dem Nutzer einen Hinweis darauf, welche Art von Daten eingegeben werden sollen Der Wert für "placeholder" wird als heller Text dargestellt, bis das Element fokussiert wird und der Nutzer Daten eingibt. Mögliche Anwendungsgebiete: Eingabe und Textbereich.
+
+form
+Gibt ein oder mehrere Formulare an, auf das bzw. die sich das Eingabeelement bezieht Bei Verwendung des Attributs form können die Eingabeelemente überall auf der Seite platziert werden, nicht nur innerhalb des Formularelements. Darüber hinaus kann ein einzelnes Eingabeelement mit mehreren Formularen verknüpft werden.
+
+required
+Ein boolesches Attribut (Wahrheitswert Attribut, hat der Nutzer etwas ausgefüllt wird true geliefert andernfalls false), das angibt, dass das Element erforderlich ist Das Attribut required ist hilfreich, wenn Sie eine browserbasierte Validierung ohne Verwendung von benutzerdefiniertem JavaScript durchführen möchten.
+
+autocomplete
+Legt fest, dass ein Feld nicht auf der Grundlage der vorherigen Eingaben des Nutzers vom Browser automatisch vervollständigt oder vorausgefüllt werden soll 	Das Attribut autocomplete eignet sich für Felder, in die zum Beispiel eine Kreditkartennummer oder eine Einmalpasswort eingegeben werden und die nicht automatisch vervollständigt werden sollen. Standardmäßig ist für das Attribut autocomplete der Wert on festgelegt, Sie müssen also off auswählen, um es zu deaktivieren.
+
+pattern
+Gleicht den Wert eines Elements mit einem regulären Ausdruck ab.Bei Verwendung von pattern sollten Sie auch einen Wert für title eingeben, damit der Nutzer weiß, welches Muster erwartet wird.
+Beispiel:pattern="^[0-9]{5}$"
+     title="Dies Ist ein Pflichfeld(required) nur Zahlen erlaubt es müssen 5 Zahlen sein"
+
+dirname
+Sendet die Ausrichtung des Steuerungselements zusammen mit dem Formular Wenn der Nutzer zum Beispiel Textdaten von rechts nach links eingegeben hat und das Eingabeelement das Attribut dirname enthält, wird zusammen mit dem Eingabewert ein entsprechender Hinweis gesendet.
+
+novalidate
+Verhindert eine Validierung der Formulareingaben, sofern dies für ein Formularelement angegeben ist
+
+formaction 	Überschreibt das für das Formularelement angegebene Attribut "action" Dieses Attribut wird für die Elemente input und button unterstützt.
+
+formenctype
+Überschreibt das für das Formularelement angegebene Attribut "enctype" 	Dieses Attribut wird für die Elemente input und button unterstützt.
+
+formmethod
+Überschreibt das für das Formularelement angegebene Attribut "method" 	Dieses Attribut wird für die Elemente input und button unterstützt.
+
+formnovalidate
+Überschreibt das für das Formularelement angegebene Attribut "novalidate" 	Dieses Attribut wird für die Elemente input und button unterstützt.
+
+formtarget
+Überschreibt das für das Formularelement angegebene Attribut "target" 	Dieses Attribut wird für die Elemente input und button unterstützt.
+
+inputmode
+Erlaubt steuert die Darstellung der Bildschirmtastatur auf Touchscreengeräten. Einige Inputtypen (tel,number,search) besitzen bereits spezielle Darstellungen.
+https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode
+https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode
+-->
+
+</body>
+
+</html>

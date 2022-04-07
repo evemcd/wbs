@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+* {
+/*    border: solid 1px;*/
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1000px;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url(../bg_image_hotel/sansebastian_bg_1980x1080px.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    /*Das Bild dehnt sich zu 100% im Elternelement aus, hier ist das der figure-Container*/
+}
+
+.zimmerImg {
+    width: 500px;
+    text-align: center
+}
+
+header {
+    background: linear-gradient(to bottom, #7db9e8 0%, #1e5799 100%);
+    padding: 10px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* hier beginnt die Navigation*/
+
+
+nav {
+    text-align: center;
+    /* die Elemente in der Nav werden zentriert ausgerichtet*/
+}
+
+ul {
+    list-style: none;
+    /* damit die Listenpunkte entfallen*/
+    padding: 0;
+    /* der linke Abstand entfaellt*/
+}
+
+li {
+    display: inline-block;
+    /* die Listenpunkte rutschen nebeneinander*/
+}
+
+nav a {
+    display: inline-block;
+    width: 130px;
+    text-decoration: none;
+    /* hiermit wird die Linie unter den Navilinks entfernt*/
+    color: #004969;
+    background-color: lightgray;
+    margin: 10px;
+    /* gibt den Elementen Aussenabstand von  10px*/
+    padding: 5px 30px 5px 30px;
+    /* setzt den Innenabstand der Schrift zum Container fest*/
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.4em;
+}
+
+main {
+    background-color: white;
+}
+
+section {
+    padding: 20px 50px;
+}
+
+figure { 
+    margin: 0;
+    display: block;
+    text-align: center
+}
+
+figcaption {
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+/*Ab hier footer*/
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    padding: 8px;
+    background: linear-gradient(to bottom, #7db9e8 0%, #1e5799 100%);
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}

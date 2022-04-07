@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PHP</title>
+<meta charset="utf-8">
+
+</head>
+<body>
+<h1>PHP - Pizzabestellung</h1>
+
+<form action="113-pizza_auswertung.php" method="POST">
+
+<p><select name="basis">
+	<option value="p1">Klein, 15cm, 5€</option>
+	<option value="p2">Mittel, 25cm, 7€</option>
+	<option value="p3">Groß, 35cm, 11€</option>
+</select> Deine Basispizza</p>
+
+<p>Deine Zutaten:</p>
+<input type="checkbox" name="sala"> Salami, 2€<br>
+<input type="checkbox" name="schi"> Schinken, 3€<br>
+<input type="checkbox" name="zwie"> Zwiebeln, 1€<br>
+<input type="checkbox" name="thun"> Thunfisch, 3€<br>
+<input type="checkbox" name="spin"> Spinat, 2€<br>
+
+<p>Deine Daten:</p>
+<input type="text" name="nm"> Dein Name<br>
+<input type="text" name="ad"> Deine Adresse<br>
+<input type="text" name="tl"> Deine Telefonnummer<br>
+
+<p>Du bezahlst:</p>
+<input type="radio" name="bez" value="bar"> Bar bei Lieferung<br>
+<input type="radio" name="bez" value="pp"> via PayPal<br>
+<input type="radio" name="bez" value="kk"> mit Kreditkarte<br>
+
+<p><input type="submit"><input type="reset"></p>
+
+</form>
+
+</body>
+</html>

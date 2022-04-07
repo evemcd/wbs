@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PHP</title>
+<meta charset="utf-8">
+
+</head>
+<body>
+<h1>PHP - Radiobuttons</h1>
+
+<form action="88-radio_auswertung.php" method="POST">
+
+<p><input type="radio" name="rest" value="Fleischhacker"> Burgerpalace</p>
+<p><input type="radio" name="rest" value="Mafiatortenbäcker"> Casa Luigi</p>
+<p><input type="radio" name="rest" value="Reisschüssel"> Peking Ente</p>
+<p><input type="radio" name="rest" value="Schnitzelschläger" checked> Bei Poldi</p>
+
+
+<p><input type="submit"></p>
+
+</form>
+
+</body>
+</html>
+<!--
+Die Radiobuttons bilden eine Gruppe von Elementen, die gemeinsam ein Formularfeld sind. 
+Sie werden durch den gemeinsamen Wert für name verbunden. Gesendet wird dann unter diesem name-Wert der Wert des value-Attributs, dessen Button beim senden aktiv ist. 
+Damit auf alle Fälle ein Wert gesendet wird, ist es sinnvoll, einen Button als checked zu markieren. 
+-->

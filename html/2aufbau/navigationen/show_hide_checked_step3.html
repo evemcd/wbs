@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bereiche auf/zu - klappen - show and hide mit :checked</title>
+    <link rel="stylesheet" href="start.css">
+    <style>
+        /* #check:checked ~ section label{background:red;} */
+
+        /* verstecken*/
+        .show {
+            display: none;
+        }
+
+        /* einblenden*/
+        #check:checked~section #box-1,
+        #check1:checked~section #box-2 {
+            display: block;
+        }
+
+        /* Tasturnutzer*/
+        #check:focus~section #box-1,
+        #check1:focus~section #box-2 {
+            display: block;
+        }
+
+        /* :focus {
+            outline: 3px solid red;
+        } */
+
+        /*Alternative dem Lesefluss entsprechend*/
+        label:focus~.show {
+            display: block;
+        }
+
+        /* #check:checked ~ section [for="check"]~.show,
+#check1:checked ~ section [for="check1"]~.show
+{display:block;} */
+
+        /* #check:checked ~ section.box-1~.show,
+#check1:checked ~ .box-2 ~.show
+{display:block;} */
+        /* #check:not(:checked)~ section div{display:none;} */
+
+        /* visualisierung*/
+        [for*="check"] {
+            background: lightgreen;
+            width: 100px;
+            display: inline-block;
+            height: 20px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;  /*anklickbarkeit wie bei anker visualisieren*/
+        }
+
+        [for*="check"]:before {
+            /* content:""; */
+            /* background:red; */
+            display: block;
+        }
+
+        #check:checked~section [for="check"]:before,
+        #check1:checked~section [for="check1"]:before {
+            content: "close";
+        }
+
+        /* optisches scheusal*/
+        /* .pfeil:after{} */
+        /* [for*="check"]:after{
+  content:"";
+  border:7px solid transparent;
+  border-left-color:blue;
+  display:block;
+  position:absolute;
+  right:0;
+  top:3px;
+}
+
+#check:checked ~ section [for="check"]:after,
+#check1:checked ~ section [for="check1"]:after{
+  border-left-color: transparent;
+  border-top-color:blue;
+} */
+
+/*Für Screenreader*/
+@media speech {
+    input[id*="check"], [for*="check"] {
+        display: none;
+    }
+    .show {
+        display: block;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+    <input type="checkbox" id="check1">
+    <!-- <label>test<input type="radio" name="radio"></label>
+      <label>test<input type="radio" name="radio" ></label> -->
+    <header>
+        <h1>Bereiche auf/zu - klappen</h1>
+    </header>
+
+    <section class="box-1">
+        <h2>Auf/zu - effekte mit :checked</h2>
+        <a href="">test</a>
+        <p>
+            HTML bietet mit seinen eingeschränkten Möglichkeiten nur wenige Standard-Elemente um Inhalte ein- und
+            auszublenden. <br>Gleichermaßen sind die vorhanden Elemente nicht für jede Form der Präsentation, dem
+            vorhanden Inhalt oder der gewünschten Benutzbarkeit verwendbar.
+        </p>
+        <p>Die geschickte Kombination von HTML-Elementen, CSS-Eigenschaften und Selektoren schafft den notwendigen
+            Freiraum in Gestaltung, Benutzbarkeit und Zugänglichkeit für fast alle Elemente. Als letzte Möglichkeit
+            steht noch die Kombination von Javascript und CSS zur Verfügung.</p>
+        <label for="check" tabindex="0">open</label>
+        <!-- <label for="check">close</label> -->
+        <div class="show" id="box-1">
+            <h3>überschrift</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero non accusamus explicabo repellat ullam
+                consequatur praesentium atque quibusdam culpa fugiat? Quod voluptates dignissimos molestias nisi?
+                Doloribus error veritatis nemo at!</p>
+        </div>
+    </section>
+    <section class="box-2">
+        <h2>Auf/zu - effekte mit :checked</h2>
+        <p>
+            HTML bietet mit seinen eingeschränkten Möglichkeiten nur wenige Standard-Elemente um Inhalte ein- und
+            auszublenden. <br>Gleichermaßen sind die vorhanden Elemente nicht für jede Form der Präsentation, dem
+            vorhanden Inhalt oder der gewünschten Benutzbarkeit verwendbar.
+        </p>
+        <p>Die geschickte Kombination von HTML-Elementen, CSS-Eigenschaften und Selektoren schafft den notwendigen
+            Freiraum in Gestaltung, Benutzbarkeit und Zugänglichkeit für fast alle Elemente. Als letzte Möglichkeit
+            steht noch die Kombination von Javascript und CSS zur Verfügung.</p>
+        <label for="check1" tabindex="0">checkbox</label>
+
+        <div class="show" id="box-2">
+            <h3>überschrift</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero non accusamus explicabo repellat ullam
+                consequatur praesentium atque quibusdam culpa fugiat? Quod voluptates dignissimos molestias nisi?
+                Doloribus error veritatis nemo at!</p>
+        </div>
+    </section>
+
+    <footer>
+        Bereiche auf/zu - klappen mit :checked
+    </footer>
+
+
+</body>
+
+</html>

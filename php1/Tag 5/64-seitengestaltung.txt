@@ -1,0 +1,13 @@
+Übung ZUfalls-Seite
+==============================================
+
+Beim Aufrufen der PHP Seite sollen folgende Elemente 
+zufällig erzeugt werden:
+
+- Die Hintergrundfarbe
+- Die Textfarbe
+- Ein Zitat, das als h3 angezigt werden soll
+- Ein Bild, das zufällig ausgewählt wird.
+
+Es ist darauf zu achten, das Hintergundfarbe und 
+Schriftfarbe nicht den gleichen Farbewert nutzen.

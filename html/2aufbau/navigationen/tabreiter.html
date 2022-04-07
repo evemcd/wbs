@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="start.css">
+  <title>Tabreiternavigation</title>
+
+  <style>
+    html {
+      /* font-size:30px; */
+    }
+
+    /* Standardformatierung Verweise + Zustände */
+    /* :link,:visited */
+
+    a {
+      font-size: 1.05em;
+      color: hotpink;
+      padding: 2px;
+    }
+
+    a:hover,
+    a:focus {
+      background: #666;
+      color: #fff;
+    }
+
+    /* Mindestgröße anklickbare Flächen für Touchevents:
+    https://www.w3.org/WAI/WCAG21/Understanding/target-size.html
+    Für Touchevents müssen interaktive Elemente mindestens 44x44px(icons) groß sein (Halbierung bei retina beachten 22x22px) -  Die kürzeste Kante selbst darf 20px nicht unterstreiten
+    */
+
+    nav {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border: 0;
+      position: relative;
+      top: 1px; /*positioning vom Ausgangspunkt position:relative;*/
+    }
+
+    /* Listenpunkte Horizontal anordnen */
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin-bottom: 0;
+      padding-left: 0;
+    }
+
+    nav li {
+      text-decoration: none;
+      background: #000;
+      /* padding:1em; */
+      /* width:180px; */
+      /* Zwischen interaktiven Elementen die aufeinander folgen sind lt. WCAG2.1 Abstände von 4px einzuhalten um eine gute Benutzbarkeit sicherzustellen */
+      margin-right: 4px;
+      color: hotpink;
+
+    }
+
+    nav a {
+      text-decoration: inherit;
+      /* inherit ist eine erzwungene Vererbung, in diesem Fall übernimmt  das Element die am Elternelement definierten Werte für  Eigenschaft */
+
+      /* Anker ausdehnen um anklickbare Fläche zu vergrößern */
+      display: block;
+      padding: 1em;
+      color: inherit;
+    }
+
+    /* zustände Hauptnavi*/
+    /*Überschreibung für Background nötig da generell bei Ankerzuständen definiert */
+    nav a:hover,
+    nav a:focus {
+      background: none;
+      color: inherit;
+    }
+
+    /* Darstellung wenn der Menüpunkt Mit der Maus berührt wird */
+    nav li:hover,
+    nav li:focus-within {
+      background: lightcoral;
+      color: #fff;
+    }
+
+    /* nav li:focus-within{
+      background:yellow;
+    } */
+    /*
+    :focus-within selektiert ein Element wenn ein darin liegendes Kinderelement gerade ausgewählt wurde.
+ 
+    Im Vorangegangnen Regelsatz wird somit das Element Li innerhalb des Nav-Containers selektiert wenn der darinliegende Anker ausgewählt wurde
+    */
+
+    /* a:active{
+      background:red;
+    } */
+
+
+    /* Aktiven Menüpunkt / Aktive Seite kennzeichnen */
+    .active,
+    .current,
+    .active:hover,
+    .current:hover,
+    .active:focus-within,
+    .current:focus-within {
+      background: #fff;
+      color: #000;
+      border: 1px solid black;
+      border-bottom: transparent;
+    }
+
+    /* nav li:focus-within{
+      background:yellow;
+    } */
+    section {
+      margin-top: 0;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <!-- semantisches div - Kopfbereich - kopfzeile role=banner-->
+    <h1>Tabreiternavigation</h1>
+  </header>
+
+  <nav>
+    <!--semantisches div- Navigationsbreich - role="navigation"-->
+    <ul>
+      <!-- tabindex="1" -->
+      <li><a href="">link 1</a></li>        <!-- class="active" ist der aktive Tab*/ -->
+      <li class="active"><a href="">link 2</a></li>
+      <li><a href="">link 3</a></li>
+      <li><a href="">link 4</a></li>
+    </ul>
+  </nav>
+
+
+  <section>
+    <!-- semantisches Div - Seitentenbereich/Seitenabschnitt role=region-->
+
+    <h2>Überschrift für section</h2>
+    <div style="filter:grayscale(1);display:inline-block;">
+      <h3 style="color:blue;">blau</h3>
+      <h3 style="color:green;">grün</h3>
+      <h3 style="color:red;">rot</h3>
+    </div>
+    <div style="display:inline-block;">
+      <h3 style="color:blue;">blau</h3>
+      <h3 style="color:green;">grün</h3>
+      <h3 style="color:red;">rot</h3>
+    </div>
+    <!-- Farbkontraste prüfen : https://contrast-ratio.com/ -->
+    <p style="background:#ffc;font-weight:bold;">Weitere Informationen zu Lesbarkeit von Texten und Visualisierung von
+      Ereigniszuständen <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html"
+        title="Kontrastverhältnisse WCAG2.0" target="_blank" hreflang="en">WCAG2.0 - Kontrastverhältnisse</a></p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href=""
+        title="title setzen wenn Linktext nicht aussagekräftig">Ipsa</a>, minima neque provident nemo cupiditate,
+      architecto quas expedita veniam laudantium corrupti vero praesentium. Labore nesciunt ab corporis veniam at, sunt
+      deserunt?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere quis architecto aspernatur. Facere sunt
+      molestias mollitia dolor nam numquam corrupti atque totam ab maxime a, libero accusantium laudantium facilis <a
+        href="">recusandae!</a></p>
+
+    <details>
+      <!--Zusammenfassung / Nachtrag / Zusatzinformation-->
+      <summary>Aria Landmark Roles</summary>
+      <!--Überschrift für details-->
+      <p>Landmark-Roles sind Informationen, für Screenreeder und andere sinnstiftende Mechnismen, über Inhaltliche
+        Aufteilung der Seitenbereiche. Eine Übersicht zu den Aria-Landmark-Roles die den HTML5-Outline-Elementen
+        zugewiesen sind finden sie unter: <a
+          href="https://www.w3.org/TR/wai-aria-practices/examples/landmarks/HTML5.html"
+          title="Landmarkroles an html5 elementen und fortführende Informationen" hreflang="en"
+          target="_blank">Aria-Landmark-Role</a></p>
+    </details>
+
+    <ul>
+      <li>listenpunkt 1</li>
+      <li>listenpunkt 2</li>
+      <li>listenpunkt 3</li>
+    </ul>
+  </section>
+
+  <footer>
+    <!-- semantisches div - Fußbereich role="contentinfo"-->
+    Tabreitrnavigation
+  </footer>
+
+</body>
+
+</html>

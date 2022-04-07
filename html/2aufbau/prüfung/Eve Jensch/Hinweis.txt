@@ -1,0 +1,90 @@
+Im Ordner Vorlagen befinden sich entsprechende Screenshots zu den einzelnen Formatierungen.
+Sowie ein kleine Farbstyleguide für die deckenden Farben.
+
+Beispiel Pseudocode zur Aufgabenstellung: 
+(Nicht alle visuellen Informationen lt. grafischer Vorlage sind in diesem Pseudocode enthalten.
+Der Pseudocode dient lediglich als Orientierung zur Aufgabenstellung.
+)
+
+<seite>
+- hintergrundfarbe #eee + Hintergrundbild oder Farbverlauf von #333 zu #eee
+- Seitenschrift serifenlos
+- Textfarbe Schwarz
+
+	[wrapper]
+		- breite 1200px ,horizontal zentriert
+		- abstand oben 30px
+
+		[header]
+		- hintergrundbild banner2.jpg
+		- Innenabstand 10px 
+		- 1px umlaufender rahmen #ddd
+			
+			[title]
+			- hintergrund rgba(0,0,0,0.9)
+			- Abstand von oben 30px 
+
+				[Überschrit der 1. Ordnung mit der klasse title]
+				- Textfarbe #D2A337
+
+				[Überschrit der 3. Ordnung mit der klasse subtitle]	
+				- Textfarbe #07BEA0
+		
+		[navigation]
+			[ungeordnete liste mit Ankern]
+			- Abstände am Listenelement entfernen
+			- Listenpunkte oder Anker mit Hintergrundfarbe #333 
+			- Textfarbe #08A1A0
+			- berührter/ausgewählter Menüpunkt Hintergrundfarbe rgba(255,255,255,0.8)
+			- aktiver Menüpunkt #fff
+			
+				
+
+		[sidebar]
+		- 1px umlaufender rahmen #ddd
+		- Innenabstand umlaufend 10px
+		- Außenabstand links 5px
+		- Breite 225px
+		- Hintergrund rgba(0,0,0,0.9)
+
+			[Überschrift der 3. Ordnung mit der Klasse heading]
+			- Hintergrund #08A1A0
+
+			
+			[Newsüberschrift]
+			- Textfarbe #D2A337
+			
+			[Textabsatz]
+			- Textfarbe #fff
+				
+				[Datum]
+				- wird von Text umflossen
+				- Hintergrund #D2A337	
+			
+
+		[content]
+		- 1px umlaufender rahmen #ddd
+		- Hintergrund #fff
+			[1. Textbsatz mit umflossenen Bild]
+
+			[2. Textabsatz]
+			- Breite 90% horizontal Zentriert
+			- doppelte Rahmenlinie umlaufend
+			- Innenabstand 10px
+
+			[3. - 5. Textabsatz]
+			- stehen nebeneinander (3 Spalten)
+			- Textfarbe #D2A337
+			- Linien zwischen den Spalten
+				[semantisches Inlineelement umschließt den erstem Satz]
+				- Textfarbe , fettgedruckt	
+
+			[6. Textabsatz]
+			- frei formatieren
+
+		
+		[footer]
+		- 1px umlaufender rahmen #ddd
+		- text + verlinkte Emailadresse
+
+

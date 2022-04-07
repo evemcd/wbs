@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PHP</title>
+<meta charset="utf-8">
+
+</head>
+<body>
+<h1>PHP - Select mit Mehrfachauswahl</h1>
+
+<form action="94-selectmultiple_auswertung.php" method="POST">
+
+<p><select name="zutaten[]" size="5" multiple>
+<option>Salami</option>
+<option>Schinken</option>
+<option>Spinat</option>
+<option>Thunfisch</option>
+<option>Champignons</option>
+<option>Zwiebeln</option>
+<option>Mozzarella</option>
+</select></p>
+
+
+<p><input type="submit"></p>
+
+</form>
+
+</body>
+</html>
+<!--
+Beim einfachen Select-Menue wird der ausgewählte Wert übertragen. Dabei wird entweder der sichtbare Text der gewählten Option gesendet, oder aber, wenn diese Option ein value-Attribut besitzt, dann der Wert des value. 
+Select sendet immer zumindest den aktuell angezeigten Wert, selbst wenn der User nichts angeklickt.
+-->

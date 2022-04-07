@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vertikales Menü mit Ausklappfunktion</title>
+  <link rel="stylesheet" href="start.css">
+  <style>
+html{
+  /* font-size:20px; */
+}
+    /* einfacher zweispalter */
+    nav{float:left;
+    width:10em;
+    margin-top:0;
+    padding:0;
+    background:#ccc;
+    border:0;
+    }
+
+    section{
+    margin-left:11em;
+    }
+
+    footer{
+      clear:both;
+    }
+
+    /* Navigation */
+    nav ul{
+      padding:0;
+      list-style:none;
+    }
+
+    nav li{
+      /* Abstände zwischen anklickbaren Flächen/ interaktiven Elementen */
+      padding:0.1em 0;
+      /* margin:10px 0; */
+      /*Padding und Border am Elternelement verhindern collapsing margins verhindern */
+      /* border-bottom:1px solid #000 */
+      background:#ffc;
+      /* wenn gesetzt kein Megadropdown ohne Javascript möglich */
+      /* position:relative; */
+
+    }
+    /* nav li li{
+      border:5px solid blue;
+    } */
+    nav a{
+      display:block;
+      padding:0.5em 0;
+      
+      /* Höhe oder Line-height angeben zum berechnen des vertikalen Einzugs alternativ bei mehrzeiligkeit line-height anpassen*/
+      /* line-height:1.5em; */
+      /* height:1em; */
+
+      /* Überdehnt den Anker, breiter als umschließendes Elternelement (padding + width = 11em ul hat selbst 10em). Damit ist die Erreichbarkeit beim ausklappen der untergeordneten Liste gewährleistet*/
+      /* padding:0.5em; */
+      /* width:10em; */
+    }
+    /* verstecken*/
+    nav li ul{
+      /* display:none; */
+      position:absolute;
+      left:-9999em;
+      width:10em
+    }
+    /* einblenden*/
+    nav li:hover > ul, nav li:focus-within > ul{
+      /* display:block; */
+      /* Verschiebungswerte nur nutzen wenn position relative am Elternelement(li) gesetzt ist -  Megadropdown nicht mehr ohne JS möglich */
+     /* left:10em;
+     top:0; */
+      left:auto;
+      margin-left:10em;
+      margin-top:-2.3em;
+      /* background:red; */
+      /* Border Oder Padding können zum verschieben genutzt werden, je nach gewünschter Darstellung. Beide Eigenschaften beanspruchen jedoch platz und überlagern somit gegf. vorangegangene Elemente. Damit diese wieder erreicht werden können (z.B. anklickbar sind) müssen diese ggf. mit z-index in der optischen Stapelreihenfolge nach vorn gebracht werden 
+     */
+      border-left:20px solid transparent;
+    }
+
+
+    nav li:hover, nav li:focus-within{
+      background:red;
+    }
+/* 
+    nav li:hover:after{
+      content:"";
+      position:absolute;
+      width:50px;
+      height:2em;
+      background:blue;
+      margin-top:-2.3em;
+      margin-left:10em;
+    } */
+    .active,.active:hover, .active:focus-within{
+      background:yellow;
+    }
+    /* Alternativ am anker */
+    /* .active>a{
+      background:lime;
+    } */
+
+    /* Ausklappbarkeit visualisieren*/
+    .sub>a:before{
+      content:"+" " ";
+      float:right;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>vertikale Navigation mit Flyout-Menü</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="" title="Link 1">link 1</a></li>
+      <li class="active sub">
+        <!-- Bei aufbau der Verschachtelung lesereihenfolge beachten-->
+        <a href="" title="Link 2">link 2</a>
+        <ul>
+          <li><a href="" title="Link 2.1">link 2.1</a></li>
+          <li><a href="" title="Link 2.2">link 2.2</a></li>
+        </ul>
+        <!-- das ändern der Reihenfolge würde CSS-Aufwand vermeiden sorgt aber für eine falsche Inhaltliche Reihenfolge und schränkt zusätzlich die möglichkeiten der Formatierung ein.
+        
+          Kann genutzt werden wenn Screenreder die Unterpunkte der Navigation nicht mit vorlesen
+        -->
+        <!-- <a href="" title="Link 2">link 2</a> -->
+      </li>
+      <li><a href="" title="Link 3">link 3</a></li>
+      <li class="sub"><a href="" title="Link 4"> link 4</a>
+        <ul>
+          <li><a href="" title="Link 4.1">link 4.1</a></li>
+          <li class="sub"><a href="" title="Link 4.2">link 4.2</a>
+            <ul>
+              <li><a href="" title="Link 4.2.1">link 4.2.1</a></li>
+              <li><a href="" title="Link 4.2.2">link 4.2.2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+</nav>
+
+  <section>
+    <h2>Überschrift für Section</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, dignissimos, dolores, nemo, quas facere illo
+      provident <a href="">tenetur</a> velit fugiat earum distinctio enim ipsa delectus omnis quis officiis nostrum quam vitae!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, dignissimos, dolores, nemo, quas facere illo
+        provident tenetur velit fugiat earum distinctio enim ipsa delectus omnis quis officiis nostrum quam vitae!</p>
+  </section>
+
+  <footer>
+    vertikales Menü mit Ausklappfunktion
+  </footer>
+</body>
+
+</html>

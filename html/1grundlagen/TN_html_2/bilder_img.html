@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Bilder im Quelltext</title>
+</head>    
+
+<body>
+    <h1>Bilder im Quelltext</h1>   
+    
+<img src="bilder/Bonifacio_700px.jpg" alt="Felskueste auf Korsika" width="400px" title="Felskueste auf Korsika">    
+    
+    <p>Pflichtattribute <br>
+    src = Quelle, Angabe, wie das Bild heisst und wo es liegt <br>
+    alt = Alternativer Text, der angezeigt wird, wenn das Bild nicht geladen werden kann. Wichtig fuer Screenreader!</p>
+    <p>Optionale Attribute <br>
+    width = Breite des Bildes, z.B. in Pixel. Empfehlung: moeglichst nur einen Wert fuer width angeben, die Hoehe passt sich proportional an. Bildgroessen spaeter optimal ueber CSS <br>
+    height = Hoehe des Bildes <br>
+    title = wird beim hovern ueber das Bild angezeigt</p>
+    
+    <img src="bilder/cupcakes/cupcake_erdbeere.jpg" alt="Erdbeer-Cupcakes">
+    <img src="bilder/cupcakes/cupcake_gruen.jpg" alt="Moster-Cupcake">
+<!--    <img src="bilder/cupcakes/">-->
+    <img src="../bild_woanders/ball.jpg" alt="Fussballer">
+    
+    <p>Bilder sind keine Blockelemente, sondern inline-Elemente. Sie sind freundlich und lassen andere Elemente neben sich zu. Sie koennen mit einer width-Angabe versehen werden. Wenn die tags direkt aneinander geschrieben werden, gibt es keinen Abstand. Ein Leerzeichen oder eine neue Zeile erzeugt einen Zwischenraum von einem Leerzeichen</p>
+    <p>Bildpfade<br>
+    Bei Webprojekten sollte die Bildverknuepfung immer relativ sein. Bilder im aktuellen Verzeichnis werden mit ./ angesprochen. Bilder in hoeheren Verzeichnissen liegen mit ../ (siehe Bildreferenzierungen)</p>
+    
+    
+</body>
+</html>
+

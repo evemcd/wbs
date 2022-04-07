@@ -1,0 +1,44 @@
+form {
+    max-width: max-content;
+    margin: 2em auto 0 auto;
+}
+
+fieldset {
+    border: 2px solid var(--colorDarkBerry);
+    margin-bottom: 20px;
+}
+
+fieldset div, p, #submitButton {
+    margin: 10px 0;
+}
+
+label {
+    width: 120px;
+    display: inline-block;
+}
+
+select, input, textarea {
+    width: 200px;
+    border: 1px solid var(--colorDarkBerry);
+    box-sizing: border-box;
+    background-color: rgba(154, 0, 64, 0.1);
+}
+
+input[type=checkbox] {
+    width: 50px;
+}
+
+.break {
+    display: none;
+}
+
+#submitButton {
+    display: block;
+    text-align: center;
+}
+
+#submitButton input {
+    background-color: var(--colorBiscuit);
+    border: 2px solid var(--colorDarkBerry);
+    border-radius: 3px;
+}

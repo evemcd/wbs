@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kurse SYSTEM "kurse.dtd">
+<kurse>
+	<kurs titel="Webdeveloper">
+			<inhalt>HTML, CSS, PHP, JavaScript, Typo3</inhalt>
+			<dauer>121 Tage</dauer>
+			<voraussetzung>Mit einem Realschulabschluss, Abitur, einer abgeschlossenen Ausbildung.
+			</voraussetzung>
+			<beschreibung>Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben.
+			</beschreibung>
+	</kurs>
+	
+	<kurs titel="Java Programmer">
+			<inhalt>Java, Oracle</inhalt>
+			<dauer>121 Tage</dauer>
+			<voraussetzung>Mit einem Realschulabschluss, Abitur, einer abgeschlossenen Ausbildung.
+			</voraussetzung>
+			<beschreibung>Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben.
+			</beschreibung>
+	</kurs>
+	
+	<kurs titel="Webdesign">
+			<inhalt>HTML, CSS, Photoshop, Illustrator, Wordpress</inhalt>
+			<dauer>101 Tage</dauer>
+			<voraussetzung>Mit einem Realschulabschluss, Abitur, einer abgeschlossenen Ausbildung.
+			</voraussetzung>
+			<beschreibung>Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben.
+			</beschreibung>
+	</kurs>
+	
+	<kurs titel="Kommunikationsdesigner">
+			<inhalt>Photoshop, Illustrator, Indesign, Gestaltungsgrundlagen</inhalt>
+			<dauer>121 Tage</dauer>
+			<voraussetzung>Mit einem Realschulabschluss, Abitur, einer abgeschlossenen Ausbildung.
+			</voraussetzung>
+			<beschreibung>Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben.
+			</beschreibung>
+	</kurs>
+
+</kurse>

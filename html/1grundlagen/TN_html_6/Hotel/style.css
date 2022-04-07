@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+* {
+    /*    border: solid 1px;*/
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1000px;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url(bg_image_hotel/sansebastian_bg_1980x1080px.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    /*Das Bild dehnt sich zu 100% im Elternelement aus, hier ist das der figure-Container*/
+}
+
+.kleinesBild img {
+    max-width: 33%;
+    min-height: 228px;
+    flex-direction: row;
+    flex: 1;
+}
+
+#zimmerbilder {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 3px;
+}
+
+header {
+    background: linear-gradient(to bottom, #7db9e8 0%, #1e5799 100%);
+    padding: 10px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* hier beginnt die Navigation*/
+
+main {
+    padding: 40px;
+}
+
+nav {
+    text-align: center;
+    /* die Elemente in der Nav werden zentriert ausgerichtet*/
+}
+
+ul {
+    list-style: none;
+    /* damit die Listenpunkte entfallen*/
+    padding: 0;
+    /* der linke Abstand entfaellt*/
+    }
+
+li {
+    display: inline-block;
+    /* die Listenpunkte rutschen nebeneinander*/
+}
+
+nav a {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 130px;
+    text-decoration: none;
+    /* hiermit wird die Linie unter den Navilinks entfernt*/
+    color: #004969;
+    background-color: lightgray;
+    border: solid 2px lightgray;
+    margin: 10px;
+    /* gibt den Elementen Aussenabstand von  10px*/
+    padding: 5px 30px 5px 30px;
+    text-transform: uppercase;
+    }
+
+nav a:hover {
+    background-color: #7db9e8;
+    border: solid 2px #1e5799;
+    }
+
+/*----- ENDE NAVIGATION -----*/
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    color: #1e5799;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.4em;
+}
+
+.fontSize {
+    font-size: 0.9em;
+}
+
+.covid {
+    color: red;
+}
+
+main {
+    background-color: white;
+}
+
+section {
+    padding: 20px 50px;
+}
+
+figure {
+    margin: 0;
+    display: block;
+    text-align: center
+}
+
+figcaption {
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+/*Ab hier Tabelle*/
+
+table {
+    width: 100%;
+    font-size: 0.9em;
+    border-spacing: 1px;
+}
+
+caption {
+    background-color: saddlebrown;
+    color: white;
+    padding: 5px;
+}
+
+th {
+    background-color: wheat;
+    padding: 5px;
+}
+
+tr {
+    background-color: #7db9e8;
+    padding: 5px;
+}
+
+td {
+    padding-left: 5px;
+}
+
+tfoot tr {
+    background-color: wheat;
+    text-align: center;
+    padding: 5px;
+}
+
+tr a {
+    text-decoration: underline;
+    color: #1e5799
+}
+
+/*Ab hier footer*/
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    padding: 8px;
+    background: linear-gradient(to bottom, #7db9e8 0%, #1e5799 100%);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #7db9e8;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation markup</title>
+      <link href="style.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+    Neuer Container für die Hauptnavigation ist nav.
+    Hier werden div-container verwendet, diese werden jeweils weiter spezifiziert über eine id. Diese kann dann in CSS mit der # angesprochen werden
+
+    <div id="inhalt">
+        <h1>Markupmethoden für Navigationsmenüs</h1>
+        <h3>Breadcrumb-Navigation</h3>
+        <div id="breadcrumb"><strong>Sie sind hier: </strong>
+            <a href="index.html">home</a> &gt;
+            <a href="katalog.html">katalog</a> &gt;
+            Produkt 1
+        </div>
+
+        <hr>
+
+        <h3>Hilfsnavigation</h3>
+        <div id="bottomnavi"> <a href="index.html">Home</a> |
+            <a href="wir.html">Über uns</a> |
+            <a href="katalog.html">Katalog</a> |
+            <a href="referenzen.html">Referenzen</a> |
+            <a href="feedback.html">Feedback</a> |
+            <a href="Impressum.html">Impressum</a>
+        </div>
+
+        <hr>
+
+        <h3>Zeilenumbrüche (alte Methode, besser mit CSS display:block)</h3>
+        <div id="hauptnavi_1"> <a href="index.html">Home</a> <br />
+            <a href="wir.html">Über uns</a> <br />
+            <a href="katalog.html">Katalog</a> <br />
+            <a href="referenzen.html">Referenzen</a> <br />
+            <a href="feedback.html">Feedback</a> <br />
+            <a href="Impressum.html">Impressum</a>
+        </div>
+
+        <hr>
+
+        <h3>Textabsätze</h3>
+        <div id="hauptnavi_2">
+            <p class="current"><a href="index.html">Home</a></p>
+            <p><a href="wir.html">Über uns</a></p>
+            <p><a href="katalog.html">Katalog</a></p>
+            <p><a href="referenzen.html">Referenzen</a></p>
+            <p><a href="feedback.html">Feedback</a></p>
+            <p><a href="Impressum.html">Impressum</a></p>
+        </div>
+
+        <hr>
+
+        <h3>Liste</h3>
+        <div id="hauptnavi_3">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="wir.html">Über uns</a></li>
+                <li><a href="katalog.html">Katalog</a></li>
+                <li><a href="referenzen.html">Referenzen</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="Impressum.html">Impressum</a></li>
+            </ul>
+        </div>
+        <hr>
+        <h3>Verschachtelte Liste</h3>
+        <div id="hauptnavi_4">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="wir.html">Über uns</a></li>
+                <li><a href="katalog.html">Katalog</a>
+                    <!-- Untermenüebene: -->
+                    <ul>
+                        <li><a href="produkt1.html">Produkt 1</a></li>
+                        <li><a href="produkt2.html">Produkt 2</a></li>
+                        <li><a href="produkt3.html">Produkt 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="referenzen.html">Referenzen</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="Impressum.html">Impressum</a></li>
+            </ul>
+        </div>
+    </div>
+</body></html>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE glossar SYSTEM "glossar.dtd">
+<glossar name="Lexikon">
+  <art title="Wirtschaft">
+    <eintrag>
+      <begriff>B2B</begriff>
+      <beschreibung>Abkürzung für "Business to Business"</beschreibung>
+    </eintrag>
+    <eintrag>
+      <begriff>B2C</begriff>
+      <beschreibung>Abkürzung für "Business to Customer"</beschreibung>
+    </eintrag> 
+    <eintrag>
+      <begriff>CRM</begriff>
+      <beschreibung>Abkürzung für "Customer Relationship Management"</beschreibung>
+    </eintrag> 
+    <eintrag>
+      <begriff>Bachelor</begriff>
+      <beschreibung>Neu eingeführte internationale Abschlüsse in ingenieur-, wirtschafts- und geisteswissenschaftlichen Studiengängen. Das Studium kann mit dem Grad Bachelor bzw. Baccalaureat nach sechs Semestern abgeschlossen werden.</beschreibung>
+    </eintrag> 
+  </art>
+  <art title="EDV">
+    <eintrag>
+      <begriff>Banner</begriff>
+      <beschreibung>Ein Banner ist ein Spruchband, ein Transparent, eine Balkenüberschrift und im INTERNET Werbefläche kombinniert mit einem Hyperlink zu der entsprechend beworbenen Site.</beschreibung>
+    </eintrag>
+    <eintrag>
+      <begriff>binär</begriff>
+      <beschreibung>Ein Zahlensystem, das mit der Basis 2 und der Ziffernzahl 2 (0 und 1) arbeitet. In dem binären (auch "dualen") Zahlensystem können die Zustände von Schaltkreisen, auf denen Prozessoren basieren, gut dargestellt werden (0=ausgeschaltet, 1= eingeschaltet).</beschreibung>
+    </eintrag> 
+    <eintrag>
+      <begriff></begriff>
+      <beschreibung></beschreibung>
+    </eintrag> 
+    <eintrag>
+      <begriff></begriff>
+      <beschreibung></beschreibung>
+    </eintrag> 
+  </art>
+</glossar>

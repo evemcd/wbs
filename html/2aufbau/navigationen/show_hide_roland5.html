@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Bereiche auf/zu - klappen - show and hide</title>
+<link rel="stylesheet" href="start.css">
+<style>
+
+ :target{
+    border:3px solid red;
+  }
+/* öffnen link */
+.open{}
+
+/*schließen link*/
+.close{}
+
+/* anzuzeigendes Element*/
+.show{}
+
+/* Funktionalität*/
+.show,.close,.open:target{display:none;}
+
+.open:target ~ .show,
+.open:target ~ .close{display:block;}
+
+/* details beispiel*/
+#details:target .show,
+#details:target .close{display:block}
+
+/* usabillity*/
+#details>h2{position:relative;}
+#details:target .close{
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  text-indent:-9999em;
+}
+</style>
+</head> 
+  <body>
+   
+    <header id="head">
+      <h1>Bereiche auf/zu - klappen</h1>
+    </header> 
+    <nav>
+      <a href="#details" title="springe zur Erklärung von details">Details</a>
+      <a href="#select">Select</a>
+      <a href="#">Pseudolink</a>
+    </nav>
+    <section>
+      <h2>Auf/zu - effekte</h2>
+      <p>
+        HTML bietet mit seinen eingeschränkten Möglichkeiten nur wenige Standard-Elemente um Inhalte ein- und auszublenden. <br>Gleichermaßen sind die vorhanden Elemente nicht für jede Form der Präsentation, dem vorhanden Inhalt oder der gewünschten Benutzbarkeit verwendbar.
+      </p>     
+      <p>Die geschickte Kombination von HTML-Elementen, CSS-Eigenschaften und Selektoren schafft den notwendigen Freiraum in Gestaltung, Benutzbarkeit und Zugänglichkeit für fast alle Elemente. Als letzte Möglichkeit steht noch die Kombination von Javascript und CSS zur Verfügung.</p>
+      <div>
+        <a href="#open" id="open" class="open">öffnen</a>
+        <a href="#" class="close">schließen</a>
+      
+        <div id="blubb" class="show">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente consequuntur, natus aspernatur mollitia velit reiciendis magni commodi perspiciatis dolores laboriosam incidunt expedita blanditiis maxime est consequatur sed quo ut officiis?</p>
+
+        </div>
+      </div>
+      <div>
+        <a href="#open1" id="open1" class="open">öffnen</a>
+        <a href="#" class="close">schließen</a>
+        
+        <div class="show">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente consequuntur, natus aspernatur mollitia velit reiciendis magni commodi perspiciatis dolores laboriosam incidunt expedita blanditiis maxime est consequatur sed quo ut officiis?</p>
+
+        </div>
+      </div>
+    </section>
+    <aside>
+      <h2>Elemente mit Aufklapp-Funktionalität (toggle)</h2>
+      <section id="details">
+        <h2><a href="#details">Das Details - Element</a>
+          <a href="#" class="close">schließen</a></h2>
+        <div class="show">
+        <code>
+        &lt;details>&lt;/details>
+        </code>
+        <p>Bei dem Element details handelt es sich um einen fortführenden bzw. ergänzenden Themenzugehörigen Inhalt.</p>
+        <h3>Beispiel Details-Element</h3>
+        <details>
+          <summary>Überschrift für details </summary>
+          <p>Das &lt;summary> - Element ist die Überschrift für das details-Element. </p>
+        </details>
+      </div>
+      </section>
+      <section id="select">
+        <h2>Das Select-Element</h2>
+        <code>&lt;select>&lt;/select></code>
+        <p>
+          Mit dem Element &lt;select> wird ein<i>(e)</i> Auswahlfeld/Auswahlliste in Formularen erstellt. In Programmiersprachen bezeichnet man die entstandene grafische Darstellung / Benutzeroberfläche <em>engl. <abbr title="Graphical User Interface">GUI</abbr></em> als Kombinationslistenfeld oder <strong>Combo-Box</strong>
+        </p>
+        <h3>Beispiel &lt;select>-Element</h3>
+        <form>
+          <select name="auswahlliste">
+            <option>Auswahl 1</option>
+            <option value="übermittelter Wert">Auswahl 2</option>
+            <option>Auswahl 3</option>
+          </select>
+          <input type="submit">
+        </form>
+          <p>Auswahlmöglichkeiten werden hierbei mit dem Element &lt;option> erzeugt</p>
+      </section>
+    </aside>
+    <footer>
+      Bereiche auf/zu - klappen
+    </footer>
+
+  </body>
+</html>
+
+

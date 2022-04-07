@@ -1,0 +1,28 @@
+{
+  "bilder": [
+    {
+      "bild" :  "../images/binnenalster.jpg",
+      "titel":  "Hamburg Binnenalster"
+    },
+    {
+      "bild" :  "../images/hamburg-elphi.jpg",
+      "titel":  "Hamburg Elbphilharmonie"
+    },
+    {
+      "bild" :  "../images/hamburg-rathaus.jpg",
+      "titel":  "Hamburg Rathaus bei Nacht"
+    },
+    {
+      "bild" :  "../images/hamburg-weihnachten.jpg", 
+      "titel":  "Hamburg Weihnachten"
+    },
+    {
+      "bild" :  "../images/speicherstadt.jpg",
+      "titel":  "Hamburg Speicherstadt - Weltkulturerbe"
+    },
+    {
+      "bild" :  "../images/st-peter-ording.jpg",
+      "titel":  "St Peter Ording - Strand"
+    }
+  ]
+}

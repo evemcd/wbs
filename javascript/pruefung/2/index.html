@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prüfung 09.11.2021</title>
+    <script src="index.js" async></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container1">
+        <div id="jsonDaten"></div>
+    </div>
+    <div class="container2">
+        <form id="form">
+            <div>
+                Frau
+                <input type="radio" name="anrede" id="frau" value="Frau">
+                Herr
+                <input type="radio" name="anrede" id="herr" value="Herr">
+                Divers
+                <input type="radio" name="anrede" id="divers" value="">
+                <!-- Ich habe divers als leeren String gelassen, da die deutsche Sprache keine einheitliche, zufriendenstellende Anrede für non-binäre Menschen hat. So wird in der Ausgabe nur der Name und Vorname angezeigt. -->
+            </div>
+            <div id="alert"></div>
+            <div>
+                <input type="text" id="name" placeholder="Name eingeben"><br>
+                <input type="text" id="vorname" placeholder="Vorname eingeben"><br>
+                <input type="text" id="mail" placeholder="E-Mail eingeben"><br>
+                <input type="text" id="tel" placeholder="Telefon (optional)"><br>
+                <input type="submit" id="submit" value="Anmelden"><br>
+                <input type="reset" id="reset" value="Löschen"><br>
+            </div>
+        </form>
+        <div id="output"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+den Pfad zu 
+
+jquery.js
+jquery.validate.js
+
+anpassen. 

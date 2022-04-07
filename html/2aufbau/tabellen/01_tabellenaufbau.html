@@ -1,0 +1,155 @@
+<!doctype html> 
+<html lang="de"> 
+<head> 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabellen in HTML</title>
+<link rel="stylesheet" href="start.css"> 
+<style>
+	table{
+		border:1px solid #000;
+		/* Zellzwischenräume definieren */
+		/* border-spacing:10px 20px; */
+		 border-spacing:0; 
+		 /* Standardwert für Bordercollapse*/
+		/* border-collapse:separate; */
+
+	}
+	/* 
+	wird der Wert collapse an der Eigenschaft bord-collapse gesetzt so sind keine Zellzwischenräume mehr möglich. Tabellenzeilen sind damit aber in der lage Rahmen aufzunehmen. Tabellenzellen und Zeilen sind können keine Außenabstände besitzen. Die Eigenschaft padding verhält sich nur an Tabellenzellen erwartungsgemäß.
+	*/
+	/* table{border-collapse:collapse;}
+	tr{border:1px solid #000;} */
+	th,td{border:1px solid #000;
+		width:200px;
+	}
+
+	col{width:100px;}
+	/* col+col{width:250px;} */
+	colgroup{width:300px;}
+</style>
+</head>
+<body>
+<header>
+	<h1>Tabellenaufbau</h1> 
+</header>
+
+<section>
+	<h2>einfacher Tabellenaufbau</h2>
+	<table>
+		<tr><!-- table row-->
+			<td>Zelle</td><!--table data-->
+			<td>Zelle</td>
+		</tr>
+		<tr>
+			<td>Zelle</td>
+			<td>Zelle</td>
+		</tr>
+	</table>
+	<h2>Tabelle mit Kopfspalten</h2>
+	<p>Für den sehenden Nutzer legen wir mit dem &lt;th> - Element (Spaltenüberschrift/Zeilenüberschrift) die Leserichtung der Tabelleninhalte fest. Die physische Hervorhebung des &lt;th>-Elementes , Standardformatierung fettgedruckt (font-style:italic), signalisiert dem Nutzer eine Zeilenweise oder Spaltenweise Leserichtung. Für sinnstiftende Mechanismen zusätzlich das Attribut scope gesetzt werden. </p>
+	<p>Das Attribut scope="wert" teilt dem Screenreader die Leserichtung mit. Es ist nur am th-Element und col-Element erlaubt.</p>
+	<h4>gültige Attributwerte sind:</h4>
+		<ul>
+			<li>scope="col" - Spaltenweise</li>
+			<li>scope="row" - Zeilenweise</li>
+			<li>scope="colgroup" - Spaltengruppe, für mehrere Spalten</li>
+			<li>scope="rowgroup" - Zeilengruppe , über mehrere Zeilen hinweg</li>
+		</ul>
+	<h3>Zeilenweise</h3>	
+	<table>
+		<tr>
+			<th scope="row">zelle 1</th> <!-- Zellen/Spalten/Zeilenüberschrift -  Kopfspalten -->
+			<td>zelle 2</td>
+			<td>zelle 3</td>
+		</tr>
+		<tr>
+			<th scope="row">zelle 1</th>
+			<td>zelle 2</td>
+			<td>zelle 3</td>
+		</tr>
+		<tr>
+			<th scope="row">zelle 1</th>
+			<td>zelle 2</td>
+			<td>zelle 3</td>
+		</tr>
+	</table>
+	<h3>Spaltenweise</h3>
+	<table>
+		<tr>
+			<th scope="col">zelle 1</th>
+			<th scope="col">zelle 2</th>
+			<th scope="col">zelle 3</th>
+		</tr>
+		<tr>
+			<td>zelle 1</td>
+			<td>zelle 2</td>
+			<td>zelle 3</td>
+		</tr>
+		<tr>
+			<td >zelle 1</td>
+			<td>zelle 2</td>
+			<td>zelle 3</td>
+		</tr>
+	</table>
+	<h2>Vordefinierte Spaltenbreiten</h2>
+	<p>Mit dem &lt;colgroup> Element können wir Spaltenbreiten vordefinieren = Spaltengruppe / Spaltenzusammenfassung</p>
+	<p>Innerhalb unseres <colgroup> Bereichs benötigen wir für jede Spalte die vordefiniert sein soll ein &lt;col> Element. Jedes &lt;col>Element steht dabei für eine Spalte von links nach rechts (abhängig vom Lesefluss)</p>
+	<h3>colgroup und col</h3>	
+	<table>
+		<colgroup>
+			<col scope="colgroup">
+			<col>
+			<col style="width:500px;">
+			<col>
+			<col>
+		</colgroup>
+		<tr>
+			<td>zelle 1</td>
+			<td>zelle 2</td>
+			<td>zelle 3</td>
+			<td>zelle 4</td>
+		</tr>
+		<tr>
+			<td>zelle 1</td>
+			<td>zelle 2</td>
+			<td>zelle 3</td>
+			<td>zelle 4</td>
+		</tr>
+		<tr>
+			<td >zelle 1</td>
+			<td>zelle 2</td>
+			<td>zelle 3</td>
+			<td>zelle 4</td>
+		</tr>
+	</table>
+	<h3>Colgroup und span</h3>
+	<p>Das Attribut span mit seinem zugewiesenen Wert legt fest für wie viele Spalten die Breitenvordefinition am &lt;colgroup> - Element gelten soll.</p>
+	<table>
+		<colgroup span="5"> 
+		</colgroup>
+		<tr>
+			<td>zelle 1</td>
+			<td>zelle 2</td>
+			<td>zelle 3</td>
+			<td>zelle 4</td>
+		</tr>
+		<tr>
+			<td>zelle 1</td>
+			<td>zelle 2</td>
+			<td>zelle 3</td>
+			<td>zelle 4</td>
+		</tr>
+		<tr>
+			<td >zelle 1</td>
+			<td>zelle 2</td>
+			<td>zelle 3</td>
+			<td>zelle 4</td>
+		</tr>
+	</table>
+
+</section>
+
+<footer>Tabellen in HTML</footer>
+</body>
+</html>

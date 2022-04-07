@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="de">   
+	<head> 
+		<meta charset="utf-8"> 
+		<title>Clear mit Pseudoelement - Floats und Clear</title> 
+		<link rel="stylesheet" href="start.css">   
+		<style>    
+		.box1{
+		background:#ffc; 
+		border:1px solid purple;
+		width:200px;
+		height:200px;
+		float:left;
+		} 
+		
+		/* Stoßen Elemente mit der Eigenschaft float in der vertikalen an weitere Elemente die vertikale Außenabstände  aufweisen, so fallen die Außenabstände in der vertikalen nicht mehr zusammen sondern Sie addieren sich. Das Standardverhalten der zusammenfallenden Außenabstände (collapsing margins) ist somit nicht mehr gegeben */
+		.box2{
+		background:#ccc;
+		border:1px solid #333;
+		width:400px;
+		height:300px;
+		float:left;
+		}
+		
+		li{
+		background:#ccc;
+		border:1px solid #666;
+		float:right;
+		}
+
+		ul{float:left;}
+		
+		/* Clearfix für steinalte IE */
+		/*ul:after{
+		/*content:".";
+		/*height:0;
+		/*visibility:hidden;
+		/*display:block;
+		/*clear:both;
+		/*}
+		*/
+		
+		/* Das Pseudoelement :after setzt unmittelbar vor dem schließenden Element ein welches angesprochen wurde.
+		In unserem Beispiel direkt vor dem schließenden </section>   Element. Wird :after gesetzt wird zwingend die Eigenschaft content benötigt um einen Inhalt einzufügen */
+		
+		/* Clearfix*/
+		.clear{clear:both;}
+		
+		.clear:after{
+		content:"";
+		display:table;
+		clear:both;
+		}
+		</style> 
+	</head>
+	<body>
+		<header><!--Kopfbereich - Seitenkopf-->
+			<h1>Floats in HTML</h1>
+		</header>
+
+		<section class="clear"><!-- Seitenabschnitt/Seitenbereich - Hauptinhaltsbereich -->
+			<h2>Clear mit Pseudoelement :after</h2> 
+			
+			<p class="box1"><!-- :before -->Box 1 <!-- :after --></p>
+			
+			<p class="box2">Box-2</p> 
+			<!--<span style="clear:both;display:block; background:red;color:yellow;" title="Wenn der Clear an dieser Stelle funktioniert hat prüfe ob in der gleichen Ebene ein Element direkt folgt an dem du clearen kannst oder ob unmittelbar nach dieser Zeile ein umschließender Container geschlossen wird der ggf. mitgefloatet werden kann bzw. mit einem Pseudoelement gecleart werden kann. Teste die alternative Cleartechnik und entferne diese Zeile!">Testzeile - zum probieren wo gecleart werden muss</span>-->
+			
+			<p style="clear:both">Erklärung: Beide Boxen mit Float nebeneinander gestellt - clearen mit Pseudoelement</p>
+			
+			<ul>
+				<li>Listenpunkt 1</li>
+				<li>Listenpunkt 2</li>
+				<li>Listenpunkt 3</li>
+				<!-- hier muss der Clear hin -->
+			</ul>
+			
+			<!-- Testzeile zum clearen müsste hier stehen-->
+			<!-- :after steht unmittelbar vor dem schließenden Element-->
+		</section>
+		<footer><!-- Fußbereich - Seitenfuß/Fußzeile -->
+			Float und Clear
+		</footer>
+	</body>
+</html>

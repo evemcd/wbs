@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Prolog muss als 1. stehen, Kommentar nicht vor Prolog schreiben. 
+tags werden wie in html geschrieben aber selber definiert. 
+leeres tag kann <tag/> genannt werden. 
+die schreibweise muss wohlgeformt sein (sauberes html), attribute müssen vollständig sein: attribut=""
+dtd = document type definition -->
+<daten> 
+    <kunde anrede="frau">
+        <vorname>Angela</vorname>
+        <nachname>Merkel</nachname>
+    </kunde>
+
+    <kunde geschlecht="frau" ort="mallorca">
+        <vorname>Helene</vorname>
+        <nachname>Fischer</nachname>
+        <img src="" alt=""/>
+    </kunde>
+
+    <kunde anrede="herr">
+        <vorname>Hugo</vorname>
+        <nachname>Boss</nachname>
+    </kunde>
+
+    <kunde anrede="m">
+        <vorname>Thomas</vorname>
+        <nachname>Mann</nachname>
+    </kunde>
+</daten>

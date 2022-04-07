@@ -1,0 +1,30 @@
+body {
+  font-family: "Lucida Sans- Unicode", Helvetica, sans-serif;
+  background-color: #717581; 
+}
+
+#slider {
+  width: 1000px;
+	color: #fff;
+}
+
+figure {
+	position: relative;
+	height: 350px;
+}
+
+
+.left {
+  position: relative;
+  animation: animateleft 1.8s
+}
+
+@keyframes animateleft { 
+  from { top :-200px; opacity:0 } to { top:0; opacity:1 }
+	
+}
+
+
+
+
+

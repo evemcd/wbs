@@ -1,0 +1,9 @@
+<!ELEMENT kurse (kurs+)>
+<!ELEMENT kurs (inhalt, dauer, voraussetzung, beschreibung)>
+
+<!ELEMENT inhalt (#PCDATA)>
+<!ELEMENT dauer (#PCDATA)>
+<!ELEMENT voraussetzung (#PCDATA)>
+<!ELEMENT beschreibung (#PCDATA)>
+
+<!ATTLIST kurs titel CDATA     #REQUIRED> 

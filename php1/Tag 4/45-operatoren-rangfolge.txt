@@ -1,0 +1,28 @@
+Operatoren Rangfolge
+======================================================
+
+()                          Klammern
+
+!, ++, --                   log. NICHT, Inkrement, Dekrement
+
+**                          Exponent
+
+*, /, %                     Punktrechnung, Modulo
+
++, -, .                     Strichrechnung, String-Operator
+
+<, <=, >, >=                Vergleiche auf größer-kleiner
+
+==, !=, ===, !==, <>, <=>   Vergleiche auf (Un-)Gleichheit, Spaceship
+
+&&                          log. UND
+
+||                          log. ODER
+
+=, +=, *=, .= ....          Zuweisungen und Kombi-Versionen
+
+AND                         log. UND - Textversion
+
+XOR                         log. XOR - Textversion
+
+OR                          log. ODER - Textversion

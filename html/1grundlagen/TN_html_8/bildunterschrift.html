@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bildunterschrift mit position</title>
+    <style>
+/*
+        * {
+            border: 1px solid black;
+        }
+*/
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 100%;
+        }
+
+        body {
+            font-family: sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        figure {
+            margin: 0;
+            position: relative;
+        }
+        
+        figure img {
+            display: block;
+        }
+        
+        figcaption {
+            width: 600px;
+            text-align: center;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            padding: 4px;
+            position: absolute;
+            bottom: 0
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bildunterschrift mit position</h1>
+
+    <figure>
+        <img src="img/Kangaroos_600x315.jpg" alt="Kängurus">
+        <figcaption>Kängurus</figcaption>
+    </figure>
+
+
+
+</body></html>
+

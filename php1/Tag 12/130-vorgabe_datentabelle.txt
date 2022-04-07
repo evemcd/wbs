@@ -1,0 +1,18 @@
+Datentabelle Anlegen
+
+
+Datentabelle: kunden
+
+innerhalb der Datenbank unternehmen
+
+
+Spalten
+
+name
+ansprechpartner
+land
+stadt
+adresse
+telefon
+abnahmemenge_monat
+kdnr

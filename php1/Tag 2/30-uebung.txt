@@ -1,0 +1,14 @@
+Übung Benzinpreisrechner
+======================================================================0
+
+Der User gibt in ein Formular einmal die gewünschte Spritmenge in Litern ein 
+und zum zweiten die gewünschte Spritart als Kürzel.
+
+Nach dem Senden ermittelt das Programm anhand der Spritart 
+den entsprechenden Literpreis und errechnet den zu zahlenden Gesamtbetrag
+
+Das Ergebnis wird dem User in die Seite geschrieben.
+
+D			Diesel			1.41
+S			Super			1.58
+E10			Super E10		1.56

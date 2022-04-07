@@ -1,0 +1,75 @@
+<!doctype html>  
+<html lang="de">  
+<head> 
+	<meta charset="UTF-8"> 
+	<title>Beispiel OFF-Canvas-Technik</title> 
+	<style> 
+	/* steuerelemente in standarddarstellung verstecken*/
+	#trigger,[for="trigger"]{display:none;}
+	/* standarformatierung */
+	body{padding-top:60px;}
+	nav{background:black;color:orange;position:fixed;top:0;left:0;right:0;}
+	nav a{color:inherit;display:block;padding:1em 2em;}
+	nav ul{overflow:hidden;list-style:none;display:table;margin:0 auto;padding:0;}
+	nav li{float:left;text-align:center;}
+	nav li:hover{background:#fff;color:#212121;} 
+	
+	/*Scrollbalken verhindern */
+	#pageview{overflow:hidden;} 
+		
+	@media screen and (max-width:1200px){
+	body{padding-top:0;}
+	/* Label einblenden zum anklicken */
+	[for="trigger"]{position:fixed;top:1.2em;background:orange;color:#212121;display:block;padding:1em;text-align:center;left:-2em;bottom:0;transform:rotate(90deg);height:3em}
+	[for="trigger"]:hover{background:#000;color:orange;}
+	/* Standardformatierung für offset überschreiben*/
+	nav{position:static;float:left;}
+	nav ul{display:block;max-width:250px;}
+	nav li{float:none;}
+	
+	/* offset aufteilung */
+	nav{position:static;width:50%;float:left;}
+	.canvaswrap{width:200%;margin-left:-100%;transition:all 1s;}
+	.canvaswrap:after{content:"";display:table;clear:both;}
+	#sitecontent{width:50%;float:right;}
+	/* direkte Kinder in Content einrücken*/
+	#sitecontent>*{margin-left:4em;}
+	/* einblenden wenn navi angeklickt wurde*/
+	#trigger:checked~#pageview .canvaswrap{margin-left:0;}
+	#trigger:checked~#pageview [for="trigger"]{background:#666;color:#fff;}
+	}
+	</style>
+</head> 
+<body>
+<input type="checkbox" id="trigger"> 
+	<div id="pageview">
+		<div class="canvaswrap">
+			
+			<div id="sitecontent">
+			<header>
+			<h1>Bla Blubb</h1>
+			</header>
+			<article>
+			<h2>Überschrift</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, fuga dolorum molestias ex vitae adipisci rerum tempora est error reprehenderit excepturi repellendus facere iusto repellat atque. Eos, porro ad adipisci.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, fuga dolorum molestias ex vitae adipisci rerum tempora est error reprehenderit excepturi repellendus facere iusto repellat atque. Eos, porro ad adipisci.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, fuga dolorum molestias ex vitae adipisci rerum tempora est error reprehenderit excepturi repellendus facere iusto repellat atque. Eos, porro ad adipisci.</p>
+			<h2>Überschrift</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, in doloremque delectus distinctio reprehenderit eum quaerat illo blanditiis labore ea non veritatis voluptatum assumenda quis itaque ducimus praesentium consectetur nihil.</p>
+			</article>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#" title="link 1">link </a></li>
+					<li><a href="#" title="link 2">link </a></li>
+					<li><a href="#" title="link 3">link </a></li>
+					<li><a href="#" title="link 4">link </a></li>
+					<li><a href="#" title="link 5">link </a></li>
+					<li><a href="#" title="link 6">link </a></li>
+				</ul>
+				<label for="trigger">Navigation</label>
+			</nav>
+		</div>
+	</div>
+</body>
+</html>

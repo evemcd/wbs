@@ -1,0 +1,131 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,body {
+	height: 100%;
+}
+body {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 16px;
+	background-color: #663333;
+	background: #efefef url(bilder/bg.png) repeat-x left top;
+}
+/*wrapper
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+#wrapper {
+	width: 1000px;
+	height: 100%;
+	min-height: 100%;
+	height: auto !important;
+	overflow: hidden !important;
+	margin: 0 auto;
+	position: relative;
+	top: 30px;
+	background-color: #2974b2;
+	padding-bottom: 100px;
+}
+/*header
++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+#header {
+	position: relative;
+	width: 1000px;
+}
+/*formular
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+#form {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 200px;
+	padding: 5px;
+	background-color: #efefef;
+	font-weight: bold;
+	z-index: 1000;
+	color: #003366;
+	border-radius: 10px;
+}
+#form h3 {
+	
+	background: #efefef url(bilder/pfeil-down.png) no-repeat right center;
+	cursor: pointer;
+}
+#form form {
+	margin-top: 20px;
+}
+#form .unten {
+	background: #efefef url(bilder/pfeil-up.png) no-repeat right center;
+}
+
+h1 {
+	color: #efefef;
+	font-size: 42px;
+	letter-spacing: 15px;
+	text-align: center;
+	border-top: 5px double #efefef;
+	border-bottom: 5px double #efefef;
+}
+h1  span{
+	letter-spacing: 0;
+}
+/*main++++++++++++++++++++++++++++++++++++++++++++*/
+#main {
+	min-height: 400px;
+}
+/*++++++++Akkordeon++++++++++++++++++++++++++++*/
+#akkordeon {
+	width: 400px;
+	height: 150px;
+	margin: 20px;
+}
+#akkordeon h2 {
+	background-color: #879d9d;
+	padding: 5px 10px 4px;
+	border-bottom: 1px solid #666666;
+	color: #ffffff;
+	font-size: 14px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+#akkordeon div {
+	background-color: #ffffff;
+}
+#akkordeon div p, #akkordeon div ul{
+	background-color: #ffffff;
+	padding: 5px 20px;
+	width: 350px;
+}
+/*die aktive Überschrift bei akkordeon bekommt eine Formatierung*/
+#akkordeon h2.ui-accordion-header-active {
+	background-color: #003366;
+}
+
+
+/* gallery*/
+#gallery {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+  justify-content: center;
+}
+.gallery {
+	width: 400px;
+	/*height: 300px;*/
+	margin: 5px;
+	border: 2px solid #efefef;
+}
+#gallery img{
+	/*display: block;*/
+	padding: 5px;	
+	vertical-align: middle; 
+}
+
+
+
+
+
+
+
+
+

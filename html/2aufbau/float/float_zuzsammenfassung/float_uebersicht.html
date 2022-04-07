@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="de">          
+	<head>   
+		<title>Float Übersicht</title> 
+		<meta charset="utf-8"> 
+		<style>  
+		body{background:#333;color:#242220;font-family:verdana,arial,sans-serif;} 
+		
+		a{color:#ca9e5b;text-decoration:none;} 
+		a:hover{text-decoration:underline;}
+		
+		.color1{background:#ede9e4;}
+		.color2{background:#d2d3dc;}
+		.color3{background:#ca9e5b;}
+		.color4{background:#9596a2;}
+		.color5{background:#807366}
+		.color6{background:#242220;color:#d2d3dc}
+		
+		h2.color6{margin-bottom:0;padding:1em 0;font-size:200%;text-align:center;}		ol.color6{margin-top:0;padding-bottom:1.5em;font-size:120%;}
+		ol.color6>li+li{
+		margin-top:0.8em;
+		padding:0.2em;
+		}
+		
+		.row{background:#ffc; clear:both; padding:1%;} 
+		.cfloat{float:left;width:98%;}
+		
+		.col10em{
+		float:left;
+		width:46%;
+		margin:1em 2%;
+		outline:1px solid #fff;
+		min-width:10em;
+		}
+		.col-3sp{
+		float:left;
+		width:29%;
+		margin:1em 2%;
+		outline:1px solid #fff;
+		}
+		
+		.col-4{
+		float:left;
+		width:25%;
+		}
+		
+		/* Navi */
+		ul{overflow:auto;
+				padding:0;}
+		
+		ul li{
+			float:left;
+			width:25%;
+			list-style:none;
+		}
+		/* Ein clearen mit :before kann nicht funktionieren! */
+		/*.clear:before{
+		content:":before";
+		display:block;
+		border:2px solid red;
+		}*/
+		
+		.clear, .clear:after{clear:both;}
+		.clear:after{
+		content:"";
+		display:table;
+		}
+		code,div[class]:before{
+		display:block;
+		width:70%;
+		border:2px double #333;
+		background:#f3f3f3;
+		padding:0.5em;
+		margin:0.5em auto 0.5em 2em;
+		color:#666;}
+		
+		div[class]:before{
+		content:"Klassen die an diesem Element genutzt werden: " attr(class); 
+		display:block;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="header" class="row">
+			<h1>Die Eigenschaft Float</h1>
+			<h3>Clearen mit Overflow</h3>
+			<p>Nachfolgende Navigations-Liste wurde mit der Eigenschaft Overflow gecleart.
+			Die Eigenschaft overflow steuert das überfließen von Inhalten wenn der Inhaltsbereich zu klein ist. Der Standardwert ist visible. Sie ist in der Lage an festen Breiten, Höhen sowie am letzten Inhalt abzuschneiden.<br> Letztes genanntes Verhalten sorgt bei nachfolgender Liste für die Ausdehnung des Elternelementes und verhindert, das direkt darauf folgende Elemente sich am letzten Vorangegangenen Element, welches sich noch im normalen Dokumentfluss befindet oder inline Inhalte an dem vorherigen float orientieren.
+			<code>
+			/*overflow:hidden; bzw. overflow:auto;*/
+			</code>
+			Bei der Verwendung sollte bedacht werden das, sofern feste Höhen /Breiten oder Schatten und Rahmen genutzt werden, es zu einem abschneiden von Inhalten kommen kann somit ggf. ein unerwartetes Darstellungsverhalten auftritt.
+			</p>
+		</div>
+		
+		<ul id="nav" class="row">
+			<li class="color6"><a href="#" title="link 1">Link 1</a></li>
+			<li class="color6"><a href="#" title="link 2">Link 2</a></li>
+			<li class="color6"><a href="#" title="link 3">Link 3</a></li>
+			<li class="color6"><a href="#" title="link 4">Link 4</a></li>
+		</ul>
+		<div id="info" class="row">
+			<h2 class="color6">Einfache Grundregeln zum Floaten</h2>
+			<ol class="color6">
+				<li>Wird die Eigenschaft float mit dem Wert left oder right gesetzt, muss auch gecleart werden! Dies bedarf nicht immer zwingend der  Eigenschaft clear.</li>
+				<li>Bekommt ein Element die Eigenschaft float zugewiesen und der Wert ist nicht "none" so fallen die Elemente auf Ihren Inhalt zusammen.</li>
+				<li>Damit nachfolgendes Element daneben stehen kann muss vorheriges Element das sich in der gleichen Ebene befindet aus dem Fluss genommen werden!</li>
+				<li>Wenn Kinder die Eigenschaft float besitzen, muss kontrolliert werden das sich das Elternelement ordnungsgemäß ausdehent</li>
+				<li>Stoßen geflotete Elemente in der vertikalen aneinander so gibt es keine collapsing margins</li>
+				<li>Blockelemente die selbst keinen float besitzen orientieren sich am letzten vorangegangenen Element das sich noch im normalen Dokumentfluss befindet</li>
+				<li>Die Eigenschaft Clear beendet keinen vorangegangenen float! Sie stellt nur sicher das, daß Element welches die Eigenschaft clear besitzt sich an dem vorherigen float orientiert und selbst nicht mitfließt.  </li>
+			</ol>
+		</div>
+		<div class="row clear"><!-- hier steht before -->
+			<h3>Clear mit Pseudoelement</h3>
+			<p>Jedes Element, das kein Standalone-Element ist, kann 2 Pseudoelemente aufnehmen: <strong>:before</strong> und <strong>:after</strong>. Der einsatz der Pseudoelmente erfordert zwingend die Eigenschaft Content da mit diesen beiden Pseudoelementklassen nur eingefügte Inhalte angesprochen werden können.<br>
+			Bei den mit der Eigenschaft content eingefügten Inhalten handelt es sich immer um Inline-Inhalte. Der Clear an Elementen funktioniert immer nur an Blockelementen daher muss für das Pseudoelement die Darstellungseigenschaft geändert werden.
+			<code>
+			.clear, .clear:after{clear:both;}<br>
+			.clear:after{<br>
+			content:"";<br>
+			display:table;<br>
+			}
+			</code>
+			</p>
+			<h4>Wichtig!!! Der clear kann immer nur mit dem Pseudoelement :after funktionieren.</h4>
+			<div class="color1 col-4">
+			Spalte 1
+			</div>
+			<div class="color2 col-4">
+			Spalte 2
+			</div>
+			<div class="color3 col-4">
+			Spalte 3
+			</div>
+			<div class="color4 col-4">
+			Spalte 4
+			</div>
+		<!-- hier steht :after-->
+		</div>
+		
+		<div class="color5 col10em">
+			Spalte 5
+			
+		</div>
+		<div class="color6 col10em">
+		Spalte 6
+		
+		</div>
+		<!--<span style="clear:both;display:block;"></span>-->
+		<div class="row cfloat">
+			<h3>Clear am direkt darauf folgenden Element</h3>
+			<p> Die Class row mit dem Eigenschaft-Wert Paar<code>clear:both;</code> sorgt dafür das dieser Div sich an den beiden vorangegangenen Floats orientiert. </p>
+			<h3>durchgängiges Floaten</h3>
+			<p>Die 3 Div-Container, die auf diesen Textabsatz folgen, werden durch den die <strong>Containing float -Technik</strong> in Ihrem Elternelement gehalten. Dies bedeutet das das Elternelement selbst den Float aufweist und dadurch die Ausdehnung erfolgt. Sehen sie sich dazu die Klasse .cfloat an.
+			<code>.cfloat{float:left;width:98%;}</code>
+			Die Breitenangabe verhindert hierbei zusätzlich das zusammenfallen auf den Inhalt. 
+			</p> 
+			<div class="color1 col-3sp">
+			Spalte 1
+			</div>
+			<div class="color2 col-3sp">
+			Spalte 2
+			</div>
+			<div class="color3 col-3sp">
+			Spalte 3
+			</div>
+			<!--<span style="clear:both;display:block;"></span>-->
+		</div>
+		<div id="footer" class="row">
+			<h3>Float Clear Regeln</h3>
+		</div>
+	</body>
+</html>

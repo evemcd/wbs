@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP</title>
+</head>
+<body>
+    <h1>PHP - PHP HTML Preprocessor</h1>
+    <h2>Ein Formular</h2>
+
+    <form method="POST" action="13-auswertung.php">
+<input type="text" name="vn">
+<input type="submit" value="Wie lautet dein Vorname?">
+    </form>
+</body>
+</html>
+
+<!-- Dieses Beispiel zeigt die klassische Anwendung von PHP beim Auswerten eines Formulars.
+Das eigentliche Formular wird in HTML erstellt und muss für PHP genau drei Elemente in jedem Falle enthalten.
+1. Jedes Formularfeld ben¿tigt einen individuellen Wert für das Attribut name. Über diesen Wert wird der darin notierte oder ausgewählte Wert später ausgelesen.
+2. Das form-tag benötigt das Attribut method, um festzulegen, wie die Werte übertragen werden müssen. Hier kann man zwischen GET und POST wählen.
+3. Ebenfalls im form-tag wird mit action der Pfad zur auswertenden PHP-Datei bestimmt, die beim Absenden des Formulars aufgerufen wird. -->

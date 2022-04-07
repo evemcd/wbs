@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+  font-family: "Lucida Sans- Unicode", Helvetica, sans-serif;
+  background-color: #717581;
+  /* color: #efefef; */
+}
+
+.container {
+    margin: 0 auto;
+    width: 75%;
+}
+
+h1 {
+    text-align: center;
+    padding: 15px;
+}
+
+#jsonDaten h2 {
+    background-color: wheat;
+    color: brown;
+    padding: 5px;
+    border: 1px solid grey;
+}
+
+.mann {
+    background-color: #f8f9fa;
+}
+
+.frau {
+    background-color: #f8d6f0;
+}
+
+.float {
+    float: right;
+}
+
+.error {
+    color: red;
+}

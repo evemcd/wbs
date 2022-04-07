@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularaufbau -  Übung und Recherche</title>
+  <style>
+    div{margin-bottom:1em;}
+    label{min-width:120px;display:inline-block;}
+  </style>
+</head>
+<body>
+  <h1>Übung und Recherche Formularaufbau</h1>
+ 
+  <!-- Erstellen Sie ein Formular mit folgenden Eingabemöglichkeiten -->
+
+  <form method="GET" action="#" enctype="application/x-www-form-urlencoded">
+ 
+  <!-- Anredeauswahlmöglichkeit Herr/Frau -->
+  <div>
+    <label for="salutation">Anrede</label>
+    <select name="salutation" id="salutation">
+    <option value="nichts ausgewählt">-- bitte auswählen --</option>
+    <option>Herr</option>
+    <option>Frau</option>
+    </select>
+  </div>
+ <div>
+    <p>Alternative Auswahl mit Radiobuttons</p>
+     <input type="radio" value="Frau" name="anrede" id="frau">
+     <label for="frau">Frau</label>
+     <input type="radio" value="Herr" name="anrede" id="herr">
+     <label for="herr">Herr</label>
+ </div>
+  <!-- Nachname -->
+
+  <div>
+    <label for="nachname">Nachname</label>
+    <input type="text" name="nachname" id="nachname" placeholder="Nachname" required>
+</div>
+   
+  <!-- Straße -->
+
+  <div>
+      <label for="strasse">Straße</label>
+      <input type="text" name="strasse" id="strasse" placeholder="Straße">
+  </div>
+  
+  <!-- Hausnummer -->
+    <div>
+        <label for="nummer">Hausnummer</label>
+        <input type="number" name="nummer" id="nummer" placeholder="Hausnummer">
+    </div>
+  <!-- PLZ -->
+   <div>
+       <label for="plz">PLZ</label>
+       <input type="number" name="plz" id="plz" placeholder="PLZ">
+   </div>
+  <!-- Stadt -->
+ <div>
+     <label for="stadt">Stadt</label>
+     <input type="text" name="stadt" id="stadt" placeholder="Stadt">
+ </div>
+  <!-- Email -->
+    <div>
+        <label for="email">E-Mail</label>
+        <input type="email" name="email" id="email" placeholder="E-Mail">
+    </div>
+  <!-- Telefon -->
+ <div>
+     <label for="telefon">Telefonnummer</label>
+     <input type="tel" name="telefon" id="telefon" placeholder="Telefonnummer">
+ </div>
+  <!-- Textabsatz mit folgendem Inhalt: Wie dürfen wir mit Ihnen Kontakt aufnehmen? -->
+  <p>Wie dürfen wir mit Ihnen Kontakt aufnehmen?</p>
+  <!-- Auswahlmöglichkeit für folgende Werte: telefonisch , email, postalisch 
+        Es sollen mehrere Werte gleichzeitig auswählbar sein - Recherche type="checkbox" alternativ Element select 
+    --> 
+    <div>
+        <input type="checkbox" value="telefonisch" name="kontakt[]" id="telefonisch">
+        <label for="telefon1">anrufen</label>
+        <input type="checkbox" value="email1" name="kontakt[]" id="email1">
+        <label for="email1">E-Mail schreiben</label>
+        <input type="checkbox" value="postalisch" name="kontakt[]" id="postalisch">
+        <label for="post">per Post</label>
+        <input type="checkbox" value="rauch" name="kontakt[]" id="rauch">
+        <label for="rauch">Rauchzeichen</label>
+    </div>
+  <!-- mehrzeiliges Texteingabefeld - Recherche Element textarea -->
+  <div>
+    <label for="nachricht">Ihre Nachricht:</label>
+    <textarea name="nachricht" id="nachricht" cols="50" rows="10">Nachricht</textarea>
+</div>
+  <!-- Sendebutton -->
+  <input type="submit" value="Weg damit!">
+ </form>
+  <!-- 
+   Prüfen Sie ob alle Werte übermittelt werden! Dokumentieren/kommentieren Sie ggf. Ihre Lösungsschritte! 
+  -->
+</body>
+</html>

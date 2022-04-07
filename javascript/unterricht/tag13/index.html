@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <title>JS - Grundlagen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../bootstrap5/css/bootstrap.css">
+  <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.css">
+  <script src="index.js" async></script>
+</head>
+<body class="bg-dark">
+  <div class="container bg-secondary">
+      
+  <div class="row bg-primary">
+    <div class="col-12">
+      <form action="#" id="form1" class="col-md-6 my-5 bg-light p-2">
+        <div class="mb-1">
+          <input type="text" id="nachname" placeholder="Bitte Name eingeben" class="form-control" />
+        </div>
+  
+        <div class="mb-1">
+          <input type="text" id="vorname" placeholder="Bitte Vorname eingeben" class="form-control" />
+        </div>
+  
+        <div class="mb-1">
+          <input type="text" id="ort" placeholder="Bitte Wohnort eingeben" class="form-control" />
+        </div>
+  
+        <div class="mb-1">
+          <input type="text" id="str" placeholder="Bitte Straße eingeben" class="form-control" />
+        </div>
+  
+        <div class="mb-1">
+          <input type="text" id="plz" placeholder="Bitte PLZ eingeben" class="form-control" />
+        </div>
+  
+        <div class="mb-1">
+          <input type="text" id="mail" placeholder="Bitte E-Mail eingeben" class="form-control" />
+        </div>
+  
+        <div class="mb-1">
+          <select id="beruf" class="form-select">
+            <option>Bitte auswählen</option>
+            <option>Programmierer</option>
+            <option>Rentner</option>
+            <option>Manager</option>
+            <option>sonstiges</option>
+          </select>
+        </div>
+  
+        <div class="mb-1">
+          <button type="submit" class="btn btn-success w-100 fw-bolder py-3 fs-2">anmelden</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- +++++++++++++++++++++++++++++++++++++++++++ -->
+  <div class="row bg-light">
+    <div class="col-12">
+  
+      <form class="col-md-5 my-5 bg-warning p-2">
+        <div class="mb-1">
+          <input type="number" step="0.01" min="0.5" max="4" id="hoch" 
+                  class="form-control" placeholder="Wie Groß sind Sie?" />
+        </div>
+        <div class="mb-1">
+          <input type="number" step="0.01" min="10" max="1000" id="gewicht" 
+                  class="form-control" placeholder="Gewicht in kg" />
+        </div>
+        <div class="mb-1">
+          <button type="submit" id="bmi_rechner" class="btn btn-primary w-100 fw-bolder py-3">
+            BMI berechnen
+          </button>
+        </div>
+      </form>
+  
+      <div class="display-5 mb-3">
+        Dein BMI ist: <span id="result"> XXX </span>
+      </div>
+  
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  </div>
+  <noscript>
+    <p>Bitte JS einschalten</p>
+  </noscript>
+  
+  </body>
+  </html>
+  
+  

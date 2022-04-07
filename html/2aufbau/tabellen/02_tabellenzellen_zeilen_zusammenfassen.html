@@ -1,0 +1,98 @@
+<!doctype html> 
+<html lang="de">
+<head> 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>colspan und rowspan - Tabellen in HTML</title>
+<link rel="stylesheet" href="start.css">  
+<style>
+	table{
+		border:1px solid #000;
+		 border-spacing:0; 
+		/* border-collapse:separate; */
+
+	}
+	/* table{border-collapse:collapse;}
+	tr{border:1px solid #000;} */
+  th,td{border:1px solid #000;
+    vertical-align:top;
+  }
+  tr{height:50px;}
+  
+</style>
+</head>
+<body>
+<header>
+	<h1>zusammengefasste Zellen - Tabellenaufbau</h1> 
+</header>
+
+<section>
+  <h2>Zellen verbinden</h2>
+  <p>Wir können mehrere Zellen innerhalb einer Zeile verbinden, so das sich eine Spalte über mehrere Spalten hinweg erstreckt. Der Attributwert der bei <b>colspan</b> angegeben wird teilt die Anzahl der Spalten mit, über wie viel Spalten sich die Zelle selbst erstrecken soll.</p>	
+  <p>Wir können mehrere Zellen innerhalb einer Spalte verbinden, so das sich eine Spalte über mehrere Zeilen hinweg erstreckt. Der Attributwert der bei <b>rowspan</b> angegeben wird teilt die Anzahl der Zeilen mit, über wie viel Zeilen sich die Zelle selbst erstrecken soll.</p> 
+  <table>
+   <tr>
+     <td colspan="3">zelle 1</td>
+     <!-- <td>zelle 2</td>
+     <td>zelle 3</td> -->
+     <td>zelle 4</td>
+     <td>zelle 5</td>
+     <td rowspan="2">zelle 6</td>
+   </tr>
+   <tr>
+     <td>zelle 1</td>
+     <td colspan="4">zelle 2</td>
+     <!-- <td>zelle 3</td>
+     <td>zelle 4</td>
+     <td>zelle 5</td> -->
+     <!-- <td>zelle 6</td> -->
+   </tr>
+   <tr>
+     <td>zelle 1</td>
+     <td colspan="2" rowspan="2">zelle 2</td>
+     <!-- <td>zelle 3</td> -->
+     <td>zelle 4</td>
+     <td>zelle 5</td>
+     <td>zelle 6</td>
+   </tr>
+   <tr>
+     <td>zelle 1</td>
+     <!-- <td>zelle 2</td>
+     <td>zelle 3</td> -->
+     <td>zelle 4</td>
+     <td>zelle 5</td>
+     <td>zelle 6</td>
+   </tr>
+   <tr>
+     <td colspan="6" rowspan="2">zelle 1
+      <p>In diesem Beispiel besitzt die Zeile 6 keine Zellen, da diese Zelle sich über 6 Spalten und 2 Zeilen erstreckt. <br><mark>Validatoren sind nicht in der Lage die Wirkungsweise der Attribute von col- und rowspan zu interpretieren und erwarten in jeder Zeile wenigstens eine Spalte.</mark></p>
+     </td>
+     <!-- <td>zelle 2</td>
+     <td>zelle 3</td>
+     <td>zelle 4</td>
+     <td>zelle 5</td>
+     <td>zelle 6</td> -->
+   </tr>
+   <tr> 
+     <!-- <td>zelle 1</td>
+     <td>zelle 2</td>
+     <td>zelle 3</td>
+     <td>zelle 4</td>
+     <td>zelle 5</td>
+     <td>zelle 6</td> -->
+    </tr>
+   <tr>
+     <td>zelle 1</td>
+     <td>zelle 2</td>
+     <td>zelle 3</td>
+     <td>zelle 4</td>
+     <td>zelle 5</td>
+     <td>zelle 6</td>
+   </tr>
+  </table>
+
+</section>
+
+<footer>Tabellen in HTML</footer> 
+</body>
+</html>

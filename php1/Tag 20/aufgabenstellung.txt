@@ -1,0 +1,27 @@
+Aufgabenstellung Klausur Datenbank 11.10.2021
+===================================================
+
+Gemäß den Vorgaben der beiliegenden Textdatei soll mit phpMyAdmin 
+eine Datenbank mit Datentabelle erstellt werden.
+
+Für diese Datenbank sollen folgende PHP/HTML-Seiten erstellt werden:
+
+Eine Übersicht zur Anzeige aller Datensätze
+
+Eine Suche nach Titel
+Eine Suche nach Autor 
+Eine Suche nach Genre mit Select-Menue, das aus der Datenbank erzeugt wird
+
+Eine Seite zum Einfügen neuer Datensätze 
+
+Eine Möglichkeit, bestehende Datensätze zu ändern
+
+Eine Möglichkeit, Datensätze zu löschen
+
+
+BITTE DIE VORGEGEBENEN BEZEICHNUNGEN GENAU ÜBERNEHMEN!
+
+Nach Abschluss der Arbeit bitte die erstellten PHP-, HTML- und CSS.Dokumente
+in ein ZIP mit dem eigenen Namen packen und hochladen
+
+Viel Erfolg :)

@@ -1,0 +1,68 @@
+.box {
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+.box:nth-of-type(4n+1) {
+    background-color: green;
+}
+
+.box:nth-of-type(4n+2) {
+    background-color: blue;
+}
+
+.box:nth-of-type(4n+3) {
+    background-color: yellow;
+}
+
+.box:nth-of-type(4n+4) {
+    background-color: red;
+}
+
+.box .mehrInfo {
+    border-top: 1px solid grey;
+    padding-top: 3px;
+}
+
+.infoBG {
+    background-color: black;
+    margin: 200px 350px;
+}
+
+.slogan {
+    background-color: lightskyblue;
+    color: black;
+}
+
+.name {
+    border-bottom: 1px solid grey;
+    color: white;
+}
+
+.created {
+    background-color: rebeccapurple;
+    color: white;
+}
+
+.kurzeInfo {
+    color: white;
+}
+
+#overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.85);
+}
+
+#date {
+    font-size: 46px;
+    font-weight: bold;
+}
+
+span {
+    display: inline-block;
+}

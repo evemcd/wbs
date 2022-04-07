@@ -1,0 +1,70 @@
+Tags für anker-onePage.html
+
+HOW TO
+
+nav	für navigation
+	a mit href="#" (6x)
+
+h1	Greifvögel und Eulen
+
+------------------------------------------------------------------------
+h2	Jäger der Nacht	
+
+h3 (3x)	Europäischer Uhu
+
+figure
+img               eurasian-eagle-owl-1642795_450px.jpg
+figcaption
+
+p	mit Blindtext (ca. 300 Wörter)
+
+h3 	Schleiereule
+
+figure
+img          barn-owl-1107397_450px.jpg
+figcaption
+
+p	mit Blindtext (ca. 300 Wörter)
+
+h3 	Steinkauz
+Blau
+figure
+img           little-owl-5530167_450.jpg
+figcaption
+
+p	mit Blindtext (ca. 300 Wörter)
+--------------------------------------------------------------------
+
+h2	Könige der Lüfte
+
+h3 (3x)	Sakerfalke
+
+figure
+img                   saker-falcon-2532395_450px.jpg
+figcaption
+
+p	mit Blindtext (ca. 300 Wörter))
+
+h3 	Blaubussard
+
+figure
+img	aguja-3397321_450px.jpg
+figcaption
+
+p	mit Blindtext (ca. 300 Wörter)
+
+h3 	Weißkopfseeadler
+
+figure
+img                    seeadler_450px.jpg
+figcaption
+
+p	mit Blindtext (ca. 300 Wörter)
+
+
+
+
+
+
+
+

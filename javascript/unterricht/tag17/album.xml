@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<artists>
+    <artist name="George Michael">
+        <album>
+            <titel>Faith</titel>
+            <jahr>1987</jahr>
+        </album>
+        <album>
+            <titel>Older</titel>
+            <jahr>1995</jahr>
+        </album>
+        <album>
+            <titel>Patience</titel>
+            <jahr>2004</jahr>
+        </album>
+    </artist>
+
+    <artist name="Marianne Faithful">
+        <album>
+            <titel>Come My Way</titel>
+            <jahr>1965</jahr>
+        </album>
+        <album>
+            <titel>Broken English</titel>
+            <jahr>1979</jahr>
+        </album>
+        <album>
+            <titel>Strange Weather</titel>
+            <jahr>1987</jahr>
+        </album>
+        <album>
+            <titel>Kissing Time</titel>
+            <jahr>2002</jahr>
+        </album>
+        <album>
+            <titel>Easy Come, Easy Go</titel>
+            <jahr>2008</jahr>
+        </album>
+    </artist>
+</artists>

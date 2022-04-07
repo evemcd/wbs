@@ -1,0 +1,45 @@
+.img1 {
+    width: 250px;
+    margin-right: 20px;
+    border-radius: 5px;
+    float: left;
+}
+
+.img2 {
+    width: 250px;
+    margin-left: 20px;
+    border-radius: 5px;
+    float: right;
+}
+
+p {
+    padding: 10px;
+}
+
+.clear:after {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+@media screen and (max-width: 768px) {
+    .img1 {
+        width: 150px;
+        margin: 0 20px 10px 20px;
+        float: none;
+    }
+
+    .img2 {
+        width: 150px;
+        margin: 0 20px 10px 20px;
+        float: none;
+    }
+
+    .img3 {
+        flex-wrap: wrap;
+    }
+
+    p {
+        padding: 0 10px;
+    }
+}

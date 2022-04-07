@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de" class="bg1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--https://materializecss.com/icons.html-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/media.css"> -->
+  <title>runter kommen Sie alle :)</title>
+
+  <style>
+    @media screen and (max-width:930px){
+     header+.navigation li{
+        float:none;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <h3><a href="index.html">FlügeFinden24</a></h3>
+  </header>
+
+  <nav class="navigation">
+    <a href="#open" class="open" id="open">menü</a>
+    <a href="#" class="close">close</a>
+    <ul class="clear show">
+      <li><a href="#" class="active">Startseite</a></li>
+      <li><a href="#">Angebote</a></li>
+      <li><a href="#">Last Minute</a></li>
+      <li><a href="#">Konto<span class="material-icons" aria-hidden="true">person</span></a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <div class="content">
+
+    <form class="search" action="https://www.google.de/search?">
+      <label for="search">Suche</label>
+      <!-- name=q - damit Google den übergebenen Parameter  auch als Suchanfrage (querystring) verarbeitet  -->
+      <input type="search" name="q" id="search" value="" placeholder="suche" pattern="^[\D]|[\d]{1,}$"
+      >
+      <span class="material-icons" aria-hidden="true">search</span>
+    </form>
+  </div>
+  
+  <footer>
+    <nav class="navigation">
+      <ul class="clear">
+        <li><a href="#" class="active">Über Uns</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">Impressum</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>

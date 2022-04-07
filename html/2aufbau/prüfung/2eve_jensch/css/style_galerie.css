@@ -1,0 +1,13 @@
+.galerie {
+    max-width: 1300px;
+    margin: 0 auto 20px auto;
+    overflow-x: scroll;
+    display: flex;
+}
+
+.galerie img {
+    height: 250px;
+    width: auto;
+    margin-right: 5px;
+    border-radius: 3px;
+}

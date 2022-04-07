@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="de">   
+	<head> 
+		<meta charset="utf-8">   
+		<title>clearen mit Overflow - Floats und Clear</title>
+		<link rel="stylesheet" href="start.css">   
+		<style>    
+		.box1{  
+		background:#ffc;
+		border:1px solid purple;  
+		width:200px;
+		height:200px;
+		float:left;
+		}
+        
+		/* Stoßen Elemente mit der Eigenschaft float in der vertikalen an weitere Elemente die vertikale Außenabstände  aufweisen, so fallen die Außenabstände in der vertikalen nicht mehr zusammen sondern Sie addieren sich. Das Standardverhalten der zusammenfallenden Außenabstände (collapsing margins) ist somit nicht mehr gegeben */
+		.box2{
+		background:#ccc;
+		border:1px solid #333;
+		width:400px;
+		height:300px;
+		float:left;
+		}
+		
+		li{
+		background:#ccc;
+		border:1px solid #666;
+		float:right;
+		}
+		ul{
+		overflow:hidden;
+		}
+		
+		section{
+		/* Durch die Wirkungsweise bzw. die Standardfunktionalität, Elemente am letzten Inhalt oder an vorgegebener Höhe abzuschneiden "fängt" overflow die Inhalte wieder ein. Dies erzwingt ein ausdehnen des Elements und damit auch den Clear des floats.  Es wird primär verwendet um Listen zu clearen oder für Tricktechniken (gleichlange Spalten). Das Clearen mit Overflow kann dazu führen das Schatten und Texte abgeschnitten werden oder mit dem Pseudoelement :after eingefügte Bereiche nicht sichtbar sind. Hat das Element noch zusätzlich die Eigenschaft position mit einem Wert der nicht static ist, oder prozentuale Breiten, ist der clear mit Overflow besonders in älteren Browsern unzuverlässig. */
+		overflow:auto;
+		}
+		</style>
+	</head>
+	<body>
+		<header><!--Kopfbereich - Seitenkopf-->
+			<h1>Floats in HTML</h1>
+		</header>
+
+		<section><!-- Seitenabschnitt/Seitenbereich - Hauptinhaltsbereich -->
+			<h2>Overflow zum clearen</h2>
+			
+			<p class="box1">Box 1</p>
+			
+			<p class="box2">Box-2</p>
+			<!--<span style="clear:both;display:block; background:red;color:yellow;" title="Wenn der Clear an dieser Stelle funktioniert hat prüfe ob in der gleichen Ebene ein Element direkt folgt an dem du clearen kannst oder ob unmittelbar nach dieser Zeile ein umschließender Container geschlossen wird der ggf. mitgefloatet werden kann bzw. mit einem Pseudoelement gecleart werden kann. Teste die alternative Cleartechnik und entferne diese Zeile!">Testzeile - zum probieren wo gecleart werden muss</span>-->
+			<p style="clear:both">Erklärung: Beide Boxen mit Float nebeneinander gestellt - clearen mit Overflow</p>
+			<ul>
+				<li>Listenpunkt 1</li> 
+				<li>Listenpunkt 2</li>
+				<li>Listenpunkt 3</li>
+				<!-- hier muss der Clear hin -->
+			</ul>
+			<!-- clearen am nachfolgenden Element -->
+		</section>
+		<footer><!-- Fußbereich - Seitenfuß/Fußzeile -->
+			Float und Clear
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+PHP - Klausur 27.09.2021
+===================================================================
+
+Thema "Burger-Bestellung"
+
+
+Für das Burger-Restaurant "BIG KAHUNA BURGER" soll eine Online-Bestellseite
+gebaut werden. Dabei wählt der User in einem Formular seinen Basis-Burger, 
+dazu dann eventuelle Extras und eine Side-Order.
+
+Er gibt seinen Namen, seine Adresse und Telefonnummer an 
+und legt fest, wie er bezahlen will.
+
+Die Auswertungsseite in PHP nennt ihm seine Auswahl, seine gewählten Zutaten
+und die gewünschte Side-Order. Dazu wird dann der Gesamtpreis ausgegeben.
+Der Gesamtpreis soll mittels Funktion auf deutsch formatiert sein.
+
+Außerdem bestätigt die Seite Namen, Adresse, Telefonnummer und 
+die ausgewählte Bezahlmethode.
+
+Zum Schluss wird der Zeitpunkt der Bestellung in der Seite ausgegeben.
+
+Vorgaben Basis-Burger:
+Premium Beef  6 €
+Wagyu Beef 10 €
+Chickenbreast 7 €
+Portobello Vegan 5 €
+
+Vorgaben optionale Extras:
+Cheddar-Cheese 1 €
+Bacon 2 €
+Onion-Rings 1.5 €
+Ananas 1.5 €
+Hot Salsa 2 €
+Gewürzgurken 1.5 €
+Jalapeno 1.5 €
+
+Vorgaben Side-Orders:
+French Fries 0 €
+Sweet-Potato-Fries 1 €
+Vegetable Fries 2 €
+
+Bezahl-Methoden:
+Bar bei Lieferung
+Kreditkarte
+PayPal
+
+Bitte alle verwendeten und erstellten Dateien in einem Ordner sammeln,
+diesem Ordner den eigenen Namen geben und nach Abschluss der Arbeit zippen 
+und hochladen.
+
+
+Viel Erfolg :)

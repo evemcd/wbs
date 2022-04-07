@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="uebung12.js" async></script>
+    <style>
+        h2 {
+            background-color: darkgreen;
+            color: white;
+        }
+
+        .split50 div {
+            display: flex;
+        }
+
+        #uhr {
+            background-color: palegoldenrod;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Kursteilnahme</h2>
+        <div id="kursHalil"></div>
+    </div>
+
+    <div>
+        <h2>Alle Teilnehmer der Kurse</h2>
+        <div id="teilnehmer"></div>
+    </div>
+
+    <div class="split50">
+        <h2>Alle Teilnehmer der Kurse übersichtlich darstellen</h2>
+        <div id="alleTeilnehmer1"></div>
+        <div id="alleTeilnehmer2"></div>
+    </div>
+
+    <div>
+        <h2 id="rechnerElement">Rechner</h2>
+        <div id="rechner"></div>
+    </div>
+
+    <div id="uhr"></div>
+
+    <div>
+        <h2>Anmeldung</h2>
+        <div id="anmeldung">
+            <form action="">
+                <input type="text" id="nn" placeholder="Nachname"><br>
+                <input type="text" id="vn" placeholder="Vorname"><br>
+                <input type="submit" id="submit" value="mich verbindlich anmelden">
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <h2>Erdkunde</h2>
+        <div>
+            <p>Wie heißt die Hauptstadt von Weißrussland?</p>
+            <form>
+                <input type="text" id="answer"><br>
+                <input type="submit" id="submitQuiz" value="Antwort schicken">
+            </form>
+            <div id="erdkunde"></div>
+        </div>
+    </div>
+
+    <div>
+        <h2>Impressionen</h2>
+        <div id="impressionen"></div>
+    </div>
+    
+
+</body>
+
+</html>

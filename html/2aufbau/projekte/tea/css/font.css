@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "BellMT";
+    src:local('BellMT');
+    src:url("/projekte/tea/fonts/BellMT.eot") format("embedded-opentype"),
+    url("/projekte/tea/fonts/BellMT.otf") format("opentype"),
+    url("/projekte/tea/fonts/BellMT.svg") format("svg"),
+    url("/projekte/tea/fonts/BellMT.ttf") format("truetype"),
+    url("/projekte/tea/fonts/BellMT.woff") format("woff"),
+    url("/projekte/tea/fonts/BellMT.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal; 
+  }

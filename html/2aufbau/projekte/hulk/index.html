@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Credible Hulk</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+
+        }
+
+        .wrapper {
+            border: 1px solid #13885c;
+            width: 1000px;
+            margin: 0 auto;
+            box-shadow: 5px 5px 5px black;
+        }
+
+        header {
+            background-color: #13885c;
+            position: relative;
+        }
+
+        .logo {
+            display: block;
+        }
+
+        .hulk {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            height: 280px;
+            width: auto;
+            z-index: 1;
+        }
+
+        .headerText {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 200px;
+            z-index: 2;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .white1, .white2, .white3 {
+            color: white;
+        }
+
+        .white1 {
+            margin-bottom: -25px;
+            margin-top: 35px;
+        }
+
+        .white1::first-letter {
+            font-size: 1.5em;
+        }
+
+        .white2 {
+            font-size: 2em;
+            display: inline-block;
+        }
+
+        .white2::first-letter {
+            font-size: 1.5em;
+        }
+
+        .black {
+            display: inline-block;
+            color: black;
+            font-size: 2em;
+            width: 190px;
+            line-height: 1em;
+            padding-left: 30px;
+        }
+
+        .black::first-letter {
+            font-size: 1.5em;
+        }
+
+        .white3 {
+            padding-left: 70px;
+        }
+
+        .headerText p:nth-child(1) {
+            font-size: 1em;
+        }
+
+        .headerText p:nth-child(2) {
+            font-size: 2em;
+        }
+
+        .headerText p:nth-child(3) {
+            font-size: 1em;
+        }
+
+        /*Navigation*/
+
+        nav {
+            background-color: #13885c;
+            border-top: 3px solid black;
+            border-bottom: 3px solid black;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            margin-block-start: 0;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        nav li {
+            list-style: none;
+            margin: 0;
+            padding: 15px 20px;
+            border-right: 1px solid black;
+        }
+
+        .active {
+            background-color: white;
+        }
+
+        .active a {
+            color: #13885c;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+        }
+
+        /*Main*/
+
+        .abschnitt1 {
+            border-bottom: 1px solid black;
+            display: flex;
+            flex-direction: row;
+        }K
+
+        figure {
+            width: 55%;
+            padding: 35px;
+            margin: 0;
+        }
+
+        figure img {
+            width: 100%;
+            height: auto;
+        }
+
+        article {
+            padding: 40px;
+        }
+
+        .article1 {
+            width: 40%;
+            padding: 50px 50px 50px 0px;
+        }
+
+        h1 {
+            color: #13885c;
+        }
+
+        p {
+            font-size: 0.9em;
+        }
+
+        span {
+            color: #13885c;
+            font-weight: 600;
+        }
+
+        .abschnitt2 {
+            display: flex;
+            border-top: 1px solid black;
+            border-bottom: 2px solid black;
+        }
+
+        .article2 {
+            flex-grow: 1;
+        }
+
+        .greenBottom {
+            background-color: #13885c;
+            height: 3em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="index.html">
+                <img class="logo" src="/hulk/img/credible_hulk_comment_your_code.jpg" alt="Hulk Kopf">
+            </a>
+            <div class="headerText">
+                <p class="white1">The</p>
+                <p><div class="black">credible</div><div class="white2"> Hulk</div></p>
+                <p class="white3">always cites his sources</p>
+            </div>
+            <img class="hulk" src="img/hulk.png" alt="Hulk">
+        </header>
+        <nav>
+            <ul>
+                <li class="active">
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Witze</a>
+                </li>
+                <li>
+                    <a href="#">Bilder</a>
+                </li>
+                <li>
+                    <a href="#">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div class="abschnitt1">
+                <figure>
+                    <img src="img/programmierer.jpg" alt="Comic mit zwei Bildern"
+                        title="Selbstmordversuche bei Programmierern, mit dem Messer am Handgelenk. Jetzt muss ich erst einmal die Schnittstellen definieren, oder ich mach es doch besser Online.">
+                </figure>
+                <article class="article1">
+                    <h1>Suizidale Programmierer</h1>
+                    <p>Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben
+                        die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines
+                        großen Sprachozeans.
+                        Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen
+                        Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund
+                        fliegen. Nicht
+                        einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu
+                        unorthographisches Leben... <br>
+                        <span>mehr lesen</span>
+                    </p>
+                </article>
+            </div>
+            <div class="abschnitt2">
+                <article class="article2">
+                    <h1>Der kleine Blindtext</h1>
+                    <p>Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die
+                        Blindtexte.
+                        Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans.
+                        Ein
+                        kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen
+                        Regelialien.
+                        Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht
+                        einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu
+                        unorthographisches Leben. Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name war
+                        Lorem
+                        Ipsum, hinaus zu gehen in die weite Grammatik. Der große Oxmox riet ihr davon ab, da es dort
+                        wimmele
+                        von bösen Kommata, wilden Fragezeichen und hinterhältigen Semikoli, doch das Blindtextchen ließ
+                        sich
+                        nicht beirren... <br>
+                        <span>mehr lesen</span>
+                    </p>
+                </article>
+                <article class="article2">
+                    <h1>Der kleine Blindtext</h1>
+                    <p>Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die
+                        Blindtexte.
+                        Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans.
+                        Ein
+                        kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen
+                        Regelialien.
+                        Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht
+                        einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu
+                        unorthographisches Leben. Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name war
+                        Lorem
+                        Ipsum, hinaus zu gehen in die weite Grammatik. Der große Oxmox riet ihr davon ab, da es dort
+                        wimmele
+                        von bösen Kommata, wilden Fragezeichen und hinterhältigen Semikoli, doch das Blindtextchen ließ
+                        sich
+                        nicht beirren... <br>
+                        <span>mehr lesen</span>
+                    </p>
+                </article>
+            </div>
+            <div class="greenBottom">
+
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+
+</html>

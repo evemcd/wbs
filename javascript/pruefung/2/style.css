@@ -1,0 +1,53 @@
+.container1 {
+    width: 70%;
+    margin: 0 auto;
+    background-color: lightgrey;
+}
+
+.container2 {
+    width: 70%;
+    margin: 0 auto;
+    background-color: rgb(0, 238, 255);
+}
+
+.box {
+    width: 40%;
+    margin: auto;
+}
+
+.motto {
+    background-color: rgb(252, 173, 173);
+    color: red;
+    margin: 10px 0 0 0;
+    padding: 8px;
+    border-radius: 5px 5px 0 0;
+    border: red solid 1px;
+}
+
+.name {
+    background-color: rgb(134, 187, 134);
+    color: green;
+    margin: 0;
+    padding: 8px;
+    border: green solid 1px;
+}
+
+.geburtstag {
+    background-color: white;
+    margin: 0;
+    padding: 8px;
+    border-bottom: lightgrey solid 1px;
+}
+
+.info {
+    background-color: white;
+    margin: 0 0 10px 0;
+    padding: 8px;
+    border-radius: 0 0 5px 5px;
+}
+
+form {
+    background-color: rgb(166, 249, 255);
+    width: 40%;
+    margin: auto;
+}

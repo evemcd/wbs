@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularaufbau -  Übung und Recherche</title>
+  <style>
+    div{margin-bottom:1em;}
+    label{min-width:120px;display:inline-block;}
+
+    /* [name="plz"]{width:5ch;} */
+  </style>
+</head>
+<body>
+  <h1>Übung und Recherche Formularaufbau</h1>
+
+  <!-- Erstellen Sie ein Formular mit folgenden Eingabemöglichkeiten -->
+  <form method="POST" action="#" enctype="multipart/form-data">
+    <input type="password" name="password">
+  <!--
+    enctype="application/www-form-x-urlencoded" - Standard
+    - übermittlung mit URL-Encoding (Prozent-Kodierung)
+    Beispiel:
+    Leerzeichen (whitespace) =  %20
+    & = %26
+    @ = %40
+    
+    https://www.w3schools.com/tags/ref_urlencode.ASP
+
+    enctype="text/plain" - übermittlung ohne URL-Encoding
+    
+    enctype="multipart/form-data" - muss verwendet werden wenn Binärdaten übermittelt werden sollen zwingend notwendig wenn <input type="file"> verwendet wird . Ein Url-encoding findet ebenso statt.
+    Sollen Binaärdaten übermittelt werden muss ebenso die Übermittlungsmethode auf Post geändert werden.
+    -->
+    <!--
+    Zur Formularübermittlung stehen uns standardmäßig zwei Methoden zur Verfügung. Geben wir keine Methode an gilt die Übermittlungsmethode get
+    
+    Übermittlungsmethoden:
+    
+    method="GET" = zu übermittelnde Informationen werden an die Aufrufadresse angehängt. Die Daten sind somit sichtbar und manipulierbar. Sie hat eine maximale Zeichenbegrenzung von ca. 2000 Zeichen.
+    
+    method="POST" = Übermittlung in einer speziellen "post-anfrage"  im Dokument-header(Protokoll). Die Postanfrage ist nicht sichtbar, Sie hat keine Zeichenbegrenzung und ermöglicht es die Datenübertragungsart frei zu wählen (Text oder binär).
+    -->
+    
+    <!-- action=""
+    Das Attribut action teilt mit wohin die Informationen Übermittelt werden sollen.
+    Bsp.: action="mailto:mail@domainname.tld" - übergit die Informationen an den MTA - MailTransferAgent (Emailclient) und dieser kann dann zum versenden verwendet werden.
+    
+    Auf webservern werden dafür Programmiersprachen verwendet z.B. Perl oder php und im action-Attribut wir dann der Pfad zum Formular-verarbeitenden Script angegeben z.B. action="inc/mail.php" , action="cgi-bin/mail.cgi" usw.
+    -->
+   
+    <!--
+    enctype="application/www-form-x-urlencoded" - Standard
+    - übermittlung mit URL-Encoding (Prozent-Kodierung)
+    Beispiel:
+    Leerzeichen (whitespace) = + oder %20
+    & = %26
+    @ = %40
+    
+    https://www.w3schools.com/tags/ref_urlencode.ASP
+
+    enctype="text/plain" - übermittlung ohne URL-Encoding
+    
+    enctype="multipart/form-data" - muss verwendet werden wenn Binärdaten übermittelt werden sollen zwingend notwendig wenn <input type="file"> verwendet wird . Ein Url-encoding findet ebenso statt.
+    Sollen Binaärdaten übermittelt werden muss ebenso die Übermittlungsmethode auf Post geändert werden.
+    -->
+  <!-- Anredeauswahlmöglichkeit Herr/Frau -->
+    <div>
+      <label for="salutation">Anrede</label>
+      <select name="salutation" id="salutation">
+        <option value="nichts ausgewählt">-- bitte auswählen --</option>
+        <option>Herr</option>
+        <option>Frau</option>
+      </select>
+    </div>
+    <div>
+      <p>Alternative Auswahl mit Radiobuttons</p>
+      <input type="radio" name="salutation1" value="Frau" id="frau">
+      <label for="frau">Frau</label>
+      <input type="radio" name="salutation1" value="Herr" id="herr">
+      <label for="herr">Herr</label>
+    </div>
+
+    <!-- Nachname -->
+    <div>
+      <label for="nachname">Nachname:</label>
+      <input name="nachname" id="nachname">
+    </div>
+    
+    <!-- Straße -->
+    <div>
+      <label for="street">Straße:</label>
+      <input name="street" id="street" >
+    </div>
+   
+    <!-- Hausnummer -->
+    <div>		
+      <label for="streetnr">Hausnummer:</label>
+      <input name="streetnr" id="streetnr">
+    </div>  
+    
+    <!-- PLZ -->
+    <div>
+      <label for="plz">PLZ:</label> 
+      <input name="plz" id="plz" pattern="[\d]{5}">
+     <!-- Erzwingt Ziffernblock und validiert auf Zahlen  - pattern="[0-9]"-->
+      
+      <!-- Beispiel Pattern Postleitzahl -->
+      <!-- [0-9][0-9][0-9][0-9][0-9] 
+      [0-9]{5}
+      -->
+      
+      <!-- Beispiel einfaches Datum -->
+      <!--[\d][\d][.][\d][\d][.][\d][\d][\d][\d]-->
+      
+      <!--
+       Zeichen bei Regulären ausdrücken
+       \ = entwertet/maskiert/escaped ein Zeichen so das dieses nicht als Text interpretiert wird
+       d = any digit / Ziffer
+       D = not digit / keine Ziffer
+       s = Leerzeichen
+       ^ = beginnt mit
+       $ = ende
+       | = or / logisches oder
+       -->
+    </div>   
+    <!-- Stadt -->
+    <div>		
+      <label for="city">Stadt:</label>
+      <input name="city" id="city">
+     </div>
+    <!-- Email -->
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" size="25">
+      <!-- a@a-->
+     <!-- bla@localhost
+      @123-->
+     <!-- Der input type="email" ist ein neuer HTML5 type. Ältere Browser , ohne HTML5 Unterstützung verwenden automatisch type="text". Man spricht hierbei von der graceful degradation (Abwärtskompatibilität). -->
+      
+     <!-- In modernen Browsern findet eine Emailvalidierung statt (ein oder mehrere Zeichen)@(ein oder mehrere Zeichen) diese kann nur hinzufügen des Attributes pattern="RegEx" mit Regulären Ausdrücken als Attributwert überschrieben werden.
+
+    Mailadressen sollten nie zu detailiert geprüft werden. Andernfalls passiert es sehr leicht das Nutzergruppen schnell ausgeschlossen werden. Halten Sie sich dafür an den RFC822 (http://www.ietf.org/rfc/rfc0822.txt) , die standardmäßige Browservalidierung entspricht diesem!
+    Für den Mailversand selbst ist der Messagestandard nach RFC5322
+      (http://www.ietf.org/rfc/rfc5322.txt) zu beachten.
+    -->
+    </div>    
+    <!-- Telefon -->
+    <div>
+      <label for="tel">Telefon:</label>
+      <input type="tel" id="tel" name="tel">
+    </div>
+    <!-- +49 (0) 30 1234-13 -->
+    <!-- Textabsatz mit folgendem Inhalt: Wie dürfen wir mit Ihnen Kontakt aufnehmen? -->
+    <!-- Auswahlmöglichkeit für folgende Werte: telefonisch , email, postalisch 
+    Es sollen mehrere Werte gleichzeitig auswählbar sein - Recherche type="checkbox" alternativ Element select 
+    -->
+    <div>
+      <p>Wie dürfen wir mit Ihnen Kontakt aufnehmen?</p>
+      <input type="checkbox" name="contactme[]" value="telefonisch" id="telefonisch">
+      <label for="telefonisch">Telefon</label>
+      <input type="checkbox" name="contactme[]" value="email" id="c-email" checked>
+      <label for="c-email">Email</label>
+      <input type="checkbox" name="contactme[]" value="postalisch" id="postalisch">
+      <label for="postalisch">Brief</label>
+    </div>
+    <div>
+      <label for="contactme2">Alternative Kontaktaufnahmemöglichkeit</label>
+      <select name="contactme2" id="contactme2" multiple size="3">
+        <option value="email" selected>Email</option>
+        <option value="telefonisch">Telefon</option>
+        <option value="postalisch">Brief</option>
+      </select>
+    </div>       
+    
+    <!-- mehrzeiliges Texteingabefeld - Recherche Element textarea -->
+    <div>  
+      <label for="message">Ihre Nachricht:</label>
+      <textarea name="message" id="message" cols="50" rows="10">voreingestellter Wert - wird Übermittelt</textarea>
+    </div>   
+    <!-- Sendebutton -->
+    <input type="submit" value="senden">
+    <input type="image" alt="senden" src="kein_bild.jpg">
+    <!--type="image" erlaubt es direkt Bilder zu verwenden . Hierbei gelten die selben Regeln wie für den Image-Tag.
+    Der Type image übermittelt Standardmäßig 2 Parameter X und Y auch wenn selbst kein name gesetzt wurde.
+    Wird name gesetzt Bsp. name="img" entstehen ebenso 2 Parameter 
+    (img-x= und img-y) diese enthalten die Koordinaten des Mausklicks  ausgehend von der Linken oberen Ecke des Elementes.
+    -->
+    <button type="submit">absenden</button>
+    <!-- Bei dem <button>Element wird der value Wert übermittelt, Das button Element sowie der input type="button" werden häufig in Kombination mit Javascript genutzt (Formularverarbeitung mittels AJAX-Technik)-->
+    <!-- <input type="reset" > -->
+  </form>
+  <!-- 
+   Prüfen Sie ob alle Werte übermittelt werden! Dokumentieren/kommentieren Sie ggf. Ihre Lösungsschritte! 
+  -->
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Float Boxen 1</title>
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+.cont0 {
+    width: 800px;
+    min-height: 50px;
+    background-color: green;
+    border: 3px solid red;
+}
+
+.box1 {
+    width: 200px;
+    height: 100px;
+    background-color: grey;
+    border:3px solid red;
+}
+
+.box2 {
+    width: 200px;
+    height: 100px;
+    background-color: grey;
+    border:3px solid red;
+}
+
+.box3 {
+    width: 200px;
+    height: 100px;
+    background-color: grey;
+    border:3px solid red;
+}
+
+div {
+    float: left;
+    margin: 30px;
+}
+
+    </style>
+</head>    
+
+<body>
+
+    <div class="cont0">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+    <div style="float: none; clear: both;"></div>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemente mit CSS gestalten</title>
+<style>
+    body {
+        max-width: 800px;
+        margin: auto;
+        background-color: aliceblue;
+        font-family: verdana, sans-serif;
+        font-size: 18px;
+    }
+    
+    h1 {
+        color: red;
+        text-align: center;
+    }
+    
+    figure {
+        border: solid 0.5px;
+        text-align: center;
+        margin: 0
+    }
+    
+    figcaption {
+        font-size: 12px;
+        font-style: italic
+    }
+    
+    
+    </style>
+    
+</head>
+
+<body>
+    <h1>Elemente mit CSS gestalten</h1>
+    <p> Mit CSS wird das Aussehen vorhandener Elemente genauer bestimmt. Es gibt keine tags, aber Attribute. Hinter dem Attributnamen folgt ein : und danach ein Wert.<br>
+        Damit der Interpreter die Umschaltung auf CSS versteht, gibt es mehrere Möglichkeiten. Eine davon ist, im head-Bereich des HTML-Dokuments ein style-Attribut einzufügen. </p>
+    <figure> <img src="cssDeklaration.png" alt="Abbildung der CSS-Regel">
+        <figcaption>Ein CSS-Attribut: die Eigenschaft Farbe mit Wert für p-Elemente (Absätze)</figcaption>
+    </figure>
+
+    <h3>Die Grundfrage bei CSS-Angaben ist immer: wie sage ich dem Element, dass es gemeint ist?</h3>
+    <p>Das Element muss irgendwie angesprochen werden, das macht man über Selektoren. Es gibt fünf Gruppen von Selektoren. Der einfachste davon ist der <span style="color:crimson;">Element-Selektor</span>, er bezieht sich direkt auf ein oder mehrere HTML-Elemente.
+    </p>
+    <p>In diesem Beispiel sprechen wir den body an, die h1, figure und figcapture. Die Eigenschaften werden von einer <span style="color:crimson;">geschweiften Klammer</span> umschlossen. Mehrere Eigenschaften für ein Element werden mit einem Semikolon getrennt.</p>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boxen</title>
+<style>
+    * {
+        border: solid 1px black;
+    }
+    
+    body {
+        margin: 0;
+    }
+    
+    #box1 {
+        width: 300px;
+        height: 200px;
+        background-color: aqua;
+        padding: 20px;
+        margin: 0 0 30px 0;
+    }
+    
+/*     eine ID darf nur einmal im html angesprochen werden, wird angesprochen mit # und Namen. */
+    
+    p {
+        margin: 20px 50px;
+    }
+    
+    h2 {
+        display: inline;
+        margin-right: 30px;
+        padding: 5px;
+    }
+    
+/*    mit display: inline wird die h2 ein freundliches Element und alle h2 rutschen nebeneinander  */
+      
+    .platzda {
+        width: 200px;
+        height: 200px;
+        background-color: coral;
+        float: left;
+    }
+    
+/*    eine Klasse wird angesprochen mit . und Klassennamen. Eine Klasse kann fuer viele Elemente eingesetzt werden*/
+    
+    .clear {
+        clear: both;
+    }
+      
+      </style>
+</head>
+
+<body>
+
+    <div id="box1">
+        <p>Hallo, ich bin der Inhalt der Box 1 und versuche mich hier anzupassen..</p>
+    </div>
+
+    <h1>Jedes HTML-Element ist eine Box</h1>
+    <p>Jedes HTML-Element besitzt Ausmaße: Breite (width), Höhe (height), Innenabstand (padding), Rahmen (border) und einen Abstand nach Außen (margin). Diese sind schon im Browserstylesheet vordefiniert, können aber verändert werden.</p>
+
+    <div>
+        <h2>Andrea</h2>
+        <h2>Lea</h2>
+        <h2>Felix</h2>
+    </div>
+    <p>Jedes Element (mit wenigen Außnahmen) beansprucht eine komplette Zeile im Browser für sich und lässt kein weiteres Element neben sich zu. Dies ist geregelt mit der Eigenschaft display (Wie erscheine ich). Der Wert block (Ganze Browserbreite) ist standardmäßig für viele HTML-Elemente im Browser-Style- Sheet gesetzt. Mit dem Wert inline kann man Elemente nebeneinander bekommen.</p>
+
+    <div>
+        <div class="platzda">
+            <h3>Jörg</h3>
+        </div>
+        <div class="platzda">
+            <h3>Heike</h3>
+        </div>
+        <div class="platzda">
+            <h3>Inga</h3>
+        </div>
+        <div class="clear">mit float werden die Container nebeneinander gesetzt. dib Heike sieht div Joerg nicht und rutscht darum hoeher. Der nachfolgende Container bekommt die Eigenschaft clear: both. Damit wird das floaten aufgehoben.</div>
+
+    </div>
+
+</body></html>

@@ -1,0 +1,29 @@
+{
+	"bilder": [
+		{
+			"bild": "images/hamburg.jpg",
+			"titel": "Hamburg Binnenalster"
+		},
+		{
+			"bild": "images/helgoland.jpg",
+			"titel": "Helgoland - lange Anna"
+		},
+		{
+			"bild": "images/istanbul.jpg",
+			"titel": "Istanbul Hagia Sophia"
+		},
+		{
+			"bild": "images/marrrakesch.jpg",
+			"titel": "Über die Dächern von Marrakesch"
+		},
+		{
+			"bild": "images/rio.jpg",
+			"titel": "Blick über Rio"
+		},
+		{
+			"bild": "images/rotterdam.jpg",
+			"titel": "Rotterdam - eine unterschätzte Stadt"
+		}
+
+	]
+}

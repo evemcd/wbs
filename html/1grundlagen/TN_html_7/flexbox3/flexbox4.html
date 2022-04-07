@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox 3</title>
+    <style>
+        /*
+        * {
+            border: solid 1px black;
+        }
+*/
+
+        body {
+            font-family: sans-serif
+        }
+
+        .flexcontainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 70em;
+            margin: 0 auto;
+        }
+
+        .flexitems {
+            width: 100%;
+            padding: 16px;
+            text-align: center;
+            border: dotted 1px black
+        }
+
+        .versalien {
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 0.8rem;
+            line-height: 1.4rem;
+        }
+
+        .rund {
+            border-radius: 50%;
+            width: 130px;
+            height: auto;
+        }
+        
+        .eckig {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lalala</h1>
+    <section class="flexcontainer">
+        <div class="flexitems">
+            <figure>
+                <img src="img/erdman2_300px.jpg" class="rund">
+            </figure>
+            <h2 class="versalien">MARKETING</h2>
+            <p>Professionelle Beratung und Umsetzung von erfolgreichen Online- und Offline-Marketing-Kampagnen und langfristige Projektbetreuung durch erfahrene Marketing-Experten.</p>
+        </div>
+        
+        <div class="flexitems">
+            <figure>
+                <img src="img/korallenfisch.jpg" class="rund">
+            </figure>
+            <h2 class="versalien">SOCIAL MEDIA</h2>
+            <p>YouTube, Facebook und Co. stehen im Fokus unserer Social-Media-Marketing-Beratung sowie die Optimierung, die Betreuung und der Aufbau von Social-Media-Kanälen.</p>
+        </div>
+        
+        <div class="flexitems">
+            <figure>
+                <img src="img/loewe_300px.jpg" class="rund">
+            </figure>
+            <h2 class="versalien">WORKSHOPS</h2>
+            <p>Workshops und Schulungen für Ihre Mitarbeiter durch Online-Profis mit jahrelanger Praxiserfahrung. Gerne bedienen wir Ihre aktuellen &amp; individuellen Ansprüche.</p>
+        </div>
+        
+        <div class="flexitems">
+            <figure>
+                <img src="img/zebra_300px.jpg" class="rund">
+            </figure>
+            <h2 class="versalien">WERBUNG</h2>
+            <p>Effektive und schnelle Reichweitensteigerung sorgt für Aufmerksamkeit. Dabei stehen Effizienz &amp; Qualität bei geringen Kosten im Vordergrund.</p>
+        </div>
+    </section>
+
+    <section class="flexcontainer">
+        <div class="flexitems">
+            <h2>Ich bin die Flexbox A</h2>
+            <p>Hier steht ein total schöner Kommentar als Kundenmeinung</p>
+            <figure>
+                <img src="img/PICT0066.jpg" class="eckig">
+            </figure>
+        </div>
+        
+        <div class="flexitems">
+            <h2>Ich bin die Flexbox B</h2>
+            <p>Hier steht ein total schöner Kommentar als Kundenmeinung</p>
+            <figure>
+                <img src="img/PICT0024.jpg" class="eckig">
+            </figure>
+        </div>
+    </section>
+
+
+
+</body></html>
+

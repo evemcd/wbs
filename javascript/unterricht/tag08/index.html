@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS - Grundlagen</title>
+    <link rel="stylesheet" href="../bootstrap-4.6.0/css/bootstrap.css">
+    <script src="index.js" async></script> <!-- erst Seite laden, dann JS ausgeben-->
+</head>
+
+<body class="bg-dark">
+    <div class="container bg-secondary">
+
+        <div class="row bg-light pb-3">
+            <div class="col-12">
+                <h2>Anzahl klicks: <span id="wert">0</span></h2>
+                <button id="btnHoch" class="btn btn-success">Klick!</button>
+                <button id="btnReset" class="btn btn-danger">Reset!</button>
+
+            </div>
+        </div>
+
+        <div class="row bg-secondary py-5">
+            <div class="col-12">
+                <span id="msg"></span>
+                <form class="w-50" action="#" method="POST" id="form">
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="nachname" placeholder="Name eingeben" />
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="vorname" placeholder="Vorame eingeben" />
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="email" placeholder="Email eingeben" required />
+                    </div>
+                    <button type="submit" class="btn btn-success w-100 mb-2">Absenden</button>
+                    <button type="reset" class="btn btn-danger w-100">Löschen</button>
+                </form>
+            </div>
+        </div>
+
+
+
+        <div class="row bg-light">
+            <div class="col-12">
+                <h1>
+                    <a href="#box3">design follows function</a>
+                </h1>
+
+                <h2 class="bunt" id="datum">21.10.2021</h2>
+                <a href="mailto:test@test.de" id="mail">Schreiben Sie mir eine Email</a>
+            </div>
+        </div>
+
+        <div class="row bg-warning">
+            <div class="col-12">
+                <p class=" box"">
+                    Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout
+                    nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext.
+                    Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich
+                    mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen
+                    werden. Und weil Sie nun schon die Güte haben, mich ein paar weitere Sätze lang zu begleiten, möchte
+                    ich diese Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller zu dienen, sondern auf etwas
+                    hinzuweisen, das es ebenso verdient wahrgenommen zu werden: Webstandards nämlich. Sehen Sie,
+                    Webstandards sind das Regelwerk, auf dem Webseiten aufbauen. So gibt es Regeln für HTML, CSS,
+                    JavaScript oder auch XML; Worte, die Sie vielleicht schon einmal von Ihrem Entwickler gehört haben.
+                    Diese Standards sorgen dafür, dass alle Beteiligten aus einer Webseite den größten Nutzen ziehen. Im
+                    Gegensatz zu früheren Webseiten müssen wir zum Beispiel nicht mehr zwei verschiedene Webseiten für
+                    den Internet Explorer und einen anderen Browser programmieren.
+                </p>
+                <p class=" box"">
+                    Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout
+                    nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext.
+                    Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich
+                    mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen
+                    werden. Und weil Sie nun schon die Güte haben, mich ein paar weitere Sätze lang zu begleiten, möchte
+                    ich diese Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller zu dienen, sondern auf etwas
+                    hinzuweisen, das es ebenso verdient wahrgenommen zu werden: Webstandards nämlich. Sehen Sie,
+                    Webstandards sind das Regelwerk, auf dem Webseiten aufbauen. So gibt es Regeln für HTML, CSS,
+                    JavaScript oder auch XML; Worte, die Sie vielleicht schon einmal von Ihrem Entwickler gehört haben.
+                    Diese Standards sorgen dafür, dass alle Beteiligten aus einer Webseite den größten Nutzen ziehen. Im
+                    Gegensatz zu früheren Webseiten müssen wir zum Beispiel nicht mehr zwei verschiedene Webseiten für
+                    den Internet Explorer und einen anderen Browser programmieren.
+                </p>
+                <p class="box" id="box3">
+                    Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout
+                    nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext.
+                    Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich
+                    mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen
+                    werden. Und weil Sie nun schon die Güte haben, mich ein paar weitere Sätze lang zu begleiten, möchte
+                    ich diese Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller zu dienen, sondern auf etwas
+                    hinzuweisen, das es ebenso verdient wahrgenommen zu werden: Webstandards nämlich. Sehen Sie,
+                    Webstandards sind das Regelwerk, auf dem Webseiten aufbauen. So gibt es Regeln für HTML, CSS,
+                    JavaScript oder auch XML; Worte, die Sie vielleicht schon einmal von Ihrem Entwickler gehört haben.
+                    Diese Standards sorgen dafür, dass alle Beteiligten aus einer Webseite den größten Nutzen ziehen. Im
+                    Gegensatz zu früheren Webseiten müssen wir zum Beispiel nicht mehr zwei verschiedene Webseiten für
+                    den Internet Explorer und einen anderen Browser programmieren.
+                </p>
+            </div>
+        </div>
+
+        <noscript>
+            <p>Bitte JS einschalten</p>
+        </noscript>
+
+
+    </div>
+</body>
+
+</html>

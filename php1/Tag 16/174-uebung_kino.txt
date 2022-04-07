@@ -1,0 +1,23 @@
+Übung Kino
+
+
+Datenbank kino
+
+Datentabelle filme
+
+titel
+otitel
+dauer
+jahr
+regie
+musik
+genre
+id
+
+Dafür folgende Seiten erstellen:
+
+gesamzübersicht
+
+suche nach titel, nach regie oder nach genre(mit select)
+
+seiten zum einfügen, ändern und löschen

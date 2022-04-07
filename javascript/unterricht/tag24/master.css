@@ -1,0 +1,31 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.kreis {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background-color: #dc3545;
+}
+
+#accordion .ui-accordion-header-active {
+	background-color: #ffc107;
+	border-color: #ffc107;
+	color: #333;
+	font-weight: bold;
+}
+
+#accordion .ui-accordion-content-active {
+	background-color: rgba(255,193,7,0.6);
+}
+
+.ui-tooltip.bunt {
+	background-color: rgba(220,53,69,0.6);
+}
+
+.ui-menu {
+	width: 200px;
+}

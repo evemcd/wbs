@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PHP</title>
+<meta charset="utf-8">
+
+</head>
+<body>
+<h1>BIG KAHUNA BURGER</h1>
+
+<form action="115-klausur_auswertung.php" method="POST">
+
+<p><select name="basis">
+	<option value="b1">Premium Beef  6 €</option>
+	<option value="b2">Wagyu Beef 10 €</option>
+	<option value="b3">Chickenbreast 7 €</option>
+	<option value="b4">Portobello Vegan 5 €</option>
+</select> Deine Burger-Basis</p>
+
+<p>Deine Toppings:</p>
+<input type="checkbox" name="cc"> Cheddar-Cheese 1 €<br>
+<input type="checkbox" name="bc"> Bacon 2 €<br>
+<input type="checkbox" name="or"> Onion-Rings 1.5 €<br>
+<input type="checkbox" name="an"> Ananas 1.5 €<br>
+<input type="checkbox" name="hs"> Hot Salsa 2 €<br>
+<input type="checkbox" name="gg"> Gewürzgurken 1.5 €<br>
+<input type="checkbox" name="jp"> Jalapeno 1.5 €<br>
+
+<p><select name="side">
+	<option value="s1">French-Fries 0 €</option>
+	<option value="s2">Sweet-Potato-Fries 1 €</option>
+	<option value="s3">Vegetable Fries 2 €</option>
+</select> Deine Side-Order</p>
+
+
+<p>Deine Daten:</p>
+<input type="text" name="nm"> Dein Name<br>
+<input type="text" name="ad"> Deine Adresse<br>
+<input type="text" name="tl"> Deine Telefonnummer<br>
+
+<p>Du bezahlst:</p>
+<input type="radio" name="bez" value="bar" checked> Bar bei Lieferung<br>
+<input type="radio" name="bez" value="pp"> via PayPal<br>
+<input type="radio" name="bez" value="kk"> mit Kreditkarte<br>
+
+<p><input type="submit"><input type="reset"></p>
+
+</form>
+
+</body>
+</html>

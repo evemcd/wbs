@@ -1,0 +1,401 @@
+<!doctype html>  
+<html lang="de">  
+<head>  
+<meta charset="utf-8"> 
+<title>Pseudoelemente :before und :after</title>   
+<link rel="stylesheet" href="start.css"> 
+<style>    
+div{
+background:#ffc;
+border:1px solid #666;
+min-height:4em;
+}
+div p{
+padding:1.5em;
+background:#ccc;
+}
+
+div:before,div:after{
+background:#f00;
+color:#fff;
+}
+div:before{
+content:":before steht unmittelbar hinter dem öffnenden Tag";
+}
+div:after{
+content:":after steht unmittelbar vor dem schließenden Tag";
+}
+
+/* Bildbeschreibung */
+figcaption:after{
+content:" " attr(title);
+}
+/* Verweise kennzeichnen */
+[title~="google"]:after{
+	content:attr(href);
+}
+[href*="utf8"]:after{
+content:attr(data-name);
+}
+
+[href^="http://"]:before,[href^="https://"]:before,[href^="//"]:before{
+content:"\00a0";/* geschützter Leerschlag (&nbsp;)*/
+background:url(img/http_sm.png) no-repeat center;
+/*width:23px;*/
+padding-left:26px;
+height:22px;
+display:inline-block;
+text-decoration:none;
+}
+
+[href^="http://"]:hover, [href^="https://"]:hover, [href^="//"]:hover{
+color:#fc0;
+}
+/*----------------------------------------------------*/
+/*verschiedene Anführungszeichen*/
+/*
+" 	\0022
+' 	\0027
+« 	\00AB
+» 	\00BB
+‘ 	\2018
+’ 	\2019
+“ 	\201C
+” 	\201D
+„ 	\201E
+‹ 	\2039
+› 	\203A
+
+*/
+/*----------------------------------------------------*/
+/* interne Verweise*/
+/*a:not([href^="http://"]){
+color:red;
+}*/
+[href$=".html"]:before{
+content:"\00BB" " ";
+}
+[href$=".html"]{
+color:#080;
+border-bottom:double 3px #080;
+text-decoration:none;
+}
+
+a[href$=".html"]:hover{
+border-color:#8CE445;
+color:#8CE445;
+}
+/*----------------------------------------------------*/
+/*Liste Unterstützter Dateiformate 
+
+.pdf 	PDF-Datei
+.doc 	Word-Datei
+.pps 	PowerPoint-Datei
+.xls 	Excel-Datei
+.rtf, .rtfd, .txt 	Generelle Textdateien
+.jpg, .jpeg, .png, .bmp, .gif, .svg, .tiff, .tif 	Generelle Bilddateien
+.mov, .avi, .mp4, .wmv 	Generelle Videodateien
+.mp3, .m4a, .wav, .wma 	Generelle Audiodateien
+.psd 	Photoshop-Datei
+.zip, .tar, .rar 	Komprimierte Archive
+.vcf 	vCard Datei (Adresskarte)
+.cal 	Kalenderdatei*/
+/*----------------------------------------------------*/
+/* Pdf Verweis - Call2Action*/
+[href$=".pdf"]{
+margin:2em 0;
+width:14em;
+min-height:2.5em;
+display:block;
+background:#f60;
+padding:0.3em 0.3em 0.3em 0;
+color:#333;
+text-decoration:none;
+font-size:1.2em;
+border-radius:0.3em;
+border:outset 4px #f60;
+background:-moz-linear-gradient(top,#ffc, #f60);
+background:linear-gradient(to top,#ffc, #f60);
+overflow:hidden;
+}
+[href$=".pdf"]:hover{
+background:#dfff97;
+background:-moz-linear-gradient(top,#fff, #dfff97);
+background:linear-gradient(to top,#fff, #dfff97);
+border-color:#dfff97;
+}
+
+[href$=".pdf"]:before{
+content:url(img/pdf_icon.png);
+margin:10px;
+float:left;
+}
+[href$=".pdf"]:after{
+content:attr(title);
+font-size:0.8em;
+color:#7A0608;
+display:block;
+}
+
+
+/* Simulierte Formen */
+.article{
+padding:0em 1em 1.5em;
+margin-top:2em;
+border:1px solid #333;
+/* Relative setzen damit sich position absolute von innenliegenden Kindern darauf beziehen kann */
+position:relative;
+}
+
+.important{
+background:#ffc;
+height:2em;
+text-align:center;
+line-height:2em;
+width:70%;
+position:absolute;
+top:-18px;
+left:2em;
+box-shadow:1px 2px 3px #444;
+margin:0;
+color:#fff;
+}
+.important+*{
+margin-top:2em;
+}
+
+.important:before{
+content:"";
+border-bottom:18px solid;
+/*Aufrechte Rahmenseite mit transparenten Farbwert sorgt dafür das in den Schnittpunkten der Rahmenecke eine diagonale entsteht, dies führt zur optischen Darstellung des Dreiecks*/
+border-left:16px solid transparent;
+position:absolute;
+top:0;
+left:-16px;
+}
+.important:after{
+content:"";
+border-bottom:18px solid;
+border-right:16px solid transparent;
+position:absolute;
+top:0;
+right:-16px;
+}
+.farbe{
+background:rgb(65,87,192);
+}
+.farbe:before,.farbe:after{
+border-bottom-color:rgb(37,34,187);
+}
+
+/* Beispiel Rahmen*/
+.border p{margin:1.5em;}
+.border span{border:20px solid;
+	border-left-color:green;
+	border-right-color:blue;
+	border-top-color:red;
+	border-bottom-color:yellow;
+}
+.border .trapez{
+border:20px solid;
+border-left-color:green;
+border-right-color:transparent;
+border-top-color:transparent;
+border-bottom-color:transparent;
+height:20px;
+float:left;
+}
+.border .dreieck{border:20px solid;
+border-left:none;
+border-right-color:blue;
+border-top:none;
+border-bottom-color:transparent;
+height:0;
+float:left;
+display:block;
+}
+.border .dreieck1{border:20px solid;
+border-left-color:transparent;
+border-right-color:transparent;
+border-top:none;
+border-bottom-color:yellow;
+height:0;
+float:left;
+display:block;
+}
+.border code{clear:both;display:block;}
+
+
+/* Zitate und Anführungszeichen */
+blockquote{
+background:#f9f9f9;
+border:10px solid #ccc;
+margin:1.5em 10px;
+padding:0.5em 10px;
+quotes:"\201C""\201D""\2018""\2019"; /* open-quote, close-quote, no-open-quote, no-close-quote */
+}
+blockquote p:before{
+content:open-quote;
+font-size:6em;
+line-height:0.1em;
+vertical-align:-0.4em;
+color:#ccc;
+margin-right:0.2em;
+}
+blockquote p:after{
+content:close-quote;
+font-size:6em;
+line-height:0.1em;
+color:#ccc;
+vertical-align:-0.6em;
+margin-left:0.2em;
+}
+</style>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</head>
+<body>
+<header>
+<h1>Pseudoelemente :before und :after</h1>
+</header>
+<section>
+<h2>Einsatzmöglichkeiten</h2>
+<div>
+
+	<p>Ich bin ein Absatz</p>
+</div>
+<pre class="prettyprint linenums=40"><code>
+&lt;!-- Die Pseudoklassen :before und :after 
+funktionieren nicht mit leeren Tags! --&gt;
+&lt;!-- zum Beispiel --&gt;
+&lt;img&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;!--Zur Verdeutlichung folgendes Beispiel--&gt;
+
+div:after {	content:&quot;ich stehe unten&quot;;}
+div:before {content:&quot;ich stehe oben&quot;;}
+
+&lt;div&gt;
+&lt;!--Hier steht der Inhalt von :before--&gt;
+&lt;p&gt;Ich bin ein Textabsatz&lt;/p&gt;
+&lt;!--und hier Inhalt von :after --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<figure><!-- Container für Medieninhalte -->
+<img src="img/fliessen.jpg" alt="fliessendes Wasser">
+<figcaption title="fliessendes Wasser">Der Titel lautet:</figcaption> <!-- Überschrift für figure -->
+</figure>
+
+<p>Ausgabe eines am Element angegebenen Attributwertes:<br>
+<code>
+figcaption:after{<br>
+content:" " attr(title);<br>
+}<br>
+</code>
+</p>
+
+<hr> 
+<p>Externe Verweise gesondert formatieren:<br>
+<code>
+[href^="http://"]:before,[href^="https://"]:before,[href^="//"]:before{<br>
+content:"\00a0";/* geschützter Leerschlag (&nbsp;)*/<br>
+background:url(img/http_sm.png) no-repeat center;<br>
+padding-left:26px;<br>
+height:22px;<br>
+display:inline-block;<br>
+text-decoration:none;<br>
+}<br>
+/* Zustände beim berühren mit der Maus */<br>
+[href^="http://"]:hover, [href^="https://"]:hover, [href^="//"]:hover{<br>
+color:#fc0;<br>
+}
+</code>
+</p>
+<a href="http://www.google.de" title="mit google suchen"></a>
+<a href="index.html" title="ein interner Link">Startseite eines Web-Projektes</a>
+<a href="http://www.utf8-zeichentabelle.de" title="Unicode Zeichentabelle" data-name="schau dich an Zeichen schlau"></a>
+<p>interne Verweise gesondert Formatieren:<br>
+<code>
+/* Zeichen voranstellen */<br>
+[href$=".html"]:before{<br>
+content:"\00BB" " ";<br>
+}<br>
+/* Nur anker ansprechen die im Href Attribut auf HTML enden */<br>
+[href$=".html"]{<br>
+color:#080;<br>
+border-bottom:double 3px #080;<br>
+text-decoration:none;<br>
+}<br>
+/* Zustände beim berühren mit der Maus */<br>
+a[href$=".html"]:hover{<br>
+border-color:#8CE445;<br>
+color:#8CE445;<br>
+}
+</code>
+</p>
+<h3> Call2Action - Elementdarstellung mit nur einem Anker </h3>
+<a href="Werbung_im_Internet.pdf" title=" PDF herunterladen">Werbung im Internet</a>
+
+<article class="article border"><!-- semantisches div -  eigenständiger Inhaltsbereich -->
+
+<h3 class="important farbe">wichtige Überschrift</h3>
+<p>Stoßen eine vertikale und horizontale Rahmenseite mit unterschiedlichen Farben an einander so bildet sich eine diagonale Schnittkante.</p>
+
+<span></span>
+<br>
+<code>
+<br><br>
+span{<br>border:20px solid;<br>
+border-left-color:green;<br>
+border-right-color:blue;<br>
+border-top-color:red;<br>
+border-bottom-color:yellow;<br>
+}
+</code>
+
+<p>Dies können wir nutzen um Polygone mit CSS zu erstellen. Das Element benötigt dabei keine Breite oder Höhe. Die Rahmenbreite von zwei aneinanderstoßenden Seiten oder  gegenüberliegende gibt dabei die Größe vor.Wird eine der Beiden Seiten dabei transparent gesetzt ergibt sich die Ausrichtung des Trapezes.</p>
+<span class="trapez"></span><span class="dreieck"></span><span class="dreieck1"></span>
+
+<code>
+/* Definitionen vom Vorherigen span werden überschrieben*/<br>
+.trapez{<br>
+border-left-color:green;<br>
+border-right-color:transparent;<br>
+border-top-color:transparent;<br>
+border-bottom-color:transparent;<br>
+height:20px;<br>
+float:left;<br>
+}<br>
+.dreieck{<br>border:20px solid;<br>
+border-left:none;<br>
+border-right-color:blue;<br>
+border-top:none;<br>
+border-bottom-color:transparent;<br>
+height:0;<br>
+float:left;<br>
+display:block;<br>
+}<br>
+.dreieck1{<br>border:20px solid;<br>
+border-left-color:transparent;<br>
+border-right-color:transparent;<br>
+border-top:none;<br>
+border-bottom-color:yellow;<br>
+height:0;<br>
+float:left;<br>
+display:block;<br>
+}
+</code>
+</article> 
+
+<blockquote><p>Dieser Absatz enthält interne Links und externe Links.<br>
+Die <a href="internerlink.html" title="Interne Seiten">Internen</a> Links werden automatisch anders Formatiert als die Links zu <a href="http://de.selfhtml.org/" title="SelfHtml"> externen</a> Seiten. Für diese Formatierungen benötigen wir kein Extra-Markup. Uns reichen hierbei die Möglichkeiten der <a href="pseudoelemente_counter.html" title="CSS-Eigenschaften counter-inkrement und counter-reset">automatisches durchnummerieren mit CSS-Counters</a>. Die Pseudoelemente :before und :after ermöglichen uns mittels der CSS-Eigenschaft content: - Inhalte (Grafiken, Texte, Counter) zu generieren. Und diesen am Anfang oder Ende des jeweiligen Tags auszugeben. Am häufigsten werden :before und :after verwendet: mit generiertem content, zum Clearen von Floats oder aber um um Grafiken oder Zeichen, am Anfang und Ende eines Zitates hinzuzufügen.</p>
+</blockquote>
+</section>
+<footer>
+Einsatz von Pseudoelementen
+</footer> 
+
+</body>
+</html>
+

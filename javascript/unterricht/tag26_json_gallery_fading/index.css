@@ -1,0 +1,109 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+  font-family: "Lucida Sans- Unicode", Helvetica, sans-serif;
+  background-color: #717581;
+}
+
+.box {
+	padding: 1rem;
+}
+
+
+#jsonDaten {
+  position:relative;
+	width: 100%;
+	margin: 0 auto;
+  background-image: linear-gradient(45deg,rgba(0,0,0,0.9),rgba(153,153,153,0.5)), url(../images/hamburg-elphi.jpg);
+
+}
+
+#jsonDaten img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#jsonDaten p {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+}
+
+#jsonDaten div {
+  display: none;
+}
+
+@media screen and (max-width: 576px),  screen and (min-width: 576px) {
+  #jsonDaten {
+    max-width:360px;
+    height: 165px;
+  }
+}
+
+@media (min-width: 768px) {
+  #jsonDaten {
+    max-width:460px;
+    height: 215px;
+  }
+}
+
+@media (min-width: 992px) {
+  #jsonDaten {
+    max-width:650px;
+		height:300px;
+  }
+}
+
+/*navigation
+++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.navi ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+.navi ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  color: #ccc;
+}
+
+.navi ul li {
+  min-width: 120px;
+}
+
+#navi1 li a {
+  background: #fff url(../images/navi.gif) repeat-x top;
+  line-height: 10px;
+}
+
+#navi1 li span {
+  display: block;
+  padding: 15px 0;
+  line-height: 10px;
+  color: #efefef;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  background: #fff url(../images/navi.gif) repeat-x bottom;
+}
+
+#navi1 li {
+  height: 40px;
+  overflow: hidden;
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>fluides adaptives responsives Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="start.css">
+    <style>
+        article {
+            float: left;
+            width: 22%;
+            margin: 0.5%;
+            padding: 1%;
+            border: 0;
+            box-shadow: 0 0 2px #000;
+            min-width: 220px;
+        }
+
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        @media screen and (max-width: 1080px){
+            #a1,#a4 {
+                width: 97%;
+            }
+
+            article {
+                width: 47%;
+            }
+        }
+
+        /* @media screen and (max-width: 1300px) and (min-width: 800px){
+            
+        } */
+
+        @media screen and (max-width: 480px){
+            article {
+                width: 97%;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            article, #a1, #a2, #a3, #a4 { /*Spezifität beachten da #a1 und #a4 ja schon angesprochen sind mit ID also kommt man mit Selektor ansprechen nicht weit.*/
+                width: 47%;
+            }
+        }
+    </style>
+    <script src="width_height.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>fluides adaptives responsives Layout</h1>
+    </header>
+    <section>
+        <h2>Seitenbereich</h2>
+
+        <article id="a1">
+            <h2>Inhalt 1</h2>
+            <p> Das <strong>&lt;article&gt;</strong> Element dient zur Einteilung von Inhalten in Sinnabschnitte, unter
+                anderem in Blogbeiträgen. Der Unterschied zum <strong>&lt;section&gt; </strong> Element <br>ist der,
+                dass die Inhalte für sich alleine stehen. Es sind sozusagen isolierte Beiträge wie eben in Blog-Posts
+                oder Inhalte in Websites. Dies bedeutet das ein oder mehrere <strong>&lt;article&gt;</strong> Elemente
+                in themenbezogenen <strong>&lt;section&gt;</strong> Elementen optimal platziert sind.</p>
+        </article>
+        <article id="a2">
+            <h2>Inhalt 2</h2>
+            <p>Das <strong>&lt;section&gt;</strong> Element dient zur Unterteilung von Inhalten nach wirklich
+                inhaltlichen Gesichtspunkten. Dieses Element stellt eine klare Trennung zwischen Abschnitten dar die
+                inhaltlich gegeben ist. Elemente die Designzwecken dienen, werden in ein <strong>&lt;div&gt; </strong>
+                Tag gesetzt, da sie kein inhaltliches Kriterium darstellen. Das <strong>&lt;section&gt;</strong> Element
+                wird nur dort eingesetzt wo ein inhaltlicher Umbruch besteht.</p>
+        </article>
+        <article id="a3">
+            <h2>Inhalt 3</h2>
+            <p>Das <strong>&lt;article&gt;</strong> Element dient zur Einteilung von Inhalten in Sinnabschnitte, unter
+                anderem in Blogbeiträgen. Der Unterschied zum <strong>&lt;section&gt; </strong> Element ist der, dass
+                die Inhalte für sich alleine stehen. Es sind sozusagen isolierte Beiträge wie eben in Blog-Posts oder
+                Inhalte in Websites. Dies bedeutet das ein oder mehrere <strong>&lt;article&gt;</strong> Elemente in
+                themenbezogenen <strong>&lt;section&gt;</strong> Elementen optimal platziert sind.</p>
+        </article>
+        <article id="a4">
+            <h2>Inhalt 4</h2>
+            <p>Das <strong>&lt;section&gt;</strong> Element dient zur Unterteilung von Inhalten nach wirklich
+                inhaltlichen Gesichtspunkten. Dieses Element stellt eine klare Trennung zwischen Abschnitten dar die
+                inhaltlich gegeben ist. Elemente die Designzwecken dienen, werden in ein <strong>&lt;div&gt; </strong>
+                Tag gesetzt, da sie kein inhaltliches Kriterium darstellen. Das <strong>&lt;section&gt;</strong> Element
+                wird nur dort eingesetzt wo ein inhaltlicher Umbruch besteht.</p>
+        </article>
+
+    </section>
+
+    <footer>fluides adaptives flex Layout</footer>
+</body>
+
+</html>

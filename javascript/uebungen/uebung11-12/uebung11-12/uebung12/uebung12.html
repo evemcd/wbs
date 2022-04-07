@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de"> 
+<head>
+	<title>js</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="master.css" />
+	<script src="uebung12_klausur_uebung.js" async></script>
+</head>
+<body>
+<div id="wraper">
+<!---->
+<h2>Kursteilnahme</h2>
+<div id="box1"></div>
+
+<h2>Alle Teilnehmer der Kurse</h2>
+<div id="box2"></div>
+
+<h2>Teilnehmer der Kurse übersichtlich darstellen</h2>
+<div id="box3">
+	<div id="box3-1"></div>
+	<div id="box3-2"></div>
+</div>
+
+
+<h2 id="rechner1">Rechner</h2>
+
+<div id="result1" class="daten"></div>
+
+<div id="datum"></div>
+
+<h2>Anmeldung</h2>
+<form action="index.php" method="post" id="form1" class="form">
+	<input type="text" id="nachname" placeholder="Nachname eingeben" />
+	<input type="text" id="vorname" placeholder="Vorname eingeben" />
+	<input type="submit" value="mich verbindlich anmelden" />
+</form>
+
+
+<h2>Erdkunde</h2>
+<!--formular erdkunde++++++++++++++-->
+<form action="index.php" method="post" id="form2" class="form">
+	<fieldset> 
+		<legend>Wie heisst die Hauptstadt von Weißrussland?</legend>
+		<p> <input type="text" id="stadt" /> </p>
+		<p> <input type="submit" value="Anwort schicken" /> </p>
+	</fieldset>
+</form>
+<div id="result2"></div>
+<!--+++++++++++++++++++++++++++++++-->
+<h2>Impressionen</h2>
+<div id="result3"></div>
+
+
+</div><!--ende wrapper-->
+</body>
+</html>

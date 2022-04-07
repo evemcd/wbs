@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --colorRed: #cd3333;
+            --colorWhite: #fff;
+        }
+
+        html {
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body {
+            background: url(/projekte/flug_vorlage/flug/img/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrapper {
+            position: relative;
+            height: 100vh;
+        }
+
+        nav {
+            position: relative;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--colorWhite);
+            font-size: 1.5em;
+            font-weight: 100;
+        }
+
+        .active {
+            background-color: var(--colorWhite);
+        } 
+
+        .active a {
+            color: var(--colorRed);
+        }
+
+        nav li:hover,
+        nav li:focus-within {
+            background-color: #af3131;
+        }
+
+        .active:hover,
+        .active:focus-within {
+            background-color: rgb(223, 222, 222);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li img {
+            height: 1.5em;
+            float: left;
+            padding: 0
+        }
+
+        li img:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .logo {
+            background-color: var(--colorWhite);
+            color: var(--colorRed);
+            text-align: center;
+            border-radius: 50px;
+        }
+
+        footer li {
+            flex-grow: 1;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: var(--colorRed);
+        }
+
+        @media screen and (min-width: 1430px) {
+            nav {
+                background-color: var(--colorRed);
+                margin-top: 49px;
+            }
+
+            ul {
+                display: flex;
+                padding-left: 30%;
+            }
+
+            nav li {
+                flex-grow: 1;
+                padding: 10px;
+            }
+
+            .logo {
+                font-size: 3em;
+                width: 20%;
+                font-style: italic;
+                padding: 10px;
+                z-index: 1;
+                position: absolute;
+                top: -12px;
+                left: 1.5em;
+            }
+
+            .search {
+                padding: 10px;
+                border: 2px solid var(--colorRed);
+                border-radius: 50px;
+                position: absolute;
+                bottom: 15em;
+                right: 6em;
+                width: 20%;
+                background-color: white;
+                display: flex;
+            }
+
+            input {
+                border: none;
+                width: 93%;
+                font-size: 1em;
+                padding-left: 10px;
+            }
+
+            footer {
+                display: block;
+                width: 100%;
+                background-color: var(--colorWhite);
+                position: absolute;
+                bottom: 0;
+            }
+
+            footer ul {
+                padding-left: 65%;
+            }
+        }
+
+        @media screen and (max-width: 1429px) and (min-width: 1024px) {
+
+            body {
+                background-position: center;
+            }
+
+            nav {
+                margin-top: 49px;
+                background-color: var(--colorRed);
+            }
+
+            ul {
+                display: flex;
+                padding-left: 30%;
+            }
+
+            nav li {
+                flex-grow: 1;
+                padding: 10px;
+
+            }
+
+            .logo {
+                font-size: 2.3em;
+                width: 23%;
+                height: 3.5rem;
+                font-style: italic;
+                padding: 10px;
+                z-index: 1;
+                position: absolute;
+                top: -12px;
+                left: 0.5em;
+            }
+
+            .search {
+                padding: 10px;
+                border: 2px solid var(--colorRed);
+                border-radius: 50px;
+                position: absolute;
+                bottom: 10em;
+                right: 5em;
+                width: 20%;
+                background-color: white;
+                display: flex;
+            }
+
+            input {
+                border: none;
+                width: 93%;
+                font-size: 1em;
+                padding-left: 10px;
+            }
+
+            footer {
+                display: block;
+                width: 100%;
+                background-color: var(--colorWhite);
+                position: absolute;
+                bottom: 0;
+            }
+
+            footer ul {
+                padding-left: 65%;
+            }
+        }
+
+        @media screen and (max-width: 1023px) and (min-width: 768px) {
+
+            body {
+                background-position: center;
+            }
+
+            nav {
+                margin-top: 49px;
+                background-color: var(--colorRed);
+            }
+
+            ul {
+                display: flex;
+                padding-left: 28%;
+            }
+
+            nav li {
+                flex-grow: 1;
+                padding: 10px;
+
+            }
+
+            .logo {
+                font-size: 1.8em;
+                width: 23%;
+                height: 3.5rem;
+                font-style: italic;
+                padding: 25px 5px 5px 5px;
+                z-index: 1;
+                position: absolute;
+                top: -12px;
+                left: 0.5em;
+            }
+
+            .search {
+                padding: 10px;
+                border: 2px solid var(--colorRed);
+                border-radius: 50px;
+                position: absolute;
+                bottom: 10em;
+                right: 5em;
+                width: 20%;
+                background-color: white;
+                display: flex;
+            }
+
+            input {
+                border: none;
+                width: 93%;
+                font-size: 1em;
+                padding-left: 10px;
+            }
+
+            footer {
+                display: block;
+                width: 100%;
+                background-color: var(--colorWhite);
+                position: absolute;
+                bottom: 0;
+            }
+
+            footer ul {
+                padding-left: 65%;
+            }
+        }
+
+        @media screen and (max-width: 767px) and (min-width: 430px) {
+
+            body {
+                background-position: center;
+            }
+
+            nav {
+                margin: 7em auto 0 auto;
+            }
+
+            nav li {
+                background-color: var(--colorRed);
+                text-align: center;
+                margin: 1.3em 2.5em;
+                padding: 10px;
+                width: 60%;
+                border-radius: 50px;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-inline-start: 0px;
+                padding-left: 20%;
+            }
+
+            .logo {
+                font-size: 2em;
+                width: 90%;
+                font-style: italic;
+                margin-top: 0;
+                margin-left: 5%;
+                padding: 15px;
+                z-index: 1;
+                position: absolute;
+                top: -3em;
+            }
+
+            .search {
+                padding: 10px;
+                border: 2px solid var(--colorRed);
+                border-radius: 50px;
+                margin: 0 auto;
+                width: 60%;
+                background-color: white;
+                display: flex;
+            }
+
+            input {
+                border: none;
+                font-size: 1em;
+                padding-left: 10px;
+            }
+
+            footer {
+                display: block;
+                width: 100%;
+                background-color: var(--colorWhite);
+                position: absolute;
+                bottom: 0;
+            }
+
+            footer ul {
+                display: flex;
+            }
+        }
+    </style>
+    <!-- <script src="width_height.js"></script> -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li class="active">
+                    <a href="#">Startseite</a>
+                </li>
+                <li>
+                    <a href="#">Angebote</a>
+                </li>
+                <li>
+                    <a href="#">Last Minute</a>
+                </li>
+                <li>
+                    <a href="#">Konto<img src="/projekte/flug_vorlage/flug/img/account_circle_black_18dp.svg"
+                            alt="icon"></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="logo">
+            FlügeFinden24
+        </div>
+
+        <div class="search">
+            <input type="search" placeholder="Suche">
+            <img src="/projekte/flug_vorlage/flug/img/search_black_24dp.svg">
+        </div>
+
+        <footer>
+            <ul>
+                <li>
+                    <a href="#">Über Uns</a>
+                </li>
+                <li>
+                    <a href="#">Kontakt</a>
+                </li>
+                <li>
+                    <a href="#">Impressum</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+
+</body>
+
+</html>

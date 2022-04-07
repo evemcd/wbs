@@ -1,0 +1,10 @@
+<!ELEMENT welt (land+)>
+<!ELEMENT land ((name | country), capital, language+, population)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT capital (#PCDATA)>
+<!ELEMENT language (#PCDATA)>
+<!ELEMENT population (#PCDATA)>
+
+<!ATTLIST land lage (Europa|Asien|Afrika|Amerika) #REQUIRED
+                         kennzeichen CDATA #IMPLIED>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PHP</title>
+<meta charset="utf-8">
+
+</head>
+<body>
+<h1>PHP - Eingabefelder</h1>
+
+<form action="86-eingabe_auswertung.php" method="POST">
+
+<p><input type="text" name="tf"> Textfeld</p>
+
+<p><input type="password" name="pw"> Passwortfeld</p>
+
+<p><input type="number" name="nm"> Zahlenfeld</p>
+
+<p><input type="color" name="fb"> Farbfeld</p>
+
+<p><input type="hidden" name="hf" value="Ich bin versteckt"></p>
+
+
+<p><input type="submit"></p>
+
+</form>
+
+</body>
+</html>
+<!--
+Bei den klassichen Eingaefeldern und auch beim versteckten Feld wird unter dem jeweiligen Bezeichner immer der aktuelle Value-Wert übertragen, sobald das Formular abgeschickt wird. 
+Sollte kein Value in dem entsprechnden Feld vorhanden sein, wird dann einfach ein leerer Strimg übertragen. 
+Hinweis zu Passwortfeldern: Die dort eingetragenen Werte werden NICHT verschlüsselt. Es findet lediglich eine verdeckte Eingabe statt, der eingegebene Wert wird als Klartetxt übertragen. 
+Beim verstekcten Feld wird dann der vorher festgelegte Wert übertragen. 
+
+-->

@@ -1,0 +1,43 @@
+{
+    "books": [{
+            "name": "SQL",
+            "autor": "Max Mustermann",
+            "seiten": 1002,
+            "jahr": "2000-12-01",
+            "verlag": "Wissen und Natur",
+            "info": "Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden."
+        },
+        {
+            "name": "PHP - OOP",
+            "autor": "Tom Jerry",
+            "seiten": 1210,
+            "jahr": "2021-12-01",
+            "verlag": "Wissen und Natur",
+            "info": "Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden."
+        },
+        {
+            "name": "Algarve",
+            "autor": "Sara Sonne",
+            "seiten": 152,
+            "jahr": "2015-12-01",
+            "verlag": "Weltschau",
+            "info": "Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden."
+        },
+        {
+            "name": "JavaScript",
+            "autor": "Anna Schlau",
+            "seiten": 1228,
+            "jahr": "1998-12-01",
+            "verlag": "Wissen und Natur",
+            "info": "Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden."
+        },
+        {
+            "name": "Provence",
+            "autor": "Max Moritz",
+            "seiten": 234,
+            "jahr": "2019-12-01",
+            "verlag": "Weltschau",
+            "info": "Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden."
+        }
+    ]
+}

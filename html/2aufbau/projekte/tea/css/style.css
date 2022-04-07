@@ -1,0 +1,73 @@
+:root {
+    --colorlinktext: #0F132C;
+}
+
+.wrapper {
+    max-width: 870px;
+    margin: 0px auto;
+    font-family: "BellMT";
+}
+
+.logoWrapper {
+    max-width: 200px;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 100px);
+    z-index: 1;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+nav {
+    margin: 100px 0 180px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding-inline-start: 0;
+}
+
+nav li:nth-child(1),
+nav li:nth-child(4) {
+    flex-grow: 1;
+}
+
+nav li:nth-child(2),
+nav li:nth-child(3) {
+    flex-grow: 2;
+}
+
+
+nav li {
+    /* flex-grow: 1; */
+    font-size: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+nav li:nth-child(1),
+nav li:nth-child(2) {
+    text-align: left;
+}
+
+nav li:nth-child(3),
+nav li:nth-child(4) {
+    text-align: right;
+}
+
+a {
+    color: var(--colorlinktext);
+    display: block;
+}
+
+p {
+    font-size: 0.8em;
+}
+
+.imgFloat {
+    float: left;
+}

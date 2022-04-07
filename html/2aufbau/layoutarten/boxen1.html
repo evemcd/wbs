@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxen Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: grey;
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        main {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            background-color: green;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        section {
+            background-color: grey;
+            overflow: auto;
+        }
+
+        .section1 {
+            flex-grow: 2;
+            margin-right: 10px;
+        }
+
+        .section2 {
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+
+        .section3 {
+            display: flex;
+            margin: 10px 0;
+        }
+
+        .wrapper {
+            background-color: unset;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .class1 {
+            float: left;
+            width: calc(66% - 20px);
+        }
+
+        .class2 {
+            float: right;
+            width: calc(33% - 20px);
+            height: 180px;
+        }
+
+        .class3 {
+            background-color: unset;
+            width: calc(66% - 20px);
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .class4 {
+            flex-grow: 1;
+        }
+
+        .class5 {
+            float: left;
+            width: calc(66% - 20px);
+        }
+
+        .class5:after {
+            clear: both;
+            display: table;
+            content: "";
+        }
+
+        .class6 {
+            display: flex;
+            background-color: unset;
+        }
+
+        .section3 div {
+            flex-grow: 1;
+        }
+
+        footer {
+            background-color: darkslateblue;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>Logo</div>
+        <h1>Überschrift</h1>
+    </header>
+    <main>
+        <div class="wrapper">
+            <section class="section1">
+                <div class="class1">Überschrift</div>
+                <div class="class2">Box</div>
+                <div class="class3">
+                    <div class="class4">Box</div>
+                    <div class="class4">Textabsatz</div>
+                </div>
+                <div class="class5">Textabsatz</div>
+            </section>
+            <section class="section2">
+                <div class="class6">
+                    <div class="class4">Bild</div>
+                    <div class="class4">Bild</div>
+                </div>
+                <div>Textabsatz</div>
+            </section>
+        </div>
+        <section class="section3">
+            <div>Box</div>
+            <div>Box</div>
+            <div>Box</div>
+            <div>Box</div>
+            <div>Box</div>
+            <div>Box</div>
+        </section>
+
+
+    </main>
+<footer>Fußnote</footer>
+
+</body>
+
+</html>

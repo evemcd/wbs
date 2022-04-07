@@ -1,0 +1,83 @@
+:root{
+    --wrapper-width:1200px;
+    /*abstände margin oder padding*/
+    /* häufige konstellationen sind 0.5%, 1%, 2-5% oder 0.5em 1em, 2em */
+    --v-margin:1em;
+    --h-margin:1em;
+    --distance1:5px;
+    --distance2: 1em;
+    --t-margin:var(--h-margin);
+    --b-margin:var(--h-margin);
+    --bg-grey:lightgrey;
+    --bg-yellow:rgb(255, 166, 0);
+  }
+  
+  /* .wrap,.wrapper - horizontal zentrieren */
+  .wrap,.wrapper{
+    margin-left:auto;
+    margin-right:auto;
+    max-width:var(--wrapper-width);
+  }
+
+  .bg-grey{background-color:var(--bg-grey);}
+  .bg-yellow{background-color:var(--bg-yellow);}
+  
+  /* spalten*/
+  .col-25{width:25%;}
+  .col-33{width:33.3333%;}
+  .col-50{width:50%;}
+  .col-66{width:66.6666667%;}
+  .col-75{width:75%;}
+  .col-100{width:100%;}
+  
+  /* Klassen für Abstände */
+  /* einfaches Beispiel */
+  .pad-1{
+    padding-left:1%;
+    padding-right:1%;
+  }
+  .mar-1{
+    margin-left:1%;
+   margin-right:1%;
+  }
+  .mar-h{
+    margin-bottom:var(--b-margin);
+    margin-top:var(--t-margin);
+  }
+  .mar-lr{
+    margin-left:var(--distance1);
+    margin-right:var(--distance2);
+  }
+  /* .mar-h+.mar-h{
+    --t-margin:5em;
+  } */
+  /* wenn margin oder padding gesetzt*/
+  .col-50.pad-1,.col-50.mar-1{width:48%;}
+  /* wenn margin und Padding gesetzt*/
+  .col-50.pad-1.mar-1{width:46%;}
+  
+  /* falls mit Variablen gesetzt*/
+  .col-50.mar-lr{width:calc(50% - (var(--distance1) + var(--distance2)) );}
+  /* ggf. float*/
+  .fl-l{float:left;}
+  .fl-r{float:right;}
+  
+  /* flexbox*/
+  .flex,.flex-w{display:flex;}
+  /* falls Inhalte umbrechen dürfen*/
+  .flex-w{flex-wrap:wrap;}
+  
+  /* Clearfix*/
+  /* Clear für nachfolgende Elemente */
+  .clear{clear:both;}
+  /* Clear am ende des Umschließenden Containers */
+  .clearfix:after{
+    content:"";
+    display:table;
+    clear:both;
+  }
+  
+  /* schmalste darstellung */
+  @media screen and (max-width:30em){
+  
+  }

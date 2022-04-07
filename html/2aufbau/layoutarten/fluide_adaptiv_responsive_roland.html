@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>fluides adaptives responsives Layout</title>
+<!--Wenn Sie den Darstellungsbereich-Meta-Wert width=device-width verwenden, geben Sie der Seite die Anweisung, die Breite des Bildschirms in geräteunabhängigen Pixeln zu nutzen. Dies ermöglicht der Seite, Inhalte neu anzuordnen und sich so an verschiedene Bildschirmgrößen anzupassen, egal ob an das kleine Display eines Mobiltelefons oder den großen Bildschirm eines Desktopcomputers.-->
+<!--
+Manche Browser behalten die Breite der Seite beim Drehen in das Querformat bei und zoomen, statt die Inhalte zum Füllen des Bildschirms neu anzuordnen. Indem Sie das Attribut initial-scale=1 verwenden, weisen Sie den Browser an, eine 1:1-Beziehung zwischen CSS-Pixeln und geräteunabhängigen Pixeln zu gewährleisten, unabhängig von der Geräteausrichtung. Somit kann die Seite die volle Breite im Querformat nutzen.
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Es ist auch möglich den querrie direkt beim Styleaufruf festzusetzen somit erübrigt es sich dann den Mediaquerrie nochmals im externen CSS aufzurufen-->
+<!--<link rel="stylesheet" href="start.css" media="screen and (min-width:860px)">-->
+<!-- Wenn eine CSS-Datei nur geladen werden soll wenn sie benötigt wird verwenden sie only screen-->
+<!--<link rel="stylesheet" href="start.css" media="only screen and (min-width:860px)">-->
+<!-- Verschiedene Medientypen 
+all - alle Medientypen - Standard muss nicht angegeben werden
+print - Druckstylesheets
+screen - Bildschirmdarstellung
+aural,speech - Sprachausgabe
+braille - Braillezeile , Brailletastaturen
+embossed - brailledrucker
+
+deprecated!!!
+tv,projektion - Bildschirmgeräte ohne Scrollfunktion
+handheld - Smartphones und kleine Bildschirme
+-->
+
+<link rel="stylesheet" href="start.css">
+<style>
+    article{
+    float:left;
+    width:22%;
+    margin:0.5%;
+    padding:1%;
+    border:0;
+    box-shadow:0 0 2px #000;
+    min-width:220px;
+  }
+  section:after{
+    content:"";
+    display:table;
+    clear:both;
+  }
+
+  /* In nachfolgenden Beispielen wurde nur mit dem Merkmalen max-width, min-width  und Orientation gearbeitet. Es ist ebenso möglich mit Geräte abhängigen Größen zu arbeiten zb. device-width, device-height, der Lage eines Gerätes(Viewporthöhe/-Breite) sowie den nativen Auflösungen selbst mit dem Merkmal resolution.
+
+  Weitere Informationen finden Sie in der w3c Spezifikation:
+  http://www.w3.org/TR/css3-mediaqueries/
+  */ 
+
+ /* komlexere Beispiele zu Mediaquerries sowie Feature- und Containerqueries :(Browsersupport beachten!!) 
+
+ https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries
+
+ Browsersupport:
+ https://caniuse.com/?search=%40container
+ https://caniuse.com/?search=%40supports
+ */
+
+ /* wenn der Viewport höher ist als Breit */
+ /* @media screen and (orientation:portrait){
+   html{
+     background:lightblue;
+   }
+ }  */
+
+ /*Regelsätze innerhalb des Mediaquerries werden nur ausgeführt wenn der Viewport kleiner als 1081px ist */
+ @media screen and (max-width:1080px){
+   /* html{
+     background:#ccc;
+   } */
+   #a1,#a4{
+     width:97%;
+   }
+   article{width:47%;}
+
+ }
+  /*Regelsätze innerhalb des Mediaquerries werden nur ausgeführt wenn der Viewport kleiner als 1301px  und größer 799px ist */  
+  @media screen and (max-width:1300px) and (min-width:800px){
+   /* html{background:#ffc;} */
+ }
+  /*Regelsätze innerhalb des Mediaquerries werden nur ausgeführt wenn der Viewport kleiner als 801px ist */  
+ @media screen and (max-width:800px){
+   article,#a1, #a4{width:47%;}
+   #a3{clear:both;}
+ }
+ /* max-width:480px */
+   /*Regelsätze innerhalb des Mediaquerries werden nur ausgeführt wenn der Viewport kleiner als 5511px ist */  
+ @media screen and (max-width:550px){
+   article,#a1,#a4{
+     width:97%;
+    /* float:none;width:auto; */
+  }
+ }
+
+/* 
+Die Mediaquerries wurden in vorangegangen Beispielen der einfachheit halber in CSS-Pixeln angegeben es empfiehlt sich mediaqueries in Schriftgrößen abhängigen Maßeinheiten(em/rem) oder Viewport abhängigen Maßeinheiten (vh,vw) anzugeben.
+Browsersupport VH und VW:
+https://caniuse.com/?search=vh 
+https://caniuse.com/?search=vw
+Wichtig: tab known issues beachten!
+
+Endgeräte mit aktivierten Lesehilfen (Schriftgröße,Schriftarten) , Retina-Technik (Bildpunkthalbierung/Viertelung) oder reduzierter PPI-Einstellung (Pixeldichte/Linienpaarauflösung) landen sonst immer in kleineren Darstellungen. Dies kann ggf. die Benutztbarkeit einschränken.
+*/
+</style>
+
+</head>
+<body>
+  <header>
+    <h1>fluides adaptives responsives Layout</h1>
+  </header>
+
+  <section>
+    <h2>Seitenbereich</h2>
+
+  <article id="a1">
+    <h2>Inhalt 1</h2>
+    <p> Das <strong>&lt;article&gt;</strong>  Element dient zur Einteilung von Inhalten in Sinnabschnitte, unter anderem in Blogbeiträgen. Der Unterschied zum <strong>&lt;section&gt; </strong> Element <br>ist der, dass die Inhalte für sich alleine stehen. Es sind sozusagen isolierte Beiträge wie eben in Blog-Posts oder Inhalte in Websites. Dies bedeutet das ein oder mehrere <strong>&lt;article&gt;</strong>  Elemente in themenbezogenen <strong>&lt;section&gt;</strong>  Elementen optimal platziert sind.</p>
+  </article> 
+  <article id="a2">
+  	<h2>Inhalt 2</h2>
+    <p>Das <strong>&lt;section&gt;</strong> Element dient zur Unterteilung von Inhalten nach wirklich inhaltlichen Gesichtspunkten. Dieses Element stellt eine klare Trennung zwischen Abschnitten dar die inhaltlich gegeben ist. Elemente die Designzwecken dienen, werden in ein <strong>&lt;div&gt; </strong> Tag gesetzt, da sie kein inhaltliches Kriterium darstellen. Das <strong>&lt;section&gt;</strong> Element wird nur dort eingesetzt wo ein inhaltlicher Umbruch besteht.</p>
+  </article>
+  <article id="a3">
+    <h2>Inhalt 3</h2>
+    <p>Das <strong>&lt;article&gt;</strong>  Element dient zur Einteilung von Inhalten in Sinnabschnitte, unter anderem in Blogbeiträgen. Der Unterschied zum <strong>&lt;section&gt; </strong> Element ist der, dass die Inhalte für sich alleine stehen. Es sind sozusagen isolierte Beiträge wie eben in Blog-Posts oder Inhalte in Websites. Dies bedeutet das ein oder mehrere <strong>&lt;article&gt;</strong>  Elemente in themenbezogenen <strong>&lt;section&gt;</strong>  Elementen optimal platziert sind.</p>
+  </article>
+  <article id="a4">
+    <h2>Inhalt 4</h2>
+    <p>Das <strong>&lt;section&gt;</strong> Element dient zur Unterteilung von Inhalten nach wirklich inhaltlichen Gesichtspunkten. Dieses Element stellt eine klare Trennung zwischen Abschnitten dar die inhaltlich gegeben ist. Elemente die Designzwecken dienen, werden in ein <strong>&lt;div&gt; </strong> Tag gesetzt, da sie kein inhaltliches Kriterium darstellen. Das <strong>&lt;section&gt;</strong> Element wird nur dort eingesetzt wo ein inhaltlicher Umbruch besteht.</p>
+  </article>
+</section>
+
+<footer>fluides adaptives responsives Layout</footer>
+</body>
+</html>
+
+
+
+
+
+
+

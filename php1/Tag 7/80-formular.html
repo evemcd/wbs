@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PHP</title>
+<meta charset="utf-8">
+<style>
+
+form	{	border:1px solid red;
+			padding:20px;
+			margin-bottom:20px;	}
+
+</style>
+</head>
+<body>
+<h1>PHP - Formulare</h1>
+<!-- Das erste Formular mit POST -->
+<form action="81-auswertung_post.php" method="POST">
+
+Formular mit POST<br>
+
+<input type="text" name="tf">
+<input type="submit" value="Senden mit POST">
+
+</form>
+
+
+<!-- Das zweite Formular mit GET -->
+<form action="82-auswertung_get.php" method="GET">
+
+Formular mit GET<br>
+
+<input type="text" name="tf">
+<input type="submit" value="Senden mit GET">
+
+</form>
+
+</body>
+</html>
+<!--
+Wenn man in HTML Formulare zur Auswertung in PHP erstellt, muss man für das Attribut method den Übertragungskanal wählen. Hier kann POST oder GET eingesetzt werden. 
+Verwendet man POST, werden die Werte aus den Formularfeldern in der SUPERGLOBALEN $:POST abgelegt, wobei die Bezeichner der Formularfelder als Key benutzt werden. Die Menge an übertragenen Daten ist nocht begrenz und die Übertragung findet verdeckt statt.
+Beim Einsatz der method GET landen die Werte in der SUPERGLOBALEN $_GET. Auch hier werden die Bezeichner der Formularfelder zu den Keys der Werte. Die Übertragungg wird mit Hilfe der URL durchgeführt, die Keys und Werte schlicht hinten angehängt. Dadurch besteht eine Begrenzung auf etwa 2000 Zeichen und jeder, der Zugriff auf den Browserverlauf hat, kann die Eingaben einsehen. Der einzige Vorteil von GET ist die Tatsache, das man von der Auswerzungdseite ein Lesezeichen/Bookmark machen kann, denn die Werte sind Bestandteil der URL. Das geht bei POST nicht. 
+In der Programmierung überwieget die Nutzung von POST deutlich, GET wird nur in Ausnahmefällen verwendet
+-->

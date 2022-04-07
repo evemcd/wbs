@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Übung 20</title>
+    <script src="index.js" async></script>
+    <link rel="stylesheet" href="../bootstrap5/css/bootstrap.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #slider {
+            width: 600px;
+        }
+
+        #slider .left {
+            position: relative;
+            animation: animateleft 2s;
+        }
+
+        @keyframes animateleft {
+            from {
+                left: -800px;
+                opacity: 0
+            }
+
+            to {
+                left: 1500px;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row bg-dark m-0">
+        <div class="col-12 py-5">
+            <div id="slider" class="mx-auto"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

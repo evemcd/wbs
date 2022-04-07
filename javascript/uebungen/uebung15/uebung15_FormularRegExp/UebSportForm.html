@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Soldat - Manager</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet"  href="UebSportForm.css" />
+	<script src="UebSportForm.js" async></script>
+</head>
+<body>
+<div id="wrapper">
+
+	
+<form id="form1" action="#" method="post">
+	<p>Name<input type="text" id="nn"  /></p>
+	<p>Vorname<input type="text" id="vn" /></p>
+	<p>Strasse<input type="text" id="str" /></p>
+	<p>PLZ<input type="text" id="plz" /></p>
+	<p>Wohnort<input type="text" id="ort" /></p>
+	<p>Telefon<input type="text" id="tel" /></p>
+	<p>E-Mail<input type="text" id="mail" /></p>
+	<p>Passwort<input type="text" id="pwd1" /></p>
+	<p>Passwort<input type="text" id="pwd2" /></p>
+	<!--+++++++++++++++++++++++-->
+	<h3>Ihr Beruf</h3>
+	<div>
+	<select id="beruf">
+		<option value="">Bitte auswählen</option>
+		<option value="soldat">Soldat</option>
+		<option value="student">Student</option>
+		<option value="manager">Manager</option>
+		<option value="sonstiges">sontiges</option>
+	</select>
+	</div>
+	<!--+++++++++++++++++++++++-->
+	<h3>Treiben Sie Sport?</h3>
+	<p class="anders">
+		<input type="checkbox" name="cb" value="Golf" />Golf
+		<input type="checkbox" name="cb" value="Fussball" />Fussball
+		<input type="checkbox" name="cb" value="nein" />kein Sport
+		<input type="checkbox" name="cb" value="Laufen" />Laufen
+	</p>
+	<!--+++++++++++++++++++++++-->
+	<p class="anders1">
+	<input type="submit" value="OK"  />
+	<input type="reset"  value="Löschen" />
+	</p>
+</form>
+
+
+</div><!--ende wrapper-->
+</body>
+</html>

@@ -1,0 +1,43 @@
+* {
+	margin: 20px auto;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    background-image: url(bilder/bg.png);
+    background-repeat: repeat-x;
+}
+
+h1 {
+    color: white;
+    background-color: rgb(48, 48, 214);
+    text-align: center;
+}
+
+#login {
+    position: absolute;
+    top: 25px;
+    left: 15%;
+    background-color: lightgray;
+    border-radius: 10px;
+    color: navy;
+    width: 20%;
+}
+
+div {
+    margin: 10px;
+}
+
+label {
+    margin: 0;
+}
+
+.galleryWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.gallery {
+    border: 2px solid black;
+}

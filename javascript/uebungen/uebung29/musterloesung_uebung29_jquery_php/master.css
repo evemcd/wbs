@@ -1,0 +1,108 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; 
+}
+html,body {
+	height: 100%;
+}
+body {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 16px;
+	background: #efefef;
+}
+
+#userDaten .card:nth-of-type(2n+1) {
+	background-color: #1ebb5f;
+}
+#userDaten .card:nth-of-type(2n) {
+	background-color:  #3598dc;
+}
+#userDaten .card:nth-of-type(3n) {
+		background-color: #f1c40f;
+}
+#userDaten .card:nth-of-type(4n) {
+	background-color: #f33;
+}
+
+#id {
+	display: none;
+}
+
+#profil {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.85);
+}
+
+#profil article {
+	max-width: 80%;
+	max-height: 80%;
+	margin: 5% auto;
+	display: block;
+	background-color: rgb(0,0,0);
+	color: #fff;
+	padding: 5%;
+	font-size: 2rem;
+}
+
+.header {
+	border-bottom: solid 1px #ccc;
+	font-size: 2.5rem;
+}
+.datum {
+	background-color: #6f42c1;
+	padding: 5px;
+	display: inline-block;
+}
+.motto {
+	background-color: #6cf;
+	padding: 10px;
+	text-align: center;
+}
+.ueber {
+	border-bottom: solid 1px #ccc;
+}
+label.error {
+	color: #dc3545;
+	display: inline-block;
+	font-weight: bold;
+	padding: 5px;
+}
+
+input.error {
+	border: solid 1px #dc3545 !important;
+}
+
+.error:focus {
+  background-color: #efefef;
+}
+
+.error::placeholder {
+  color: #dc3545;
+}
+
+
+#uhr {
+	font-size: 4rem;
+	font-weight: bold;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+}
+
+#uhr span{
+	display: inline-block;
+}
+
+#uhr span:nth-of-type(1){
+	color: #3598dc;
+}
+
+#uhr span:nth-of-type(2){
+	color: #f33;
+}
+

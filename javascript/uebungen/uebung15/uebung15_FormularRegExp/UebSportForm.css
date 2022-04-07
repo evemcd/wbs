@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans- Unicode", Helvetica, sans-serif;
+  font-size: 1rem;
+  background-color: #717581;
+}
+/*wrapper
++++++++++++++++++++++++++++++++++*/
+#wrapper {
+	width: 90%;
+	margin: 10px auto;
+	padding: 1rem;
+	background-color: #CD6889;
+}
+
+form {
+	width: 400px;
+	background-color: #CDC1C5;
+	margin: 10px;
+	padding: 10px;
+}
+form p {
+	text-align: right;
+	margin: 3px;
+}
+form .anders {
+	text-align: left;
+}
+form .anders1 input{
+	width: 100px;
+	padding: 5px;
+}
+form select {
+	width: 160px;
+}
+
+form input {
+	margin-left: 10px;
+}

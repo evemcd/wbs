@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>content verstecken</title>
+  <style>
+    #header {
+      background: url("img/header_bg.jpg") no-repeat top left;
+      height: 157px;
+      /* font-size:0px; */
+      /* display:none; */
+      /* visibility: hidden; */
+  
+    }
+
+    #header a {
+      display: block;
+      height: 157px;
+      width: 960px;
+      /* color:transparent; */
+      /* color:rgba(0,0,0,0) */
+
+      text-indent:-1000px;
+    }
+    span{
+      /* display:none; */
+      /* visibility: hidden; */
+
+      /* float:left;
+      margin-left:-100000px; */
+
+      /* position:absolute;
+      left:-9999em; */
+    }
+
+    #header2 a {
+      display: block;
+      height: 157px;
+    }
+    #header2 img{
+      position:absolute;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 id="header">
+    <a href="index.html" title="falls ein logo vorhanden link zur startseite">
+      <span>Simple HTML Layout</span>
+    </a>
+  </h1>
+
+  <h1 id="header2">
+    <a href="index.html" title="falls ein logo vorhanden link zur startseite">
+      <img src="img/header_bg.jpg" alt="headergrafik/logo">
+      Simple HTML Layout
+    </a>
+  </h1>
+
+
+</body>
+
+</html>

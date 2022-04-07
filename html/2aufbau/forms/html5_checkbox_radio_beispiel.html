@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Standardinputtypen und Pseudoklassen</title>
+  <style>
+  label{
+    min-width:100px;
+    display:inline-block;
+  }
+
+  input,select,textarea{
+    width:50%;
+    border:1px solid aquamarin;
+  }
+
+  [type="radio"],[type="checkbox"]{
+    width:auto;
+  }
+
+  input:hover,select:hover,textarea:hover{
+    border-color:rgb(105, 211, 172);
+  }
+  input:focus,select:focus,textarea:focus{
+    background:rgb(243, 255, 242);
+  }
+
+  [type="submit"],button{
+    border:none;
+    background:none;
+    background:aqua;
+  }
+  [for*="radio"]{cursor: pointer;}
+  /* Die Inputtypen radio und Checkbox sind nicht formatierbar, in diesem Fall wird meist ein Pseudoelement am Label genutzt um individuelle Darstellungen zu ermöglichen. Alternativ kann Javascript eingesetzt werden um Standardelementen wie div und span Funktionalitäten zu zuweisen. Diese Elemente sind dann frei formatierbar. */
+  /* Selektor mit :nth-Pseudoklasse um verstecken in alten Browsern zu verhindern*/
+  [type="radio"]:nth-of-type(n){
+     visibility: hidden;
+     position:absolute;
+     z-index:1;
+    /* appearance: none;
+    border:0; */
+  }
+  /* Label wie radio formatieren */
+  /*[type="checkbox"]:checked + label, */
+  [for*="radio"]:nth-of-type(n):before{
+    content:"";
+    display:inline-block;
+    width:12px;
+    height:12px;
+    border:1px solid #000;
+    border-radius:50%;
+    margin-right:10px;
+  } 
+  /* Auswahl formatieren */
+   [type="radio"]:checked + label:before{
+    background:red;
+   }   
+
+ /* @supports - verhält sich ähnlich einem Mediquerrie der Browser prüft dabei ob die definierte Eigenschaft unterstützt wird.
+  Das aufzählen mehrer Eigenschaften ist nicht möglich. Für jede Eigenschaft die geprüft werden soll ist eine Eigene Anweisung notwendig. Bsp.: 
+   @supports (display: grid){} usw. */
+  /* Anweisung für Browser in denen appearance unterstützt wird - notwendig für Browser mit neuer Touch -API (Label-Elemente sind da nicht mehr anklickbar) */
+    @supports (appearance:none){ 
+      [type="radio"]:nth-of-type(n){
+        /* wenn mit display versteckt wurde */
+        display:inline-block;
+        /* Wenn mit position und visibillity versteckt wurde*/
+        visibility: visible;
+        position:static;
+     
+        /* Standarddarstellungsverhalten entfernen*/
+        appearance: none;
+        border:0;
+
+      }
+      /* Formatierung für label entfernen*/
+      [for*="radio"]:nth-of-type(n):before,
+      [type="radio"]:checked [for*="radio"]:nth-of-type(n):before{
+        content:"";
+        display:none;
+      }
+      /* Radio / Checkbox formatieren */
+      [type="radio"]:before{
+        content:"";
+        display:inline-block;
+        width:12px;
+        height:12px;
+        border:1px solid #000;
+        border-radius:50%;
+        margin-right:10px;
+      }
+
+      [type="radio"]:checked:before{
+        background:hotpink;
+      }
+   } 
+  </style> 
+</head>
+
+<body>
+  <h1>Standardinputtypen und Pseudoklassen  </h1>
+ 
+  <form>
+  <div>
+    <label for="vorname">Vorname</label>
+    <input name="vorname" value="" id="vorname">
+  </div>
+
+  <div>
+    <label for="nachname">Nachname</label>
+    <input name="nachname" id="nachname" title="erweiterte Beschreibung">
+  </div>
+
+  <div>
+    <h3>Radio</h3>
+    <input type="radio" name="radiogroup" value="radio 1" id="radio1">
+    <label for="radio1" tabindex="0">Radio 1</label> 
+    <input type="radio" name="radiogroup" value="radio 2" id="radio2">
+    <label for="radio2" tabindex="0">Radio 2</label>
+  </div>
+
+  <div>
+    <h3>Checkbox</h3>
+    <input type="checkbox" name="checkboxgroup" value="auswahl 1" id="auswahl1">
+    <label for="auswahl1">Auswahl 1</label>
+    <input type="checkbox" name="checkboxgroup" value="auswahl 2" id="auswahl2" checked>
+    <label for="auswahl2">Auswahl 2</label>
+  </div>
+
+  <div>
+    <label for="kommentar">Hinterlassen Sie einen Kommentar</label>
+    <textarea name="kommentar" cols="25" rows="5" id="kommentar"></textarea>
+  </div>
+  
+   <input type="submit" value="absenden">
+
+  </form>
+ 
+</body>
+</html>

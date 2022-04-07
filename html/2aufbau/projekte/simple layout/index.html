@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        header {
+            /* margin-bottom: -5px; */
+            padding-bottom: 0;
+        }
+
+        header img {
+            display: block;
+        }
+
+        body {
+            background-color: #ebebe9;
+        }
+
+        .mainDiv {
+            display: flex;
+        }
+
+        nav {
+            background-color: #2a2927;
+            width: 25%;
+        }
+
+        h1 {
+            color: #d81d6a;
+        }
+
+        h2 {
+            color: #d81d6a;
+            font-size: 1.2rem;
+        }
+
+        nav h1 {
+            text-align: center;
+        }
+
+        a {
+            color: #ebebe9;
+            font-size: 1rem;
+        }
+
+        nav a:active {
+            color: #d81d6a;
+        }
+
+        main {
+            background-color: #e284ab;
+            display: flex;
+            width: 75%;
+        }
+
+        main section {
+            flex-grow: 1;
+            padding: 0 10px 10px 10px;
+        }
+
+        /* main h1 {
+            margin-top: 0;
+        } */
+
+        p {
+            font-size: 0.8rem;
+        }
+
+        .imgFloat {
+            float: left;
+        }
+
+        .clear:after {
+            content: "";
+            display: table;
+            clear: left;
+        }
+
+        footer {
+            background-color: #2a2927;
+            color: #d81d6a;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="#"><img src="img/header_bg.jpg" alt="Header Image"></a>
+        </header>
+
+        <div class="mainDiv">
+            <nav>
+                <h1>#navigation</h1>
+                <ul>
+                    <li>
+                        <a href="#">Seite 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Seite 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Seite 3</a>
+                    </li>
+                    <li>
+                        <a href="#">Seite 4</a>
+                    </li>
+                </ul>
+            </nav>
+            <main>
+                <section>
+                    <article>
+                        <h1>#mitte - Headline</h1>
+                        <p>Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das
+                            Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der
+                            Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem
+                            Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi -
+                            Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, mich ein paar weitere
+                            Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als
+                            Lückenfüller zu dienen, sondern auf etwas hinzuweisen, das</p>
+                        <img src="/img/nicht_lustig.jpg" width="200" height="200" alt="Vorsicht geschwätziger Hund"
+                            title="Hund erzählt endlose Geschichte, Briefträger liegt auf dem Boden, Blut läuft aus dem Ohr"
+                            class="imgFloat">
+                        <p class="clear">Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich
+                            warten. Damit das
+                            Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der
+                            Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem
+                            Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi -
+                            Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, mich ein paar weitere
+                            Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als
+                            Lückenfüller zu dienen, sondern auf etwas hinzuweisen, das</p>
+                    </article>
+                    <article>
+                        <h2>Überschrift</h2>
+                        <p>Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das
+                            Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der
+                            Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem
+                            Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi -
+                            Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, mich ein paar weitere
+                            Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als
+                            Lückenfüller zu dienen, sondern auf etwas hinzuweisen, das</p>
+                        <p>Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das
+                            Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der
+                            Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem
+                            Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi -
+                            Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, mich ein paar weitere
+                            Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als
+                            Lückenfüller zu dienen, sondern auf etwas hinzuweisen, das</p>
+                    </article>
+                </section>
+                <section>
+                    <article>
+                        <h1>#rechts - Headline</h1>
+                        <img src="/img/android-vs-apple.jpg" width="350" height="219" alt="Android und Apple kämpfen mit Lichtschwertern">
+                        <p>Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das
+                            Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der
+                            Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem
+                            Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi -
+                            Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, mich ein paar weitere
+                            Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als
+                            Lückenfüller zu dienen, sondern auf etwas hinzuweisen, das</p>
+                    </article>
+                    <article>
+                        <h2>Überschrift</h2>
+                        <p>Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das
+                            Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der
+                            Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem
+                            Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi -
+                            Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, mich ein paar weitere
+                            Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als
+                            Lückenfüller zu dienen, sondern auf etwas hinzuweisen, das</p>
+                        <p>Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das
+                            Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der
+                            Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem
+                            Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi -
+                            Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, mich ein paar weitere
+                            Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als
+                            Lückenfüller zu dienen, sondern auf etwas hinzuweisen, das</p>
+                        <p>Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das
+                            Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der
+                            Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem
+                            Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi -
+                            Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, mich ein paar weitere
+                            Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als
+                            Lückenfüller zu dienen, sondern auf etwas hinzuweisen, das</p>
+                    </article>
+                </section>
+            </main>
+        </div>
+
+
+
+        <footer>
+            <h2>#footer - Hier kommt der Link zum Impressum usw.</h2>
+        </footer>
+    </div>
+</body>
+
+
+</html>

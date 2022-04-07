@@ -1,0 +1,3 @@
+Recherchieren Sie im Web wie Webfonts eingebunden werden können. 
+Binden Sie entsprechend Ihrer Recherche die Schriften crete-round und alegreya-sc in dieses Projekt ein.
+Die grafische Vorlage gibt Aufschluss darüber wo diese Schriften verwendet werden.    

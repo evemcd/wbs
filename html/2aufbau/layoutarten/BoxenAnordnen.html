@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tabellen schubsen</title>
+
+    <style>
+        html {
+            font-size: 1.2rem;
+            font-family: sans-serif;
+            color: coral;
+            max-width: 1200px;
+        }
+
+ /* überschrift start*/
+        .top {
+            background-color: lightgray;
+            margin-top: 1%;
+            margin-bottom: 3%;
+            display: flex;
+        }
+
+        .uber {
+            margin: 1.5%;
+            margin-left: 30%;
+        }
+
+        .logo {
+            background-color: greenyellow;
+            margin: 1.5%;
+            width: 10%;
+            height: 30px;
+            text-align: center;
+            padding: 1%color: coral;
+        }
+
+ /*überschrift ende*/
+
+ /* box links start*/
+        .links {
+            background-color: lightgray;
+            width: 65%;
+            height: 300px;
+            position: relative;
+            top: 6px;
+            float: left;
+        }
+
+        .links {}
+
+        .boxl {
+            background-color: greenyellow;
+            margin: 1%;
+        }
+
+        .links1 {
+            display: flex;
+            height: 30%;
+        }
+
+        .bo4 {
+            width: 65%;
+        }
+
+        .bo5 {
+            width: 30%;
+            height: 285px;
+        }
+
+        .links2 {
+            display: flex;
+            height: 44%;
+        }
+
+        .bo6 {
+            width: 25%;
+        }
+
+        .bo7 {
+            width: 38%;
+        }
+
+        .bo8 {
+            width: 65%;
+            height: 20%;
+        }
+
+ /* box links ende       */
+
+ /* box rechts start       */
+        .rechts {
+            background-color: lightgray;
+            width: 30%;
+            float: right;
+        }
+
+        .boxr {
+            max-width: 40%;
+            min-height: 98px;
+            background-color: greenyellow;
+            margin: 3%;
+        }
+
+        .bo3 {
+            min-width: 90%;
+            min-height: 180px;
+        }
+
+        .bo1 {
+            float: right;
+            width: 40%;
+            margin-right: 20px;
+        }
+
+        .clear:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+ /* box rechts ende       */
+
+ /* box unten start              */
+        .unten {
+            background-color: lightgray;
+            display: flex;
+            margin-top: 5%;
+        }
+
+        .boxu {
+            min-width: 12%;
+            min-height: 100px;
+            background-color: greenyellow;
+            margin: 2%;
+            text-align: center;
+        }
+
+/*  box unten ende*/
+
+ /* footer start*/
+        .foot {
+            background-color: darkgrey;
+            text-align: center;
+            margin-top: 1%;
+        }
+
+ /* footer ende*/
+
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="logo">Logo</div>
+        <div class="uber">Überschrift</div>
+    </div>
+
+    <div class="links">
+        <div class="links1">
+            <div class="boxl bo4">Überschrift</div>
+            <div class="boxl bo5">Box</div>
+        </div>
+        <div class="links2">
+            <div class="boxl bo6">Box</div>
+            <div class="boxl bo7">Textabsatz</div>
+        </div>
+        <div class="boxl bo8">Textabsatz</div>
+    </div>
+
+    <div class="clear">
+        <div class="rechts">
+            <div class="boxr bo1">Bild</div>
+            <div class="boxr bo2">Bild</div>
+            <div class="boxr bo3">Textabsatz</div>
+        </div>
+    </div>
+
+    <div class="unten">
+        <div class="boxu">Box</div>
+        <div class="boxu">Box</div>
+        <div class="boxu">Box</div>
+        <div class="boxu">Box</div>
+        <div class="boxu">Box</div>
+        <div class="boxu">Box</div>
+    </div>
+    <div class="foot">
+        <footer>Fußnote</footer>
+    </div>
+</body>
+
+</html>

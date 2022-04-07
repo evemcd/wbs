@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="de">
+<head> 
+  <meta charset="UTF-8">
+  <title>Listen und Screenreader - Accessibility</title> 
+ <style>  
+ .ul,.ul{
+ padding-left:40px;
+ }
+ 
+ .ul div, .ol div{ 
+  display:list-item;
+}
+
+.ul div{
+list-style:inside square;
+}
+
+.ol div{
+list-style:inside upper-roman;
+}
+ 
+ .list-block,.list-block li{
+ display:inline;
+ }
+ 
+ol,ol li{ 
+ display:block;
+}
+ </style>
+</head>
+<body>
+  <h1>Beispiel manuelle Auszeichnung für Screenreader</h1>
+  <a href="http://meinnvda.de/" title="kostenloser Screenreader">NVDa Screenreader</a>
+  <h2>Content  Semantik</h2>
+  <p>Es ist möglich semantisch bedeutungslosen Elementen Aria-Rollen zuzuweisen um diese für Screenreader zuganglich zu machen. <strong>Diesen Aufwand kann man sich zum Großteil erspaaren indem man die semantisch korrektesten Elemente wählt.</strong></p>
+  <!-- Aria-rolen für Screenreader  - Achtung keine Semantik der Inhalt wird lediglich für Screenreader verständlich-->
+  <div role="heading" aria-level="1"> Screenreader headline 1 </div>
+	<h1>echte headline</h1> 
+  <!-- Keine leeren semantischen Elemente! generell sind unnötige inhaltsleere Elemente zu vermeiden -->
+  <h1>&nbsp;</h1>
+	
+  <div role="paragraph">Ich bin fließtext</div>
+	<p>echter Textabsatz</p> 
+  
+	<div role="heading" aria-level="4"> Screenreader headline 4 </div>
+	<h4>echte headline h4</h4> 
+
+  <h2>ungeordnete liste</h2>
+  <ul>
+    <li>listenpunkt 1</li>
+    <li>listenpunkt 2</li>
+    <li>listenpunkt 3</li>
+  </ul>
+  <h3>Liste ohne Aufzählungszeichen</h3>
+  <ul style="list-style:none">
+    <li>listenpunkt 1</li>
+    <li>listenpunkt 2</li>
+    <li>listenpunkt 3</li>
+  </ul>
+  
+  <h3>Liste mit geänderter Darstellung</h3>
+  <ul class="list-block">
+    <li>listenpunkt 1</li>
+    <li>listenpunkt 2</li>
+    <li>listenpunkt 3</li>
+  </ul>
+  
+  <h3>Simulierte Liste</h3>
+  <div role="list" class="ul">
+    <div role="listitem">falscher Listenpunkt ul</div>
+    <div role="listitem">falscher Listenpunkt ul</div>
+  </div>
+  
+  <h2>geordnete liste</h2>
+  <ol>
+    <li>listenpunkt 1</li>
+    <li>listenpunkt 2</li>
+    <li>listenpunkt 3</li>
+  </ol>
+  
+  <h3>Simulierte geordnete Liste</h3>
+  <div role="list" class="ol">
+    <div role="listitem">falscher Listenpunkt ól</div>
+    <div role="listitem">falscher Listenpunkt ol</div>
+    <div role="listitem">falscher Listenpunkt ol1</div>
+  </div>
+  
+  
+  <h3>simulierte Definitionsliste</h3>
+  <!--definitionsliste -->
+	<div role="definition">
+		<div role="term"> Definitionsbegriff</div>
+    <p>beschreibung</p>
+    <div role="term"> Definitionsbegriff</div>
+    <p>beschreibung</p>
+	</div>
+  
+  <h3>Formular</h3>
+  <form>
+      <div id="label">div als Label</div>
+      <input name="test" aria-labelledby="label" aria-describedby="beschreibung">
+      <p id="beschreibung">Textabsatz als Beschreibung und alternative zu title</p>
+      
+      <div role="button" aria-clickable="true" onclick="alert('Das div wurde angeklickt')">als Button Element</div>
+      <!-- Die Funktionalität des anklickens muss mit Javascript selbst gelsöst werden -->
+      <input type="submit">
+  </form>
+  
+  
+</body>
+</html>

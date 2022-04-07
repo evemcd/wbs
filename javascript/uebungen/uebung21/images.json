@@ -1,0 +1,28 @@
+{
+    "bilder": [
+        {
+            "bild": "images/hamburg.jpg",
+            "titel": "Hamburg"
+        },
+        {
+            "bild": "images/helgoland.jpg",
+            "titel": "Helgoland"
+        },
+        {
+            "bild": "images/istanbul.jpg",
+            "titel": "Istanbul"
+        },
+        {
+            "bild": "images/marrrakesch.jpg",
+            "titel": "Marrakesch"
+        },
+        {
+            "bild": "images/rio.jpg",
+            "titel": "Rio de Janeiro"
+        },
+        {
+            "bild": "images/rotterdam.jpg",
+            "titel": "Rotterdam"
+        }
+    ]
+}

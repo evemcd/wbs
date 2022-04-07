@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/*
+* {
+    border: solid 1px;
+}
+*/
+
+body {
+    max-width: 800px;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+header {
+    
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center
+}
+
+/* hier beginnt die Navigation*/
+
+
+nav {
+    text-align: center;
+    /* die Elemente in der Nav werden zentriert ausgerichtet*/
+}
+
+ul {
+    list-style: none;
+    /* damit die Listenpunkte entfallen*/
+    padding: 0;
+    /* der linke Abstand entfaellt*/
+}
+
+li {
+    display: inline-block;
+    /* die Listenpunkte rutschen nebeneinander*/
+}
+
+nav a {
+    text-decoration: none;
+    /* hiermit wird die Linie unter den Navilinks entfernt*/
+    color: #004969;
+    background-color: lightgray;
+    margin: 10px;
+    /* gibt den Elementen Aussenabstand von  10px*/
+    padding: 5px 30px 5px 30px;
+    /* setzt den Innenabstand der Schrift zum Container fest*/
+    text-transform: uppercase;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}

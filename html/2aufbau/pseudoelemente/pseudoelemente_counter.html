@@ -1,0 +1,80 @@
+<!doctype html> 
+<html lang="de">   
+<head>   
+<meta charset="utf-8"> 
+<title>Pseudoelemente und Counter</title>       
+<style>
+.liste ul{list-style:none;}
+/* durchnummerieren */
+.liste li:before{
+	content:counter(level1) " ";
+	counter-increment:level1;
+	}
+.liste li li:before{
+	content:counter(level1) "." counter(level2) " ";
+	counter-increment:level2;
+}
+.liste li li li:before{
+	content:counter(level1) "." counter(level2) "." counter(level3) " ";
+	counter-increment:level3;
+}
+/*counter (Name des Zähler) bzw. counter:Zählername = Wert ausgeben,
+counter-increment:Zählername; - der Zähler der hochgezählt werden soll
+counter-reset:Zählername; Wert zurücksetzen --> immer am vorherigen (übergeordneten) Elternelement! */
+/* ##############################################################
+Den Reset immer auf das übergeordnete Element legen aber niemals auf das <ul> selbst. Sollte kein umschließender Container vorhanden sein kann das <body> Element für den ersten reset genutzt werden 
+#################################################################
+*/
+.liste{
+counter-reset:level1;
+}
+.liste li{
+counter-reset:level2;
+}
+.liste li li{
+counter-reset:level3;
+}
+.liste li li li{
+counter-reset:none
+}
+</style>
+</head>
+
+<body>
+<h1>Automatisches Durchnummerieren</h1>
+<div class="liste">
+<ul>
+  <li>Listenpunkt 1
+    <ul>
+		<li>Listenpunkt 1.1
+			<ul>
+				<li>Listenpunkt 1.1.1</li>
+				<li>Listenpunkt 1.1.2</li>
+			</ul>
+		</li>
+		<li>Listenpunkt 1.2
+			<ul>
+				<li>Listenpunkt 1.2.1</li>
+				<li>Listenpunkt 1.2.2</li>
+				<li>Listenpunkt 1.2.3</li>
+			</ul>
+		</li>
+	</ul>
+  </li>
+  <li>Listenpunkt 2</li>
+  <li>listenpunkt 3
+	<ul>
+        <li>Listenpunkt 3.1</li>
+        <li>Listenpunkt 3.2
+			<ul>
+				<li>Listenpunkt 3.2.1</li>
+				<li>Listenpunkt 3.2.2</li>
+			</ul>
+		</li>
+		<li>Listenpunkt 3.3</li>
+    </ul>
+  </li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+<meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Wie gross ist meine Box?</title>
+   
+    <style>
+        .coral {
+            background-color: coral;
+            width: 500px;
+            padding: 10px;
+            border: solid 1px black;
+            margin: 30px;
+        }
+        
+/*        500 + 10 + 10 + 1 + 1 = 522px width */
+        
+        .coralBoxsizing {
+            background-color: coral;
+            width: 500px;
+            padding: 10px;
+            border: solid 1px black;
+            margin: 30px;
+            box-sizing: border-box
+        }        
+        
+/*        Groesse der Box mit Boxsizing: border-box: 500px
+        padding und border passen sich innerhalb der Box an anstatt die Box zu vergroessern
+        Inhalt = 500px - 10 - 10 - 1 - 1*/
+        
+        .aqua {
+            background-color: aqua;
+            width: 500px;
+            padding: 20px;
+            margin: 0 30px 30px
+        }
+    
+    </style>
+  
+</head>
+
+<body>
+    <h1>Wie gross ist meine Box? Boxsizing</h1>
+    <div class="coral"> Jedes HTML-Element – gleich ob body, div, p, table, a oder span – wird im Box-Modell als rechteckige Box betrachtet. Das Box-Modell mit padding, border und margin ist die Grundlage für das grafische Layout und die Berechnung der Breite und Höhe von Elementen mit CSS.
+        Die einfache Angabe der Breite allein reicht allerdings nicht, um den Raum für ein Layout-Element zu berechnen.</div>
+    
+    <div class="coralBoxsizing"> Jedes HTML-Element – gleich ob body, div, p, table, a oder span – wird im Box-Modell als rechteckige Box betrachtet. Das Box-Modell mit padding, border und margin ist die Grundlage für das grafische Layout und die Berechnung der Breite und Höhe von Elementen mit CSS.
+        Die einfache Angabe der Breite allein reicht allerdings nicht, um den Raum für ein Layout-Element zu berechnen.</div>
+    
+    <div class="aqua"> Jedes Block-Element (div, p, table, …) dehnt sich über die gesamte Breite der umfassenden Box aus, wenn width für das Element nicht angegeben ist. Inline-Elemente wie a, span und strong nehmen innerhalb der umfassenden Box genau den Platz für ihren Inhalt ein.</div>
+    
+    <img src="werte_angeben.png">
+    
+
+</body>
+</html>

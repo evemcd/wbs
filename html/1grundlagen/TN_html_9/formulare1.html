@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularfelder</title>
+    <style>
+        div {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formularfelder</h1>
+    <form action="#" method="post">
+        <div>
+            <label for="vorname">Vorname</label>
+            <input type="text" name="vorname" id="vorname" placeholder="Vorname" required>
+        </div>
+        <div>
+            <label for="nachname">Nachname</label>
+            <input type="text" name="nachname" id="nachname">
+        </div>
+        <div>
+            <label for="email">E-Mail</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="telefon">Telefon</label>
+            <input type="tel" name="telefon" id="telefon">
+        </div>
+        <div>
+            <input type="file" name="datei" id="datei">
+        </div>
+        <div>
+            <label for="passwort">Passwort</label>
+            <input type="password" name="passwort" id="passwort">
+        </div>
+        <div>
+            <label for="nachricht">Ihre Nachricht:</label>
+            <textarea name="nachricht" id="nachricht" cols="50" rows="10">Nachricht</textarea>
+        </div>
+        <div>
+            <label for="newsletter">Newsletter</label>
+            <input type="checkbox" name="newsletter" id="newsletter" checked>
+        </div>
+        <h2>Eine Gruppe von Checkboxen</h2>
+        <div>
+            <label for="malen">Malen</label>
+            <input type="checkbox" value="malen" name="hobby1[]" id="malen">
+            <label for="garten">Garten</label>
+            <input type="checkbox" value="garten" name="hobby1[]" id="garten">
+            <label for="sport">Sport</label>
+            <input type="checkbox" value="sport" name="hobby1[]" id="sport">
+        </div>
+        <div>
+            <label for="frau">Frau</label>
+            <input type="radio" value="frau" name="anrede" id="frau">
+            <label for="mann">Herr</label>
+            <input type="radio" value="mann" name="anrede" id="mann">
+            <label for="firma">Firma</label>
+            <input type="radio" value="firma" name="anrede" id="firma">
+        </div>
+        Dropdown
+        <div>
+            <label for="liste1">Waehlen Sie Ihr Programm</label>
+            <select name="liste1[]" id="liste1">
+                <option value="1">Photoshop</option>
+                <option value="2">HTML</option>
+                <option value="3">CSS</option>
+                <option value="4">JavaScript</option>
+                <option value="5" selected>PHP</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Abschicken input">
+            <input type="reset" value="reset input">
+            <button type="submit">Abschicken Button</button>
+            <button type="reset">reset Button</button>
+            <input type="button" value="Button">
+        </div>
+
+
+        <!--
+action gibt an, wohin die Daten geschickt werden sollen (meist ein formmailer.php)
+method: post: Daten werden im Hintergrund uebertragen (bevorzugt)
+method: get: Eintraege sind sichtbar (Beispiel: Suchfelder)
+name-Attribut: eindeutiger Name, damit das php-Skript die Eingabefelder auseinanderhalten kann
+id: verbindet input-tag mit label-tag (for="id-Name")
+Das label-tag ist wie ein Etikett fuer das Eingabefeld. Es benoetigt zwingend das Attribut for="id-Name". Damit wird der Bezug hergestellt.
+Die neuen Werte definieren die input-Felder genauer. 
+Ein Textfeld, in das mehr Text geschrieben werden kann: textarea. Die groesse richtet sich nach Angabe der cols (Zeichen pro Zeile) und rows
+Um eine Gruppe von Checkboxen zu uebertragen, brauchen alle den gleichen Namen mit dem Zusatz []. Ausserdem das Attribut value.
+Mit dem Attribut radio erstellt man eine Entweder/Oder AUswahl. Es kann nur ein Symbol angeklickt werden.
+Eine Dropdownliste mit mehreren Moeglochkeiten zur Auswahl. Diese muessen im option-tag geschrieben werden und jeweils einen Wert (value) erhalten. Fuer grosse Listen kann man Eintraege gruppieren mit optgroup.
+placeholder: setzt eine Beschriftung ins Eingabefeld Es verschwindet, wenn der User schreibt.
+required: Eingabe erforderlich, ansonsten kann das Formular nicht verschickt werden. Es erscheint eine Meldung.
+-->
+
+
+
+
+
+
+
+    </form>
+
+
+</body></html>
+

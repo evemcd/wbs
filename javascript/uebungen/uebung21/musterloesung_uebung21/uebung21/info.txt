@@ -1,0 +1,3 @@
+den Pfad für die Bootstrap.css Bitte anpassen.
+
+aus Speicherplatzgründen, wurden die Ordner entfernt (Bootstrap, fontawesome) 

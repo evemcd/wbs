@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bereiche auf/zu - klappen - show and hide</title>
+    <link rel="stylesheet" href="start.css">
+    <style>
+        :target {
+            border: 3px solid red;
+        }
+
+        #blubb {
+            display: none;
+        }
+
+        /* a:active + #blubb {        a wird gerade geklickt (sobald nicht mehr geklickt wird, verschwindet es) und direkt darauf folgt #blubb dann:
+            display: block;
+            background: red;
+        } */
+
+        #blubb:target {
+            display: block;
+            border: 3px solid blue;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Bereiche auf/zu - klappen</h1>
+    </header>
+    <nav>
+        <a href="#details">Details</a>
+        <a href="#select">Select</a>
+        <a href="#">Pseudolink</a>
+    </nav>
+
+    <section>
+        <h2>Auf/zu - effekte</h2>
+        <p>
+            HTML bietet mit seinen eingeschränkten Möglichkeiten nur wenige Standard-Elemente um Inhalte ein- und
+            auszublenden. <br>
+            Gleichermaßen sind die vorhanden Elemente nicht für jede Form der Präsentation, dem vorhanden Inhalt oder
+            der gewünschten Benutzbarkeit verwendbar.
+        </p>
+        <p>Die geschickte Kombination von HTML-Elementen, CSS-Eigenschaften und Selektoren schafft den notwendigen
+            Freiraum in Gestaltung, Benutzbarkeit und Zugänglichkeit für fast alle Elemente. Als letzte Möglichkeit
+            steht noch die Kombination von Javascript und CSS zur Verfügung.</p>
+        <a href="#blubb">öffnen</a>
+        <a href="#">schließen</a>   <!--:target wird nicht mehr angesprochen-->
+        <div id="blubb">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente consequuntur, natus aspernatur
+                mollitia velit reiciendis magni commodi perspiciatis dolores laboriosam incidunt expedita blanditiis
+                maxime est consequatur sed quo ut officiis?</p>
+        </div>
+    </section>
+    <aside>
+        <h2>Elemente mit Aufklapp-Funktionalität (toggle)</h2>
+        <section id="details">
+            <h2>Das Details - Element</h2>
+            <code>
+                &lt;details>&lt;/details>
+            </code>
+            <p>Bei dem Element details handelt es sich um einen fortführenden bzw. ergänzenden Themenzugehörigen Inhalt.
+            </p>
+            <h3>Beispiel Details-Element</h3>
+            <details>
+                <summary>Überschrift für details </summary>
+                <p>Das &lt;summary> - Element ist die Überschrift für das details-Element. </p>
+            </details>
+        </section>
+        <section id="select">
+            <h2>Das Select-Element</h2>
+            <code>&lt;select>&lt;/select></code>
+            <p>
+                Mit dem Element &lt;select> wird ein<i>(e)</i> Auswahlfeld/Auswahlliste in Formularen erstellt. In
+                Programmiersprachen bezeichnet man die entstandene grafische Darstellung / Benutzeroberfläche <em>engl.
+                    <abbr title="Graphical User Interface">GUI</abbr></em> als Kombinationslistenfeld oder
+                <strong>Combo-Box</strong>
+            </p>
+            <h3>Beispiel &lt;select>-Element</h3>
+            <form>
+                <select name="auswahlliste">
+                    <option>Auswahl 1</option>
+                    <option value="übermittelter Wert">Auswahl 2</option>
+                    <option>Auswahl 3</option>
+                </select>
+                <input type="submit">
+            </form>
+            <p>Auswahlmöglichkeiten werden hierbei mit dem Element &lt;option> erzeugt</p>
+        </section>
+    </aside>
+    <footer>
+        Bereiche auf/zu - klappen
+    </footer>
+
+</body>
+
+</html>

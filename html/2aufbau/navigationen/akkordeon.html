@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bereiche auf/zu - klappen - show and hide mit :checked</title>
+    <link rel="stylesheet" href="start.css">
+    <style>
+        /*Darstellung*/
+        .btn {
+            background-color: hotpink;
+            color: white;
+            padding: 0.5em;
+            border-radius: 0.2em;
+        }
+
+        /*Usability*/
+        /*label*/
+        [for].btn {
+            cursor: pointer;
+            height: 1em;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        /*close anzeigen wenn input ausgewählt ist*/
+        #check:checked ~ #box [for].btn:before,
+        #check1:checked ~ #box-1 [for].btn:before {
+            content: "close";
+            display: block;
+        }
+
+        .btn:hover,
+        .btn:focus {
+            background-color: rgb(126, 15, 15);
+        }
+
+        /*ausblenden*/
+        .show {
+            display: none;
+        }
+
+        /*einblenden*/
+        #check:checked ~ #box .show,
+        #check1:checked ~ #box-1 .show {
+            display: block;
+        }
+
+        /*ausklappen für Tastatur*/
+        [for].btn:focus~.show {
+            display: block;
+        }
+
+        /*verstecken mit Animation*/
+        .show {
+            display: block;
+            /* height: 0; */
+            overflow: hidden;
+            transition: all 2s;
+            max-height: 0;
+            opacity: 0;
+        }
+
+        #check:checked ~ #box .show,
+        #check1:checked ~ #box-1 .show,
+        [for].btn:focus~.show {
+            /* height: max-content; */
+            max-height: 50em;
+            opacity: 1;
+        }
+
+        /*Steuerelemente nicht mit vorlesen*/
+        @media speech {     /*wenn in der id irgendwas mit check steht*/
+            [id*=check],[for*=check] {
+                display: none;
+            } 
+            .show {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+        <input type="checkbox" id="check">   <!--werden später versteckt-->
+        <input type="checkbox" id="check1">
+
+    <header>
+        <h1>Bereiche auf/zu - klappen</h1>
+    </header>
+
+    <section id="box">
+        <h2>Auf/zu - effekte mit :checked</h2>
+        <p>
+            HTML bietet mit seinen eingeschränkten Möglichkeiten nur wenige Standard-Elemente um Inhalte ein- und
+            auszublenden. <br>Gleichermaßen sind die vorhanden Elemente nicht für jede Form der Präsentation, dem
+            vorhanden Inhalt oder der gewünschten Benutzbarkeit verwendbar.
+        </p>
+        <p>Die geschickte Kombination von HTML-Elementen, CSS-Eigenschaften und Selektoren schafft den notwendigen
+            Freiraum in Gestaltung, Benutzbarkeit und Zugänglichkeit für fast alle Elemente. Als letzte Möglichkeit
+            steht noch die Kombination von Javascript und CSS zur Verfügung.</p>
+        <label for="check" class="btn" tabindex="0">open</label>
+        
+        <div class="show">
+            <h3>überschrift</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero non accusamus explicabo repellat ullam
+                consequatur praesentium atque quibusdam culpa fugiat? Quod voluptates dignissimos molestias nisi?
+                Doloribus error veritatis nemo at!</p>
+        </div>
+    </section>
+    <section id="box-1">
+        <h2>Auf/zu - effekte mit :checked</h2>
+        <p>Die geschickte Kombination von HTML-Elementen, CSS-Eigenschaften und Selektoren schafft den notwendigen
+            Freiraum in Gestaltung, Benutzbarkeit und Zugänglichkeit für fast alle Elemente. Als letzte Möglichkeit
+            steht noch die Kombination von Javascript und CSS zur Verfügung.</p>
+
+        <label for="check1" class="btn" tabindex="0">open</label>
+        <div class="show">
+            <h3>überschrift</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero non accusamus explicabo repellat ullam
+                consequatur praesentium atque quibusdam culpa fugiat? Quod voluptates dignissimos molestias nisi?
+                Doloribus error veritatis nemo at!</p>
+        </div>
+    </section>
+    <footer>
+        Bereiche auf/zu - klappen mit :checked
+    </footer>
+
+
+</body>
+
+</html>

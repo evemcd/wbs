@@ -1,0 +1,9 @@
+body {
+    font-size: 12px;
+}
+
+.boxes {
+    width: 40%;
+    display: inline-block;
+    margin: 10px;
+}

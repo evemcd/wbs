@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <title>JS - Grundlagen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../bootstrap5/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../../../jQuery/jquery-3.6.0.js"></script>
+    <script src="../../../jQuery/jquery-ui-1.13.0.custom/jquery-ui.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="container bg-dark">
+        <h1 class="btn-info p-5 m-0 display-5 fw-bolder">jQuery</h1>
+
+        <div class="row list-group-item-primary">
+            <div class="col-4 py-5 form-bg">
+                <h2>Registrierung</h2>
+                <form class="list-group-item-success p-2">
+                    <input type="text" id="anrede" placeholder="Anrede" class="m-1 w-100" title="Bitte Anrede angeben. Nur Buchstaben erlaubt.">
+                    <input type="text" id="nn" placeholder="Nachname" class="m-1 w-100" title="Bitte Nachname angeben. Nur Buchstaben erlaubt.">
+                    <input type="text" id="vn" placeholder="Vorname" class="m-1 w-100" title="Bitte Vorname angeben. Nur Buchstaben erlaubt.">
+                    <input type="text" id="ort" placeholder="Wohnort" class="m-1 w-100" title="Bitte Wohnort angeben">
+                    <input type="text" id="plz" placeholder="PLZ" class="m-1 w-100" title="Bitte Postleitzahl angeben">
+                    <input type="text" id="str" placeholder="Straße HausNr" class="m-1 w-100" title="Bitte Straße und Hausnummer angeben">
+                    <input type="text" id="mail" placeholder="E-Mail" class="m-1 w-100" title="Bitte E-Mail angeben">
+                    <input type="text" id="pw1" placeholder="Passwort" class="m-1 w-100" title="Bitte Passwort angeben. Mindestens 8 Zeichen, Groß- und Kleinbuchstaben, Zahlen und !?.-_">
+                    <input type="text" id="pw2" placeholder="Passwort wiederholen" class="m-1 w-100" title="Bitte Passwort wiederholen">
+                    <button class="btn btn-success w-100 m-1" type="submit" id="submit">anmelden</button>
+                    <button class="btn btn-danger w-100 m-1" type="reset" id="reset">löschen</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

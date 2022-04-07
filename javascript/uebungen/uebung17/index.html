@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Buchungsformular</title>
+    <script src="index.js" async></script>
+    <style>
+        .container {
+            width: 40%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="form1">
+            <div>
+                <label for="airport">Abflughafen:</label>
+                <select name="airport" id="airport">
+                    <option value="auswahl">Bitte auswählen</option>
+                    <option value="Hamburg">Hamburg</option>
+                    <option value="Hannover">Hannover</option>
+                    <option value="Bremen">Bremen</option>
+                </select>
+                <br>
+                <label for="dauer">Reisedauer:</label>
+                <select name="dauer" id="dauer">
+                    <option value="auswahl">Bitte auswählen</option>
+                    <option value="1 Woche">1 Woche</option>
+                    <option value="2 Wochen">2 Wochen</option>
+                    <option value="3 Wochen">3 Wochen</option>
+                </select>
+                <br>
+                <label for="pers">Reisende</label>
+                <select name="pers" id="pers">
+                    <option value="auswahl">Bitte auswählen</option>
+                    <option value="1 Person">1 Person</option>
+                    <option value="2 Personen">2 Personen</option>
+                    <option value="3 Personen">3 Personen</option>
+                    <option value="4 Personen">4 Personen</option>
+                </select>
+            </div>
+
+
+            <div>
+                <label for="room">Zimmertyp:</label><br>
+                <input type="radio" name="room" id="room1" value="Einzelzimmer"> Einzelzimmer
+                <input type="radio" name="room" id="room2" value="Doppelzimmer"> Doppelzimmer
+                <input type="radio" name="room" id="room3" value="Familienzimmer"> Familienzimmer
+            </div>
+
+
+            <div>
+                <label for="vn">Vorname:</label>
+                <input type="text" name="vn" id="vn" placeholder="Muster: Hans"><br>
+                <label for="nn">Nachname:</label>
+                <input type="text" name="nn" id="nn" placeholder="Muster: Schmidt"><br>
+                <label for="str">Straße:</label>
+                <input type="text" name="str" id="str" placeholder="Muster: Marktstraße, 22a"><br>
+                <label for="plz">PLZ:</label>
+                <input type="text" name="plz" id="plz" placeholder="Muster: 12345"><br>
+                <label for="ort">Wohnort:</label>
+                <input type="text" name="ort" id="ort" placeholder="Muster: Hamburg|Schwerin|Hannover"><br>
+                <label for="mail">E-Mail:</label>
+                <input type="text" name="mail" id="mail" placeholder="Muster: test@test.(hh|sn|h)"><br>
+            </div>
+
+
+            <div>
+                <label for="request">Wünsche an das Hotel</label><br>
+                <input type="checkbox" name="request" id="req1" value="Nichtraucherzimmer"> Nichtraucherzimmer
+                <input type="checkbox" name="request" id="req2" value="Raucherzimmer"> Raucherzimmer
+                <input type="checkbox" name="request" id="req3" value="Frühanreise"> Frühanreise
+                <input type="checkbox" name="request" id="req4" value="Spätabreise"> Spätabreise
+                <input type="checkbox" name="request" id="req5" value="Parkplatz"> Parkplatz
+            </div>
+            <input type="submit" id="submit" value="BUCHEN">
+            <input type="reset" value="CLEAR">
+        </form>
+        <div id="ausgabe"></div>
+    </div>
+</body>
+
+</html>

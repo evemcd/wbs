@@ -1,0 +1,166 @@
+/* generelle Stylguide Vorgaben */
+/* standardregelsätze */
+/***************************   
+/*   
+/* 
+Die hier angegeben Regelsätze ermöglichen es die wichtigsten Vorgaben aus einem Stylguide zu übernehmen und müssen mit jedem Projekt nur angepasst werden
+Layout spezifische Angaben (das spätere Design) wird in einem weiteren Stylesheet aufgebaut. 
+Ein späteres zusammenfassen der CSS-Dateien oder generelles einzelnes einbinden von mehreren CSS-Dateien ist jederzeit möglich.
+
+Das Zusammenführen von mehreren CSS-Dateien via:
+ @import url("dateiname.css");
+ @import url("dateiname-2.css");
+ usw. ist aus Performancegründen zu vermeiden.
+
+ Führen Sie bei kleineren Stylesheets (gesamt bis ca. 1500 Zeilen) alle Anweisungen in einer Datei zusammen. Bei größen Styleysheets rufen sie einfach alle benötigten Dateien im Kopf auf.
+/*  
+/*
+/**/
+
+
+/** Resetten*/ 
+/**
+*{margin:0;padding:0;}
+*/
+
+/**
+* Alternativen zum hardereset
+* http://meyerweb.com/eric/tools/css/reset/ -resetstylesheet 
+* http://necolas.github.io/normalize.css/ - normalisieren
+*/ 
+
+:root{
+  /* Allgemeine vorgaben und einsatz dokumentieren*/
+  /* heading color */
+  --color1:rgb(0, 151, 151);
+  /* second heading color*/
+  --color2:var(--color1);
+  /* Background */
+  --color3:#f3f3f3;
+  /* Standard Textfarbe */
+  --color4:#212121;
+  /* hover color textlink*/
+  --color5: blue;
+  /* borders, inputs etc. */
+  --color6:#333;
+  /* ggf. für bessere Verständlichkeit noch sprechendere Variablen verwenden und diesen dann die allgemeinen Vorgaben zuweisen.*/
+  /* diese Variablen dann denn jeweiligen eigenschaften zuweisen */
+  /* Momentan wurden diese nicht genutzt */
+  /* --backgroundimg:ur(dummy.jpg); */
+  /* --primarycolor:var(--color3); */
+  /* Background*/
+  /* --page-bg:var(--color2); */
+
+
+  /* Schriftgrößen*/
+  /* font-size base html*/
+  /* Relative maßeinheiten dann an den Elementen selbst verwenden (em,rem,%)*/
+  --size-16:16px;
+  --size-18:18px;
+  /* --f-size1:100%;
+  /* Alternativen */
+  /*
+  --heading1:2em;
+  --heading2:1.5em; */
+  /* Typo*/
+  /* primary Font */
+  --font1:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* Secondary font */
+  --font2:'Courier New', Courier, monospace;
+  --heading-color:var(--color3);
+}
+
+html{
+  background-color:var(--color3,#ccc);
+  font-size:var(--size-16,initial);
+  font-family:var(--font1,times, "times new roman",serif);
+  color:var(--color4,inherit);
+  box-sizing:content-box;
+}
+
+*,*:before,*:after{
+  box-sizing:inherit;
+}
+
+/* falls reset benutzt,  nicht nötig */
+/* body{ margin:0;} */
+
+/*********************************/
+/* Content vorgaben
+/***/
+h1,h2,h3{
+  font-family:var(--font2,courier,"courier new", monospace);
+  color:var(--color1,inherit);
+}
+h1{font-size:200%;}
+h2{
+  color:var(--color2,inherit);
+  font-size:150%;
+}
+h3{font-size:120%;}
+
+p{font-size:110%;}
+/* Listen **/
+ul,ol{
+  /* list-style:none; */
+ /* padding-left:0; */
+}
+dd,dt{}
+
+/*********************************/
+/* interaktive elemente
+/*********************************/
+
+/* Verweise*/
+
+a{
+  color:var(--color4,inherit);
+  /* Wenn standard Textlinks ohne Hervorhebung dargestellt werden muss eine alternative Hervorhebung verwendet werden*/
+  /* text-decoration:none; */
+}
+a:hover,a:focus{
+  color:var(--color5,red);
+  text-decoration:none;
+}
+
+/* Formularelemente */
+label{ 
+  /* ggf. Darstellungeigenschaft und cursor */
+}
+
+input,textarea,select{
+  width:80%;
+  border:1px solid var(--color6, currentcolor);
+}
+
+input:hover,textarea:hover,select:hover{
+  border-color: var(--color1, currentcolor);
+}
+input:focus,textarea:focus,select:focus{
+  border-color: var(--color4, currentcolor);
+}
+/* Breiten für radio und checkbox überschreiben*/
+[type="radio"],[type="checkbox"]{
+  width:auto;
+}
+/* Spezielle anpassungen Formularelemente*/
+[type="submit"],button{
+  width:50%;
+}
+/* ggf auch individueller hover */
+[type="submit"]:active,button:active{
+  /* background:var(--color5); */
+}
+
+img{
+  background:var(--color1);
+  display:inline-block;
+}
+/* transparente Bilder ohne Hintergrund */
+img[src$=".png"],img[src$=".gif"]{
+  background:none;
+}
+/* rahmen um verlinkte Bilder in alten Browsern verhindern*/
+a img{
+  border:0;outline:0;
+}

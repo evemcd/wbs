@@ -1,0 +1,36 @@
+.cupcake {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.frostingImg {
+    text-align: center;
+}
+
+.frostingImg img {
+    width: 13%;
+    height: auto;
+}
+
+.frostingImg figcaption {
+    text-align: center;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    .cupcake ul {
+        padding-left: 1.1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cupcake {
+        flex-direction: column;
+    }
+
+    .frostingImg img {
+        width: 10%;
+    }
+}

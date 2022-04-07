@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Footer</title>
+    
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    
+        #wrapper {
+            background-color: coral;
+            width: 500px;
+            min-height: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        footer {
+            height: 40px;
+            text-align: center;
+            background-color: lightblue;
+            padding: 5px;
+            position: sticky;
+            bottom: 0;
+        }
+    
+
+    </style>
+    
+    
+</head>
+
+<body>
+<div id="wrapper">
+    <h1>Sticky Footer</h1>
+    <main>
+    <p>
+    Damit das Element wrapper eine Mindesthoehe von 100% anzeigt, muessen fuer dessen Vorfahren body und HTML die Angabe height: 100% gesetzt werden.<br>
+        Der wrapper bekommt dann mit der Eigenschaft min-height: 100% die Mindesthoehe zugewiesen.<br>
+        Der footer wird mit position: sticky an das Ende des Viewports geheftet. Weitere Angabe: bottom: 0.<br>
+        <strong>Der footer darf nicht innerhalb des Wrappers liegen.</strong>
+    </p>
+    </main>
+    
+    </div>
+    <footer>
+    Impressum - Datenschutz - Kontakt</footer>
+
+</body></html>
+

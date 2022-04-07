@@ -1,0 +1,16 @@
+Übung EMail-Check
+==========================================
+
+Eine User-Eingabe soll geprüft werden, ob es sich dabei um eine eMail-Adresse handelt.
+(MIT PHP, NICHT MIT HTML)
+
+Folgende Checks sind zu machen:
+
+1. 		Wurde etwas eingegeben
+2.		Ist die Eingabe lang genug (min 6 Zeichen)
+3.		Ist ein @-Zeichen vorhanden
+4. 		Ist ein . vorhanden
+5. 		ist der letzte . hinter dem @-Zeichen platziert
+
+
+Es soll jeweils eine Fehlermeldung ausgegeben werden. 

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE welt SYSTEM "welt.dtd">
+<welt>
+  <land lage="Europa">
+    <name>Deutschland</name>
+    <capital>Berlin</capital>
+    <language>Deutsch</language>
+    <population>83</population>
+  </land>
+  
+  <land lage="Europa">
+    <name>Niederlande</name>
+    <capital>Amsterdam</capital>
+    <language>Niederländisch</language>
+    <population>10</population>
+  </land>
+  
+  <land lage="Europa">
+    <country>Russia</country>
+    <capital>Moskau</capital>
+    <language>Russish</language>
+    <population>150</population>
+  </land>
+  
+  <land lage="Asien">
+    <country>Indonesia</country>
+    <capital>Jakarta</capital>
+    <language>Indonesisch</language>
+    <language>Sudanesisch</language>
+    <language>Javanisch</language>
+    <population>240</population>
+  </land>
+</welt>

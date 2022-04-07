@@ -1,0 +1,42 @@
+{
+    "artist" : [
+        {
+            "name" : "George Michael",
+            "albums" : [
+                {
+                    "titel" : "Faith",
+                    "jahr" : 1987
+                },
+                {
+                    "titel" : "Older",
+                    "jahr" : 1996
+                },
+                {
+                    "titel" : "Patience",
+                    "jahr" : 2002
+                }
+            ]
+        },
+        {
+            "name" : "Marianne Faithful",
+            "albums" : [
+                {
+                    "titel" : "Come My Way",
+                    "jahr" : 1964
+                },
+                {
+                    "titel" : "Broken English",
+                    "jahr" : 1978
+                },
+                {
+                    "titel" : "Strange Weather",
+                    "jahr" : 1986
+                },
+                {
+                    "titel" : "Kissing Time",
+                    "jahr" : 2002
+                }
+            ]
+        }
+    ]
+}

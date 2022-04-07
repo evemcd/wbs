@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float - Beispiele</title>
+  <style> 
+    /* allgemeine Visualisierung */
+    div{
+      background:#333;
+      padding:1%;
+    }
+
+    div div{
+      background:#ccc;
+      padding:1%;
+      margin:1%;
+    }
+    
+    /* Spaltenbreite abzüglich margin/padding (umlaufend je 1%)*/
+    .col-30{width:26%;}
+    .col-33{width:29%;}
+    .col-70{width:66%;}
+    
+    /* Spalte mit margin statt float */
+    .col-30.push-l{
+      margin-right:70%;
+    }
+
+    /* ggf. Mindesthöhe bei 2-Spalter */
+    /* .m-height{min-height:50px;} */
+    .col-30.push-l,.col-30.fl-l{
+      min-height:75px;
+    }
+
+    /* Klassen für float */
+    .fl-l{float:left;}
+    .fl-r{float:right;}
+
+    /* Clearen Mit Pseudoelement */
+    .clear:after{
+      content:"";
+      display:table;
+      clear:both;
+    }
+    
+    /* Hilfsvisualisierung - verwendete Klassen am Element im Browser anzeigen , klasse Test am body oder Html-Element setzen*/
+    .test [class]:before{
+      content: "Klassen am Element: " attr(class);
+      display:table;
+      outline:2px solid #fc0;
+      padding:0.5em;
+      margin-bottom:1em;
+      background:#f3f3f3;
+      font-size:0.8em;
+    }
+    </style>
+</head>
+<body>
+  <h1>Beispiele für kreatives Floating</h1>
+<h2>3 - spalter</h3>
+  <div class="clear">
+    <div class="col-33 fl-l">
+    spalte1
+    </div>
+    <div class="col-33 fl-l">
+    spalte2
+    </div>
+    <div class="col-33 fl-l">
+    spalte3
+    </div>
+  </div>
+  
+<h3>sourceordering</h3>  
+  <div class="clear">
+    <div class="col-33 fl-l">
+    spalte1
+    </div>
+    <div class="col-33 fl-r">
+    spalte2
+    </div>
+    <div class="col-33 fl-l">
+    spalte3
+    </div>
+  </div>
+  
+<h2>optischer Zweispalter</h2>
+  <div class="clear">
+    <div class="col-30 fl-l">
+    spalte1
+    </div>
+    <div class="col-70 fl-r">
+    spalte2
+    </div>
+    <div class="col-70 fl-r">
+    spalte3
+    </div>
+  </div>
+  
+  <h3>sourceordering</h3>
+  <div class="clear">
+    <div class="col-70 fl-r">
+    spalte1
+    </div>
+    <div class="col-70 fl-r">
+    spalte2
+    </div>
+    <div class="col-30 push-l">
+    spalte3
+    </div>
+  </div>
+</body>
+</html>

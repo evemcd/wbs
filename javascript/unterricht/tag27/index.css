@@ -1,0 +1,45 @@
+body {
+  font-family: "Lucida Sans- Unicode", Helvetica, sans-serif;
+  background-color: #717581;
+}
+
+.navi ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 0;
+	list-style: none;
+}
+
+.navi ul li {
+	min-width: 120px;
+}
+
+.navi ul li a {
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	padding: 15px 0;
+	color: #efefef;
+}
+
+#navi1 li:nth-of-type(1) a {
+	background-color: #f33;
+}
+
+#navi1 li:nth-of-type(2) a {
+	background-color: #f1c40f;
+}
+
+#navi1 li:nth-of-type(3) a {
+	background-color: #1ebb5f;
+}
+
+#navi1 li:nth-of-type(4) a {
+	background-color: #3598dc;
+}
+
+#navi1 li:nth-of-type(5) a {
+	background-color: #c39;
+}

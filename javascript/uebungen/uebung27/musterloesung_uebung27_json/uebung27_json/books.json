@@ -1,0 +1,44 @@
+{
+  "books": [
+    {
+      "name": "SQL",
+      "autor": "Max Mustermann", 
+			"seiten": 1002,
+			"jahr": "2000-12-01",
+			"verlag": "Wissen und Natur",
+			"info": "SQL ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben "
+    },
+    {
+      "name": "PHP - OOP",
+      "autor": "Tom Jerry",
+			"seiten": 1210,
+			"jahr": "2021-09-23",
+			"verlag": "Wissen und Natur",
+			"info": "PHP - OOP ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben "
+    },
+		{
+      "name": "Algarve",
+      "autor": "Sara Sonne",
+			"seiten": 152,
+			"jahr": "2021-07-12",
+			"verlag": "Weltschau",
+			"info": "Algarve ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben "
+    },
+		{
+      "name": "JavaScript",
+      "autor": "Anna Schlau",
+			"seiten": 1288,
+			"jahr": "2021-03-16",
+			"verlag": "Wissen und Natur",
+			"info": "JavaScript ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben "
+    },
+		{
+      "name": "Provence",
+      "autor": "Max Moritz",
+			"seiten": 234,
+			"jahr": "2020-06-30",
+			"verlag": "Weltschau",
+			"info": "Provence ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben "
+    }
+  ]
+}

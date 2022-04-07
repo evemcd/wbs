@@ -1,0 +1,74 @@
+                    b <!DOCTYPE html>
+<html lang="de">
+<head>
+<title>JavaScript</title>
+<meta charset="utf-8" />
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Verdana, sans-serif;
+	font-size: 20px;
+}
+#main {
+	width: 800px;
+	margin: 0 auto;
+	position: relative;
+}
+
+h1 {
+	font-size: 55px;
+}
+
+ul {
+	background-color: #ccc;
+	list-style-type: none;
+	display: table;
+	
+	font-weight: bold;
+	color: #ff4500;
+}
+
+li {
+	padding: 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+<div id="main">
+
+
+<h1>Mutiplizieren mit for</h1>
+<ul id="liste1"></ul>
+
+<h1>Mutiplizieren mit while</h1>
+<ul id="liste2"></ul>
+<script type="text/javascript">
+"use strict";
+let eingabe = prompt("Bitte eine Zahl eingeben");
+
+//for
+for(let i=1; i<= eingabe; i++)
+{
+	document.getElementById("liste1").innerHTML += "<li>"+i+" x " + i + " ist: "+(i*i)+"</li>";
+}
+
+
+let z=1;
+while(z <= eingabe)
+{
+	document.getElementById("liste2").innerHTML += "<li>"+z+" x "+z+" ist: "+(z*z)+"</li>";
+	z++;
+}
+
+</script>
+
+
+</div>
+</body>
+</html>

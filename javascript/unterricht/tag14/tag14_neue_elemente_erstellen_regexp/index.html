@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <title>JS - Grundlagen</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../fontawesome/css/all.css" />
+  <script src="index.js" async></script>
+</head>
+<body class="bg-dark">
+<div class="container bg-secondary">
+    
+<div class="row bg-primary">
+  <div class="col-12 py-5">
+    <form id="form1" class="col-md-4 bg-light p-2">
+      <div>
+        <input type="text" id="newStudent" class="form-control" placeholder="Name eingeben" />
+      </div>
+      <button type="submit" class="btn btn-success w-100 fw-bolder py-3 my-2">
+        Neu anmelden
+      </button>
+    </form>
+    <!-- +++++++++++++++++ -->
+    <ul id="liste" class="col-md-4 list-group my-2">
+      <li class="list-group-item list-group-item-primary">Tom</li>
+      <li class="list-group-item list-group-item-secondary">Jerry</li>
+      <li class="list-group-item list-group-item-warning">Moritz</li>
+    </ul>
+  </div>
+</div>
+<!-- +++++++++++++++++++++++++++++++++++++++++++ -->
+<div class="row bg-light">
+  <div class="col-12 py-5">
+    <form class="col-md-4">
+      <div class="mb-1">
+        <input type="text" id="nachname" class="form-control" placeholder="Name eingeben" />
+      </div>
+      <div class="mb-1">
+        <input type="text" id="vorname" class="form-control" placeholder="Vorname eingeben" />
+      </div>
+      <div class="mb-1">
+        <input type="text" id="geb" class="form-control" placeholder="Geburtstag eingeben" />
+      </div>
+      <div class="mb-1">
+        <input type="text" id="tel" class="form-control" placeholder="Telefon eingeben" />
+      </div>
+      <div class="mb-1">
+        <input type="text" id="heirat" class="form-control" placeholder="Heiratsdatum eingeben" />
+      </div>
+      <div class="mb-1">
+        Laufen <input type="checkbox" name="cb" class="form-check-input" value="Laufen" />
+        Tanzen <input type="checkbox" name="cb" class="form-check-input" value="Tanzen" />
+        Singen <input type="checkbox" name="cb" class="form-check-input" value="Singen" />
+      </div>
+
+      <div class="mb-1">
+        <select id="beruf" class="form-select">
+          <option>Bitte auswählen</option>
+          <option>Soldat</option>
+          <option>Student</option>
+          <option>Manager</option>
+          <option>sonstiges</option>
+        </select>
+      </div>
+      <button type="submit" id="anmelden" class="btn btn-success w-100 fw-bolder py-3">Anmelden</button>
+    </form>
+
+    <div id="ausgabe"></div>
+  </div>
+</div>
+
+</div>
+<noscript>
+  <p>Bitte JS einschalten</p>
+</noscript>
+
+</body>
+</html>
+

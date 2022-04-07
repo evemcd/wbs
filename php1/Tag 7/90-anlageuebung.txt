@@ -1,0 +1,21 @@
+Übung Anlageberechnung
+=====================================================
+
+Der User möchte Geld anlegen.
+In einem Formular mit zwei Feldern gibt er 
+	1. die Anlagesumme
+	2. die Laufzeit
+an. 
+
+Das Programm ermittelt mit Hilfe der Laufzeit den Zinssatz
+den die Bank dafür gewährt
+
+3 Jahre oder weniger			=> 2%
+4 oder 5 Jahre					=> 3%
+6 bis einschließlich 9 Jahre	=> 4%
+10 oder mehr Jahre 				=> 5%
+
+Mit dem Zinsatz berechnet das Programm die Zinsen, 
+die in jedem Jahr erwirtschaftet werden und addiert diesen Betrag auf die Gesamtsumme. 
+
+Dazu wird für jedes Jahr der Laufzeit sowohl der Zinsbetrag als auch die Gesamtsumme ausgegeben

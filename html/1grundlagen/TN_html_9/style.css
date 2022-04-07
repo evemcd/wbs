@@ -1,0 +1,61 @@
+@charset "utf-8"
+
+/*
+    * {
+        border: 1px solid black;
+}
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+fieldset {
+    max-width: 25rem;
+    margin: 20px auto;
+}
+
+legend {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+form div {
+    margin: 20px 0
+}
+
+label {
+    display: inline-block;
+    width: 8rem;
+    vertical-align: top;
+    padding-top: 5px
+}
+
+input {
+    width: 12rem;
+    height: 2rem;
+}
+
+input:hover {
+    background-color: aliceblue;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    width: 8rem;
+    margin-right: 15px;
+    font-weight: 700;
+}

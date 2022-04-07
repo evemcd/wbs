@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vertikales Menü mit Ausklappfunktion</title>
+  <link rel="stylesheet" href="start.css">
+  <style>
+    /* einfacher zweispalter */
+    nav {
+      float: left;
+      width: 10em;
+      margin-top: 0;
+      padding: 0;
+      background: #ccc;
+      border: 0;
+    }
+
+    section {
+      margin-left: 11em;
+    }
+
+    footer {
+      clear: both;
+    }
+
+    /*Navigation*/
+    nav ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    nav li {
+      padding: 0.2em 0;
+      border-bottom: 1px solid black;
+      background-color: #ccc;
+    }
+
+    /* nav li li {
+      border: 5px solid blue;
+    } */
+
+    nav a {
+      display: block;
+      padding: 0.5em;
+      /* width: 10em; */
+    }
+
+    nav li ul {
+      /*spricht die ul in der ersten ul an und versteckt sie*/
+      /* display: none ; */
+      position: absolute;
+      left: -99999em;
+      width: 10em;
+    }
+
+    nav li:hover > ul,
+    nav li:focus-within > ul {
+      /*einblenden für Maus und Touch/Tastaturnutzer*/
+      left: auto;
+      margin-left: 10em;
+      margin-top: -2.4em;
+      /* background-color: red; */
+      border-left: 20px solid transparent;
+    }
+
+    nav li:hover,
+    nav li:focus-within {
+      background-color: red;
+    }
+
+    .active {
+      background-color: yellow;
+    }
+
+    .active>a {
+      /*nur das direkte Kind, nicht die weiteren*/
+      background-color: lime;
+    }
+
+    .sub>a:before {
+      content: "+"" ";
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>vertikale Navigation mit Flyout-Menü</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="" title="Link 1">link 1</a></li>
+      <li class="active sub">
+        <a href="" title="Link 2">link 2</a>
+        <ul>
+          <li><a href="" title="Link 2.1">link 2.1</a></li>
+          <li><a href="" title="Link 2.2">link 2.2</a></li>
+        </ul>
+      </li>
+      <li><a href="" title="Link 3">link 3</a></li>
+      <li class="sub"><a href="" title="Link 4"> link 4</a>
+        <ul>
+          <li><a href="" title="Link 4.1">link 4.1</a></li>
+          <li class="sub"><a href="" title="Link 4.2">link 4.2</a>
+            <ul>
+              <li><a href="" title="Link 4.1">link 4.2.1</a></li>
+              <li><a href="" title="Link 4.2">link 4.2.2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Überschrift für Section</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, dignissimos, dolores, nemo, quas facere illo
+      provident <a href="">tenetur</a> velit fugiat earum distinctio enim ipsa delectus omnis quis officiis nostrum quam
+      vitae!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, dignissimos, dolores, nemo, quas facere illo
+      provident tenetur velit fugiat earum distinctio enim ipsa delectus omnis quis officiis nostrum quam vitae!</p>
+  </section>
+
+  <footer>
+    vertikales Menü mit Ausklappfunktion
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>horizontales Menü mit Ausklappfunktion</title>
+  <link rel="stylesheet" href="start.css">
+  <style>
+    /** 
+    * TODO
+    * [ ] Listenpunkte horizontal nebeneinander stellen
+    *     ! - Flex, float, inline-block*/
+    ul {display: flex;
+            list-style: none;
+            padding: 10px;
+        }
+    li {padding: 10px;
+        }
+    
+      
+    * /*[ ] verschachtelte Ebenen verstecken
+    *     ! - display:none / visibility:hidden werden von Screenreadern/sinnstiftenden Mechanismen nicht wiedergegeben*/ 
+
+     .sub {display: none;
+            position: absolute;}
+
+    .sub2 {display: none;
+            position: absolute;
+            min-width: 100px;
+            left: 6em;
+            top: 2.5em;} 
+
+    /*sinnstiftenden Mechanismen nicht wiedergegeben /*
+    * [ ] wenn Listenpunkt mit der Maus berührt wird soll versteckte Ebene erscheinen
+    *     ! - selected-element:hover target-element{}   ">" = Kindselector, damit nicht alle kommen*/
+   
+        .main li:hover > .sub, nav li:focus-within > .sub {background-color: red;
+                             display: block;}
+        .sub li:hover > .sub2, .sub li:focus-within > .sub2 {background-color: royalblue;
+                                display: block;
+       }
+
+    /* [ ] Funktionalität des einblendens für Tastatur/Touchscreennutzer prüfen
+    *     ! - Test mit Tab-Key :focus / :focus-within
+   
+    ** [ ] Standardformatierung Navigation (Hintergründe/Schriftfarben)
+    **    ! - Anker ausdehnen nicht vergessen - display:block
+    ** 
+    *** - Accessibillity / Usabillity (WCAG)
+    *** [ ] visuelle Zustandsänderung beim berühren mit der Maus / Auswahl des Elementes
+    ***     ! - z.B. Hintergrund/Textfarbe , Rahmen, Symbole/Icons, Kontraste beachten
+    *** [ ] Abstände zwischen anklickbaren Flächen / Interaktiven Elementen  
+    ***     ! - 4px horizontal/vertikal je nach Anordnung, Mindestgröße Touchevent (44x44) - bei retina / 2 , kürzeste Seite > 20px
+   
+    *** [ ] Ausklappbarkeit visualisieren
+    ***     ! -  Rahmen, Symbole/Icons
+    *** [ ] Aktiven Menüpunkt / Unterpunkt kennzeichnen
+    ***     ! - z.B. Hintergrund/Textfarbe , Rahmen, Symbole/Icons
+    **
+    *
+    /**/
+    
+    
+    
+    /*
+    ****************************************************************
+    ***
+    ***     regelmäßig Markup und CSS validieren
+    ***     Semantik beachten
+    ***     testen, testen, testen
+    ***     finales validieren
+    ***
+    ****************************************************************
+    /**/
+
+  
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>horizontale Navigation mit Flyout-Menü</h1>
+  </header>
+  
+  <nav>
+    <ul class="main">
+      <!--ggf Tabindex für alte browser setzen die :focus-within nicht unterstützen-->
+      <li><a href="main1" title="Link 1">link 1</a></li>
+      <li>
+        <a href="main2" title="Link 2">link 2</a>
+        <ul class="sub">
+          <li><a href="sub21" title="Link 2.1">link 2.1</a></li>
+          <li><a href="sub22" title="Link 2.2">link 2.2</a>
+            <ul class="sub2">
+              <li><a href="sub221" title="Link 2.2.1">link 2.2.1</a></li>
+              <li><a href="sub222" title="Link 2.2.2">link 2.2.2</a></li>
+            </ul>
+          </li>
+          <li><a href="sub23" title="Link 2.3">link 2.3</a></li>
+          <li><a href="sub24" title="Link 2.4">link 2.4</a></li>
+        </ul>
+      </li>
+      <li><a href="main3" title="Link 3">link 3</a></li>
+      <li>
+        <a href="main4" title="Link 4">link 4</a>
+        <ul class="sub">
+          <li><a href="sub41" title="Link 4.1">link 4.1</a></li>
+          <li><a href="sub42" title="Link 4.2">link 4.2</a>
+            <ul class="sub2">
+              <li><a href="sub421" title="4.2.1">Link4.2.1</a></li>
+              <li><a href="sub422" title="4.2.2">Link4.2.2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Grundprinzip horizontale Ausklappnavigation</h2>
+    <p>Lesen Sie die Kommentare in der Datei aufmerksam durch und betrachten diese als Checkliste! Nachfolgend noch ein Beispiel für das verstecken von Inhalten.</p>
+    <details>
+      <summary>Tips</summary>
+      <h2>Inhalte freundllich verstecken</h2>
+    <figure>
+      <img src="https://snuffis-web.de/code/img/code_hide_markup.png" alt="demomarkup" style="max-width:80%;height:auto;">
+      <figcaption>Markup Beispiel</figcaption>
+    </figure>
+    <figure>
+      <img src="https://snuffis-web.de/code/img/code_hide.png" alt="demo css-regeln verstecken" style="max-width:80%;height:auto;">
+      <figcaption>einfache CSS-regeln zum verstecken</figcaption>
+    </figure>
+    <figure>
+      <img src="https://snuffis-web.de/code/img/code_hide_show.png" alt="demo css-regeln einblenden" style="max-width:80%;height:auto;">
+      <figcaption>CSS-regel zum einblenden</figcaption>
+    </figure>
+    </details>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, dignissimos, dolores, nemo, quas facere illo
+    provident tenetur velit fugiat earum distinctio enim ipsa delectus omnis quis officiis nostrum quam vitae!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, dignissimos, dolores, nemo, quas facere illo
+    provident tenetur velit fugiat earum distinctio enim ipsa delectus omnis quis officiis nostrum quam vitae!</p>
+  </section>
+
+  <footer>
+    horizontale Menü mit Ausklappfunktion
+  </footer>
+</body>
+
+</html>

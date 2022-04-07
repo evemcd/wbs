@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap');
+
+:root {
+    --colorBlue: #305b7b;
+    --colorBgGrey: #f3f3f3;
+}
+
+body {
+    font-family: 'Crete Round', serif;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-top: 0;
+    box-shadow: -3px 5px 3px #bbbbbb, 3px 5px 3px #bbbbbb;
+}
+
+.topHeader {
+    font-family: 'Alegreya SC', serif;
+    background-color: var(--colorBlue);
+    padding: 10px;
+    text-align: right;
+    color: white;
+    font-size: 0.7em;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.imgParent {
+    position: relative;
+}
+
+.logoLayer1 {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.logoLayer2 {
+    position: absolute;
+    left: 3em;
+    z-index: 2;
+    font-size: 1.3em;
+    color: black;
+    margin-top: 0.5em;
+}
+
+.headerImg {
+    display: block;
+    width: 100%;
+}
+
+nav {
+    background-color: var(--colorBlue);
+    box-sizing: border-box;
+    border-bottom: 3px solid var(--colorBgGrey);
+}
+
+nav ul {
+    margin-top: 0;
+    list-style: none;
+    display: flex;
+    margin-bottom: -3px;
+    padding-inline-start: 0;
+}
+
+nav li {
+    padding: 6px 30px;
+    border-bottom: 3px solid var(--colorBgGrey);
+}
+
+nav li:hover,
+nav li:focus-within {
+    padding: 6px 30px;
+    border-bottom: 3px solid rgb(182, 182, 182);
+    background-color: #2d516d;
+}
+
+nav a {
+    font-size: 0.9em;
+}
+
+.active {
+    background-color: white;
+    border-bottom: 3px solid gray;
+}
+
+.active:hover,
+.active:focus-within {
+    background-color: rgb(235, 233, 233);
+    border-bottom: 3px solid gray;
+}
+
+.active a {
+    color: gray;
+}
+
+main {
+    background-color: var(--colorBgGrey);
+    display: flex;
+}
+
+.mainInfo {
+    width: 55%;
+    /* padding: 1em; */
+}
+
+section {
+    background-color: white;
+    padding: 1em;
+}
+
+h1 {
+    margin-top: 0;
+    color: var(--colorBlue);
+}
+
+p {
+    margin-bottom: 0;
+    font-size: 0.8em;
+    color: gray;
+}
+
+.news {
+    width: 40%;
+    margin: 1.5em;
+}
+
+aside {
+    background-color: white;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: 1px solid lightgray;
+}
+
+aside p {
+    font-size: 0.7em;
+}
+
+h2 {
+    color: var(--colorBlue);
+    margin-top: 0;
+    font-size: 1em;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--colorBgGrey);
+}
+
+.footerInfo {
+    display: flex;
+}
+
+.footerDivs {
+    background-image: linear-gradient(to bottom, #ffffff, #efefef, #e0dfdf, #d0cfcf, #c0c0bf);
+    border: 1px solid lightgray;
+    margin: 1em;
+    width: 30%;
+}
+
+.footerDivs {
+    padding: 0.5em;
+}
+
+footer img {
+    float: left;
+    padding-right: 1em;
+}
+
+footer h2 {
+    margin-bottom: 0;
+}
+
+h3 {
+    color: var(--colorBlue);
+    font-size: 0.7em;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+footer ul {
+    list-style: square;
+    margin-top: 0.5em;
+    padding-left: 1em;
+}
+
+footer li {
+    color: gray;
+    font-size: 0.7em;
+}
+
+footer p {
+    color: var(--colorBlue);
+    font-size: 0.8em;
+    font-weight: 700;
+    padding-left: 3.5em;
+}
+
+footer a {
+    text-decoration: underline;
+    color: var(--colorBlue);
+}
+
+.bottom {
+    background-color: #c9c9c9;
+}
+
+.bottom p {
+    color: gray;
+    font-size: 0.7em;
+    font-weight: 300;
+    text-align: center;
+    padding: 2em;
+}

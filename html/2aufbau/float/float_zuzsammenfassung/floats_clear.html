@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="de">      
+	<head> 
+		<meta charset="utf-8"> 
+		<title>Floats und Clear</title>
+		<link rel="stylesheet" href="start.css">    
+		<style>    
+		.box1{
+		background:#ffc;
+		border:1px solid purple;
+		width:200px;
+		height:200px;
+		float:left;
+		}
+    
+		/* Stoßen Elemente mit der Eigenschaft float in der vertikalen an weitere Elemente die vertikale Außenabstände  aufweisen, so fallen die Außenabstände in der vertikalen nicht mehr zusammen sondern Sie addieren sich. Das Standardverhalten der zusammenfallenden Außenabstände (collapsing margins) ist somit nicht mehr gegeben */
+		.box2{
+		background:#ccc;
+		border:1px solid #333;
+		width:400px;
+		height:300px;
+		float:left;
+		}
+		
+		/*******************************/
+		/* Infobox 
+		/******************************/
+		.info{border:3px double green}
+		.info dt{font-weight:bold}
+		.info dd{font-style:italic}
+		</style>
+	</head>
+	<body>
+		<header><!--Kopfbereich - Seitenkopf-->
+			<h1>Floats in HTML</h1>
+		</header>
+
+		<section><!-- Seitenabschnitt/Seitenbereich - Hauptinhaltsbereich -->
+			<h2> Beenden des Fließens für ein Element</h2>
+			<article class="info">
+				<h3>Die Eigenschaft Clear</h3>
+				<p>Die Eigenschaft clear: beendet das umfließen von vorangegangen Floats für das nachfolgende Element bzw. dem Element an dem der Clear angegeben wurde. Dabei ist es möglich jede Richtung des Floats einzeln zu beenden oder generell das fließen zu verhindern. Folgende Werte sind dabei möglich:</p>
+				<dl>
+					<dt>clear:both</dt>
+					<dd>beendet das fließen in beider Richtungen</dd>
+					<dt>clear:left</dt>
+					<dd>beendet das rechte umfließen für vorangegangene links gefloatete Elemente</dd>
+					<dt>clear:right</dt>
+					<dd>beendet das linke umfließen für vorangegangene rechts gefloatete Elemente</dd>
+				</dl>
+			</article>
+			<p class="box1">Box 1</p>
+			
+			<p class="box2">Box-2</p>
+			<span style="clear:both;display:block; background:red;color:yellow;" title="Wenn der Clear an dieser Stelle funktioniert hat prüfe ob in der gleichen Ebene ein Element direkt folgt an dem du clearen kannst oder ob unmittelbar nach dieser Zeile ein umschließender Container geschlossen wird der ggf. mitgefloatet werden kann bzw. mit einem Pseudoelement gecleart werden kann. Teste die alternative Cleartechnik und entferne diese Zeile!">Testzeile - zum probieren wo gecleart werden muss</span>
+			<p style="clear:both">Erklärung: Beide Boxen mit Float nebeneinander gestellt - clearen am nachfolgenden Element</p>
+		</section>
+		<footer><!-- Fußbereich - Seitenfuß/Fußzeile -->
+			Float und Clear
+		</footer>
+	</body>
+</html>

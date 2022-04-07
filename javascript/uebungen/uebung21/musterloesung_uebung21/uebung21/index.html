@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <title>JS</title>
+  <!-- darf nicht fehlen -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="../../fontawesome/css/all.css" />
+	<link rel="stylesheet" href="index.css" />
+  <script src="index.js" async></script>
+</head>
+<body>
+
+<div class="container">
+<!-- ***************************** -->
+<div class="row m-0 bg-dark py-5">
+	<div id="slider" class="mx-auto">	</div>
+</div>
+
+<div class="row m-0 bg-light py-5">
+	<div id="xmlDaten" class="mx-auto"></div>
+</div>
+<!-- **************************** -->
+<div class="row m-0 bg-info">
+  <form class="col-md-4 my-3 mb-5">
+		<div class="mb-1">
+      <input type="text" id="anrede" class="form-control" placeholder="Anrede eingeben" />
+    </div>
+    <div class="mb-1">
+      <input type="text" id="nachname" class="form-control" placeholder="Name eingeben" />
+    </div>
+    <div class="mb-1">
+      <input type="text" id="vorname" class="form-control" placeholder="Vorname eingeben" />
+    </div>
+    <div class="mb-1">
+      <input type="text" id="mail" class="form-control" placeholder="E-Mail eingeben" />
+    </div>
+    <div class="mb-1">
+      <select id="ort" class="form-select">
+        <option>Wohnort</option>
+        <option>Bochum</option>
+        <option>Siegburg</option>
+        <option>Nordhausen</option>
+        <option>Hamburg</option>
+      </select>
+    </div>
+    <button type="submit" id="anmelden" class="btn btn-success w-100 fw-bolder py-3">Anmelden</button>
+  </form>
+	<div id="ausgabe" class="p-2 mb-5"></div>
+</div>
+	
+</div><!--ende container-->
+ 
+</body>
+</html>
+
+

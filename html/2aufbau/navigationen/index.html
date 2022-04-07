@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menü</title>
+    <link rel="stylesheet" href="start.css">
+    <style>
+        
+        html {
+            box-sizing: border-box;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+        
+        html {
+            font-size: 0.815rem;
+            color: black;
+            background-color: white;
+        }
+        
+        body {
+            margin: 0;
+        }
+        
+        img {
+            display: inline-block;
+            background-color: #eeeeee;
+        }
+        
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        /**/
+        /* Den Hamburger gestalten und erst mal gleich ausblenden: */
+        /**/
+        
+        #toggle_menue {
+            margin: 0;
+            padding: 7px;
+            border-bottom: 1px solid white;
+            display: none;
+        }
+        
+        #toggle_menue a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            line-height: 1em;
+        }
+        
+        #toggle_menue a span {
+            display: block;
+            width: 18px;
+            border-top: 3px solid white;
+            border-bottom: 3px solid transparent;
+        }
+        
+        /**/
+        /* Erste Ebene: */
+        /**/
+        
+        nav {
+            padding: 0;
+            border: none;
+            background-color: #060;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        
+        nav li {
+            padding: 2px;
+            width: 7rem;
+            color: white;
+            border-right: 1px solid white;
+            background-color: #060;
+        }
+
+        nav li a {
+            display: block;
+            padding: 5px;
+            text-align: center;
+            color: inherit;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        /**/
+        /* Zweite Ebene: */
+        /**/
+        
+        nav li.sub > a {
+            position: relative;
+        }
+        nav li.sub > a:before {
+            content: "";
+            border: 0.70em solid transparent;
+            border-left-color: white;
+            position: absolute;
+            top: 5px;
+            left: 2px;
+        }
+        
+        nav li ul {
+            position: absolute;
+            display: block;
+            margin-left: -2px;
+            margin-top: 2px;
+        }
+
+        nav li li {
+            border-top: 1px solid white;
+            background-color: orange;
+        }
+
+        /**/
+        /* Zweite Ebene ein und ausblenden: */
+        /**/
+        
+        nav li.sub > ul {
+            height: 0;
+            overflow: hidden;
+            transition: all .5s;
+        }
+        
+        nav li.sub:hover > ul,
+        nav li.sub:focus-within > ul {
+            height: calc(3 * 1rem + 3 * 5px + 3 * 2px + 2 * 1px);
+      }
+        
+        nav li.sub > a:before {
+            transition: all .5s;
+        }
+        
+        nav li.sub:hover > a:before,
+        nav li.sub:focus-within > a:before {
+            transform: rotate(90deg);
+            top: calc(7px + 0.7em / 2);
+            transition: all .5s;
+        }
+        
+        /**/
+        /* Hover-Effekt und aktive Seite markieren: */
+        /**/
+        
+        nav li:hover,
+        nav li:focus-within {
+            background-color: red;
+        }
+        
+        nav li.active {
+            background-color: gray;
+        }
+        
+        @media screen and (max-width: 30rem) {
+            
+            /**/
+            /* Das Menü vertikal machen: */
+            /**/
+            
+            nav {
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+                margin: 0;
+            }
+            
+            header {
+                margin-top: 37px;
+            }
+
+            nav ul,
+            nav li.sub > ul,
+            nav li.sub:hover > ul,
+            nav li.sub:focus-within > ul {
+                display: block;
+                position: static;
+            }
+            
+            nav li.sub > ul,
+            nav li.sub:hover > ul,
+            nav li.sub:focus-within > ul {
+                margin: 2px -2px -2px -2px;
+            }
+            
+            nav ul li {
+                border-right: none;
+                border-top: 1px solid white;
+                width: auto;
+            }
+            
+            nav > ul > li:first-child {
+                border-top: none;
+            }
+
+            /**/
+            /* Den Hamburger einblenden: */
+            /**/
+            
+            #toggle_menue {
+                display: block;
+            }
+        
+            /**/
+            /* Das Menü ein- und ausblenden: */
+            /**/
+            
+            #toggle_menue + .menue {
+                max-height: 0;
+                overflow: hidden;
+                transition: all .5s;
+            }
+        
+            #toggle_menue:target + .menue {
+                max-height: 15em;
+                transition: all .5s;
+            }
+        
+            #toggle_menue:target .open,
+            #toggle_menue:not(:target) .close {
+                display: none;
+            }
+            
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hamburger Menü</h1>
+    </header>
+
+    <nav>
+        <div id="toggle_menue">
+            <a class="open" href="#toggle_menue" title="Hauptmenue einblenden">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </a>
+            <a class="close" href="#" title="Hauptmenue ausblenden">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </a>
+        </div>
+        <ul class="menue">
+            <li class="active"><a href="" title="link 1">link 1</a></li>
+            <li class="sub"><a href="" title="link 2">link 2</a>
+                <ul>
+                    <li><a href="" title="link 2.1">link 2.1</a></li>
+                    <li><a href="" title="link 2.2">link 2.2</a></li>
+                </ul>
+            </li>
+            <li><a href="" title="link 3">link 3</a></li>
+            <li><a href="" title="link 4">link 4</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Hamburger Navigation</h2>
+        <p>Die drei Balken als Symbol haben sich als alternative Navigation bei umfangreichen Menüs durchgesetzt.<br>
+            Das Symbol selbst ist bekannt durch unterschiedliche Softwareprodukte und Betriebssysteme.<br>
+            Der Vorteil der Hamburgernavigation liegt klar auf der Hand. Sie benötigt in der Grunddarstellung wenig Platz.</p>
+        <p>Von der der <strong>Verwendung des Hamburgermenüs als generelle Standardnavigation ist</strong> mit der Ausnahme von nativen Apps und Webwidgets <strong>abzusehen</strong>. </p>
+        <p><i>Wenn Nutzer keine Sprechenden Menüpukte beim betreten der Seite erkennen können gelingt es Ihnen nicht sich einen Überblick über die Themen der Seite zu verschaffen.</i></p>
+        <p>
+            Auf Seiten mit einem geringen Inhaltsumfang (z.B. Künstler - Portfolios) stellt dies hingegen kein Problem dar. Die Wahl dieser Navigationsform ermöglich mehr gestalterische Möglichkeiten.
+        </p>
+    </section>
+    <article>
+        <h2>Anforderungen für eine Hamburger Navigation</h2>
+        <h3>Standarddarstellung</h3>
+        <ul>
+            <li>Hamburger nicht sichtbar, nur klassische horizontale Navi</li>
+            <li>Untermenüs sollen bei Hover/focus dargestellt werden</li>
+        </ul>
+        <h3>schmalste Darstellung</h3>
+        <h4> (Portrait bzw. sobald Platz nicht ausreicht)</h4>
+        <ul>
+            <li>Das Hamburgermenü-icon (Grafik oder CSS-Formatierung) sollte dauerhaft erreichbar sein und nicht mitscrollen</li>
+            <li>klick auf das Hamburger-icon soll die eigentliche Navigation einblenden(Vertikal angeordnet)</li>
+            <li>wenn der Hamburger ausgeklappt ist soll ein schließen Symbol dargestellt werden was es ermöglich das Menü wieder einzuklappen</li>
+        </ul>
+    </article>
+    <footer>
+        Hamburger Menü
+    </footer>
+</body>
+
+</html>

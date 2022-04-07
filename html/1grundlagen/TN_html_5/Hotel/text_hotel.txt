@@ -1,0 +1,51 @@
+<body>
+	
+<header>
+	<h1>Parador de la Gomera</h1>
+		<nav>
+				
+		</nav>
+		
+</header>
+    
+ <main>
+		
+ <section>
+	<figure>
+		<img src="links/parador_view_700px.jpg" alt="Blick vom Zimmer über den Atlankik">
+			<figcaption>Blick auf den Atlantik und nach Teneriffa</figcaption>
+			</figure>
+		
+		<h2>Über den Felsen</h2>
+			
+<p>Das Hotel Parador auf La Gomera mit gehobenem Komfort, ruht in seinem typisch kanarischen Baustil oberhalb der Inselhauptstadt San Sebastian auf einem Fesvorsprung auf etwa sechzig Meter über dem Meer.
+
+Der grandiose Pool im Parador de La Gomera
+Das komfortable Hotel präsentiert sich mit idyllischen Innenhöfen, einladenden Aufenthaltsräumen, subtropischer Gartenanlage und mit einem grandiosem Panoramapool.
+
+Das stilvolle Hotel Parador Conde de la Gomera liegt auf einem Felsplateau und bietet einen herrlichen Ausblick bis nach Teneriffa.</p>
+		
+<p>Ipsum corrupti quod autem aspernatur voluptates suscipit sequi, eligendi incidunt, laudantium esse nihil omnis excepturi vel, voluptas! Modi illum veritatis provident assumenda, earum. Quas consequatur, harum aspernatur omnis nesciunt obcaecati.</p>
+		
+<p>Asperiores iste voluptate praesentium provident atque voluptates officia officiis nemo id. Deleniti molestiae inventore magnam voluptas! Dolor nisi omnis minus quas natus, et vero, quae earum, ipsum, beatae expedita veritatis.</p>
+		
+		
+		
+</section>
+	</main>
+		
+<footer>
+<a> tags 3 x
+	Impressum | Kontakt | Copyright
+
+</footer>
+	
+	
+	
+	
+	
+	
+	
+
+</body>
+</html>

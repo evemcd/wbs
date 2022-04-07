@@ -1,0 +1,14 @@
+HTML ist Klartext, reiner Text. Es beschreibt, als was der Browser Text und Bilder darstellen soll: als einfachen Textabsatz, Überschrift, Auflistung, als Link oder als Adresse eines Bildes.
+Die verschiedenen HTML-Elemente beschreiben, worum es sich bei einem Text, Bild etc. genau handelt.
+Dazu werden die sogenannten Tags verwendet.
+
+HTML-Tags
+sind Anweisungen in spitzen Klammern, auch HTML - Markup genannt. Sie legen eine Struktur über Text und Bilder der Webseite und versorgen die Browser mit Informationen über den Aufbau der Seite. Die meisten HTML-Tags treten paarweise auf. Sie werden immer mit einem Start-Tag, einer sich öffnenden spitzen Klammer (<) begonnen und mit einem End-Tag, einer sich schließenden spitzen Klammer mit vorangestelltem Schrägstrich (/>) geschlossen.
+
+Das englische to tag something bedeutet „etwas markieren“ oder „etwas kennzeichnen“, weil der HTML Standard englisch ist, wird dieser Begriff verwendet. <html> ist also ein öffnendes Tag, und </html> ist ein schließendes Tag – beide zusammen „kennzeichnen“ einen HTML-Bereich.
+
+Attribute
+sind Ergänzungen, die die Eigenschaften des jeweiligen HTML-Elements näher bestimmen. Also mehr Informationen.
+Sie werden mit in das Start-Tag geschrieben, mit einem vorangestellen Leerzeichen.
+Ihre Werte werden in Anführungszeichen gesetzt ("").
+

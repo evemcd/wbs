@@ -1,0 +1,1 @@
+Pfad zu jquery.js anpassen 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      background:lightblue;
+      padding:10px;
+      margin:10px;
+    }
+    div div{background:lightcoral;}
+    div div div{background:lightgreen;}
+    .flex{
+      display:flex;
+    }
+    .box-1{width:550px;}
+    .box-2{width:300px;}
+  </style>
+</head>
+<body>
+ 
+  <div class="flex">
+    <div class="box-1">BOX 1
+      <div class="flex">
+        <div>
+          <div>Boxinnen 1</div>
+          <div class="flex">
+            <div>Boxinnen 2</div>
+            <div>Boxinnen 3</div>
+          </div>
+          <div>Boxinnen 4</div>
+        </div>
+        <div>Boxinnen 5</div>
+      </div>
+    </div>
+    <div class="box-2">BOX 2
+      <div class="flex">
+        <div>Boxinnen 1</div>
+        <div>Boxinnen 2</div>
+      </div>
+      <div>Boxinnen 3</div>
+    </div>
+  </div>
+<!--   
+  <div class="float">
+    <div>BOX 1
+      <div>Boxinnen 1</div>
+      <div>Boxinnen 2</div>
+      <div>Boxinnen 3</div>
+      <div>Boxinnen 4</div>
+      <div>Boxinnen 5</div>
+    </div>
+    <div>BOX 2
+      <div>Boxinnen 1</div>
+      <div>Boxinnen 2</div>
+      <div>Boxinnen 3</div>
+    </div>
+  </div> -->
+</body>
+</html>

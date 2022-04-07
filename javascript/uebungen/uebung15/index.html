@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Übung 15</title>
+    <script src="index.js" async></script>
+    <style>
+        .wrapper {
+            width: 40%;
+            margin: 0 auto;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        form {
+            background-color: rgb(172, 172, 172);
+            padding: 10px;
+        }
+
+        .input {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form id="form1">
+            <div class="input">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="input">
+                <label for="vorname">Vorname</label>
+                <input type="text" name="vorname" id="vorname">
+            </div>
+            <div class="input">
+                <label for="str">Straße</label>
+                <input type="text" name="str" id="str">
+            </div>
+            <div class="input">
+                <label for="plz">PLZ</label>
+                <input type="text" name="plz" id="plz">
+            </div>
+            <div class="input">
+                <label for="ort">Wohnort</label>
+                <input type="text" name="ort" id="ort">
+            </div>
+            <div class="input">
+                <label for="fon">Telefon</label>
+                <input type="text" name="fon" id="fon">
+            </div>
+            <div class="input">
+                <label for="mail">E-Mail</label>
+                <input type="text" name="mail" id="mail">
+            </div>
+            <div class="input">
+                <label for="pw1">Passwort</label>
+                <input type="text" name="pw1" id="pw1">
+            </div>
+            <div class="input">
+                <label for="pw2">Passwort</label>
+                <input type="text" name="pw2" id="pw2">
+            </div>
+            <div>
+                <label for="beruf">Ihr Beruf</label><br>
+                <select name="beruf" id="beruf">
+                    <option value="">Bitte auswählen</option>
+                    <option value="Soldat">Soldat</option>
+                    <option value="Student">Student</option>
+                    <option value="Manager">Manager</option>
+                    <option value="sonstiges">sonstiges</option>
+                </select>
+            </div>
+            <div>
+                <label for="sport">Treiben Sie Sport?</label><br>
+                <input type="checkbox" name="sport[]" id="golf" value="Golf">Golf
+                <input type="checkbox" name="sport[]" id="fussball" value="Fussball">Fußball
+                <input type="checkbox" name="sport[]" id="kein" value="keinSport">kein Sport
+                <input type="checkbox" name="sport[]" id="laufen" value="Laufen">Laufen
+            </div>
+            <input type="submit" id="submit" value="OK">
+            <input type="reset" id="reset" value="Löschen">
+        </form>
+    </div>
+
+
+    <noscript>JS einfügen</noscript>
+
+</body>
+
+</html>

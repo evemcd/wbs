@@ -1,0 +1,23 @@
+Uebung Würfelspiel
+========================================================
+
+Ein PHP Programm soll ein Würfelspiel mit zwei Spielern simulieren.
+Dabei läuft dieses Spiel, bis mindestebs einer der beiden Spieler 
+den Zahlenwert 24 errreicht oder überschritte hat.
+
+In jeder Runde würfelt jeder Spieler einmal 1W6 und 
+addiert das zu seinen bisherigen Würfen dazu
+
+Dabei wird für jeden Spieler in jeder Runde sowohl 
+der diesmal gewürfelte Wert als auch die bis dahin erwürfelte Summe ausgegeben
+
+etwa so 
+Spieler 1: Dieser Wurf 5, insgesamt 12
+Spieler 2: Dieser Wurf 3, insgesamt 9
+
+
+Am Ende gewinnt der Spieler, der nach Ende des Würfelns den höheren Wert hat
+Das soll als Satz ausgegeben werden
+
+etwa so 
+Spieler 1 hat gewonnen

@@ -1,0 +1,7 @@
+<!ELEMENT glossar (art+)>
+<!ELEMENT art (eintrag+)>
+<!ELEMENT eintrag (begriff, beschreibung)>
+<!ELEMENT begriff (#PCDATA)>
+<!ELEMENT beschreibung (#PCDATA)>
+<!ATTLIST glossar name (Lexikon)>
+<!ATTLIST art name (Wirtschaft|EDV) #REQUIRED>

@@ -1,0 +1,335 @@
+:root {
+    --colorBerry: #9a0040;
+    --colorDarkBerry: #750031;
+    --colorBiscuit: #ffead1;
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    border: 1px solid var(--colorDarkBerry);
+    border-radius: 5px;
+}
+
+header {
+    background-image: url(../img/header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    border-radius: 5px 3px 0 0;
+}
+
+.headerFade {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%,
+            rgba(255, 255, 255, 0.55) 100%);
+    width: 100%;
+    height: 500px;
+}
+
+header img {
+    width: 430px;
+    height: 350px;
+    z-index: 1;
+    position: absolute;
+    top: 70px;
+    left: calc(50% - (430px / 2));
+}
+
+header h1 {
+    font-family: 'Rock Salt', sans-serif;
+    color: var(--colorBerry);
+    font-size: 5em;
+    width: 354px;
+    text-align: center;
+    position: absolute;
+    top: 160px;
+    left: calc(50% - (354px / 2));
+    z-index: 2;
+    text-shadow: 5px 5px var(--colorDarkBerry)
+}
+
+#burger {
+    display: none;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding-inline-start: 0;
+    position: absolute;
+    top: -44px;
+}
+
+nav li {
+    background-color: var(--colorBerry);
+    margin-left: 2em;
+    padding: 10px 10px;
+    border-radius: 5px 5px 0 0;
+    border: 2px solid var(--colorBerry);
+}
+
+nav li:hover,
+nav li:focus-within {
+    border: 2px solid var(--colorBiscuit);
+}
+
+.active {
+    background: rgb(117, 0, 49);
+    background: linear-gradient(180deg, rgba(117, 0, 49, 1) 0%, rgba(154, 0, 64, 1) 100%);
+}
+
+nav a {
+    padding: 10px 30px;
+    text-decoration: none;
+    color: var(--colorBiscuit);
+    font-weight: 900;
+    font-size: 1em;
+}
+
+main {
+    border-top: 3px solid var(--colorBerry);
+}
+
+.navBottom {
+    height: 40px;
+    background: rgb(154, 0, 64);
+    background: linear-gradient(180deg, rgba(154, 0, 64, 1) 0%, rgba(154, 0, 64, 0) 100%);
+}
+
+.wrapperM {
+    margin: 0 20px;
+}
+
+h2 {
+    color: var(--colorDarkBerry);
+    padding-left: 2em;
+    width: 50%;
+    font-size: 2.5em;
+    line-height: 1em;
+}
+
+.sidebar {
+    float: right;
+    border: 1px solid var(--colorBerry);
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+h4 {
+    margin: 0 10px 5px 10px;
+    color: var(--colorDarkBerry);
+}
+
+.sidebar:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar li:nth-of-type(2),
+.sidebar li:nth-of-type(4),
+.sidebar li:nth-of-type(6),
+.sidebar li:nth-of-type(8) {
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: var(--colorBerry);
+    font-size: 1.5em;
+    line-height: 1em;
+}
+
+.indexImg {
+    width: 100%;
+}
+
+.footerTop {
+    height: 40px;
+    background-color: var(--colorBerry);
+    background: linear-gradient(180deg, rgba(154, 0, 64, 0) 0%, rgba(154, 0, 64, 1) 100%);
+}
+
+footer {
+    background-color: var(--colorBerry);
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+footer a {
+    padding: 5px 20px;
+    font-size: 0.8em;
+    text-decoration: underline;
+    color: var(--colorBiscuit);
+}
+
+@media screen and (max-width: 1130px) and (min-width: 769px) {
+    #burger {
+        display: none;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding-inline-start: 0;
+        position: absolute;
+        top: -22px;
+    }
+
+    nav li {
+        margin-left: 0.5em;
+        padding: 0;
+        border-radius: 5px 5px 0 0;
+        border: 1px solid var(--colorBerry);
+    }
+
+    nav li:hover,
+    nav li:focus-within {
+        border: 1px solid var(--colorBiscuit);
+        margin-left: 0.5em;
+        padding: 0;
+    }
+
+    .active {
+        background: rgb(117, 0, 49);
+        background: linear-gradient(180deg, rgba(117, 0, 49, 1) 0%, rgba(154, 0, 64, 1) 100%);
+    }
+
+    nav a {
+        padding: 10px 20px;
+        text-decoration: none;
+        color: var(--colorBiscuit);
+        font-weight: 600;
+        font-size: 0.8emem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #burger {
+        margin: 0;
+        padding: 7px;
+        display: block;
+        background-color: var(--colorBerry);
+    }
+    
+    #burger a {
+        padding: 0;
+    }
+    
+    #burger a span {
+        display: block;
+        width: 18px;
+        border-top: 3px solid white;
+        border-bottom: 3px solid transparent;
+    }
+
+    #burger + .nav {
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    #burger:target + .nav {
+        max-height: max-content;
+    }
+
+    #burger:target .open,
+    #burger:not(:target) .close {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+    }
+    
+    nav ul {
+        display: block;
+        width: 100%;
+        margin: 0;
+        top: 35px;
+    }
+    
+    nav li {
+        margin-left: 0;
+        border-radius: 0;
+        border: 1px solid var(--colorBerry);
+    }
+    
+    nav li:hover,
+    nav li:focus-within {
+        border: 1px solid var(--colorBiscuit);
+    }
+    
+    .active {
+        background: rgb(117, 0, 49);
+        border: 1px solid var(--colorDarkBerry);
+        /* background: linear-gradient(180deg, rgba(117, 0, 49, 1) 0%, rgba(154, 0, 64, 1) 100%); */
+    }
+    
+    nav a {
+        font-weight: 600;
+        font-size: 1em;
+    }
+
+    .sidebar {
+        float: none;
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    header img {
+        width: 344px;
+        height: 280px;
+        z-index: 1;
+        position: absolute;
+        top: 70px;
+        left: calc(50% - (344px / 2));
+    }
+    
+    header h1 {
+        font-family: 'Rock Salt', sans-serif;
+        color: var(--colorBerry);
+        font-size: 3.5em;
+        width: 283px;
+        text-align: center;
+        position: absolute;
+        top: 160px;
+        left: calc(50% - (283px / 2));
+        z-index: 2;
+        text-shadow: 5px 5px var(--colorDarkBerry)
+    }
+    h2 {
+        padding-left: 0;
+    }
+
+    .sidebar {
+        float: none;
+        margin-left: 0;
+    }
+}

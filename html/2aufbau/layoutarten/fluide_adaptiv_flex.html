@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>fluides adaptives flex Layout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="start.css">
+<style>
+section {
+    display: -webkit-box; /*autoprefixer*/
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  article {
+    width: calc(25% - 32px);
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+    /* flex-basis: 25%; */
+    /*flex: 0 0 20%;*/ /* grow shrink basis*/
+    /* max-width: 300px; */
+    min-width: 300px;
+  }
+
+  section>h2 { /*section direktes Kind h2*/
+    width: 100%;
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1>fluides adaptives flex Layout</h1>
+  </header>
+<section>
+  <h2>Seitenbereich</h2>
+
+  <article id="a1">
+    <h2>Inhalt 1</h2>
+    <p> Das <strong>&lt;article&gt;</strong>  Element dient zur Einteilung von Inhalten in Sinnabschnitte, unter anderem in Blogbeiträgen. Der Unterschied zum <strong>&lt;section&gt; </strong> Element <br>ist der, dass die Inhalte für sich alleine stehen. Es sind sozusagen isolierte Beiträge wie eben in Blog-Posts oder Inhalte in Websites. Dies bedeutet das ein oder mehrere <strong>&lt;article&gt;</strong>  Elemente in themenbezogenen <strong>&lt;section&gt;</strong>  Elementen optimal platziert sind.</p>
+  </article> 
+  <article id="a2">
+  	<h2>Inhalt 2</h2>
+    <p>Das <strong>&lt;section&gt;</strong> Element dient zur Unterteilung von Inhalten nach wirklich inhaltlichen Gesichtspunkten. Dieses Element stellt eine klare Trennung zwischen Abschnitten dar die inhaltlich gegeben ist. Elemente die Designzwecken dienen, werden in ein <strong>&lt;div&gt; </strong> Tag gesetzt, da sie kein inhaltliches Kriterium darstellen. Das <strong>&lt;section&gt;</strong> Element wird nur dort eingesetzt wo ein inhaltlicher Umbruch besteht.</p>
+  </article>
+  <article id="a3">
+    <h2>Inhalt 3</h2>
+    <p>Das <strong>&lt;article&gt;</strong>  Element dient zur Einteilung von Inhalten in Sinnabschnitte, unter anderem in Blogbeiträgen. Der Unterschied zum <strong>&lt;section&gt; </strong> Element ist der, dass die Inhalte für sich alleine stehen. Es sind sozusagen isolierte Beiträge wie eben in Blog-Posts oder Inhalte in Websites. Dies bedeutet das ein oder mehrere <strong>&lt;article&gt;</strong>  Elemente in themenbezogenen <strong>&lt;section&gt;</strong>  Elementen optimal platziert sind.</p>
+  </article>
+  <article id="a4">
+    <h2>Inhalt 4</h2>
+    <p>Das <strong>&lt;section&gt;</strong> Element dient zur Unterteilung von Inhalten nach wirklich inhaltlichen Gesichtspunkten. Dieses Element stellt eine klare Trennung zwischen Abschnitten dar die inhaltlich gegeben ist. Elemente die Designzwecken dienen, werden in ein <strong>&lt;div&gt; </strong> Tag gesetzt, da sie kein inhaltliches Kriterium darstellen. Das <strong>&lt;section&gt;</strong> Element wird nur dort eingesetzt wo ein inhaltlicher Umbruch besteht.</p>
+  </article>
+
+</section>
+
+<footer>fluides adaptives flex Layout</footer>
+</body>
+</html>
+
+
+
+
+
+
+

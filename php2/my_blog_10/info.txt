@@ -1,0 +1,10 @@
+Alle User haben das Passwort = "hamburghamburg"
+
+Neu:
+
+guestbook.inc.php -> pro seite 5 Datensätze anzeigen
+index.php -> CSRF - Token erstellen
+
+login_form.inc.php -> <input type="hidden" value="inhalt vom token" />
+login_check.php -> bei einloggen, inhalt vom input mit dem $_SESSION['token'] vergleichen
+------------------------------------

@@ -1,0 +1,109 @@
+<!doctype html> 
+<html lang="de">
+<head> 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabellen in HTML</title>
+<link rel="stylesheet" href="start.css">  
+<style>
+	table{
+		border:1px solid #000;
+		 border-spacing:0; 
+		/* border-collapse:separate; */
+
+	}
+	/* table{border-collapse:collapse;}
+	tr{border:1px solid #000;} */
+  th,td{border:1px solid #000;
+    vertical-align:top;
+  }
+  /* body{display:table;}
+  header{display:table-footer-group}
+  footer{
+    display:table-header-group;
+  }
+  section{display:table-caption;} */
+  caption{
+    color:#333;
+  }
+  tbody tr:nth-child(2n+1){
+    background:red;
+  }
+  /* tbody tr:nth-of-type(2) td:nth-of-type(2){
+    background:#fc0;
+  } */
+  tbody tr+tr td+td{
+    background:#fc0;
+  }
+  tbody tr+tr td+td+td{
+    background:none;
+  }
+  tbody tr+tr+tr td+td{
+    background:none;
+  }
+
+</style>
+</head>
+<body>
+<header>
+	<h1>semantischer Tabellenaufbau</h1> 
+</header>
+
+<section> 
+  <h2>semantische Tabelle</h2>
+  <p>Mit dem &lt;caption>Element können wir eine Tabellenüberschrift festlegen </p>
+  <p> wir können in HTML Tabellenbereiche semantisch strukturieren/definieren.<br>
+	Dazu stehen uns die Elemente <strong>&lt;thead>&lt;tbody>&lt;tfoot></strong> zur Verfügung.<br> Die Elemente &lt;thead> und &lt;tfoot> dürfen innerhalb einer Tabelle jeweils nur einmal vorkommen. Das Element &lt;tbody> kann durchaus mehrfach vorkommen.
+	</p>
+  <table>
+    <!-- mit dem <colgroup> Element können wir Spalten vordefinieren = Spaltengruppe / Spaltenzusammenfassung -->
+    <!--<colgroup></colgroup>-->
+    <caption>Tabellenüberschrift - Farbassoziationen</caption>
+    <thead><!-- Table head - Tabellenkopfbereich - (Einleitung) -->
+      <tr>
+        <th scope="colgroup">Assoziation 1</th>
+        <th scope="col">Assoziation 2</th>
+        <th scope="col">Assoziation 3</th>
+        <!-- 
+        Das Attribut scope="wert" teilt dem Screenreader die Leserichtung mit. Es ist nur am th-Element erlaubt.
+        gültige Attributwerte sind:
+        scope="col" - Spaltenweise
+        scope="row" - Zeilenweise
+        scope="colgroup" - Spaltengruppe, für mehrere Spalten
+        scope="rowgroup" - Zeilengruppe , über mehrere Zeilen hinweg
+        -->
+      </tr>
+    </thead>
+    <tbody><!-- table body -  Inhaltsbereich der Tabelle - eine Tabelle kann mehrere Inhaltsbereiche besitzen -->
+      <tr>
+        <td>Dynamik</td>
+        <td>Entspannung</td>
+        <td>Unendlichkeit</td>
+      </tr>
+    <!-- </tbody>
+    <tbody> -->
+      <tr>
+        <td>Behaglichkeit</td>
+        <td>Durchsetzungsvermögen</td>
+        <td>Korrektheit</td>
+      </tr>
+      <tr>
+        <td>Temperament</td>
+        <td>Beharrlichkeit</td>
+        <td>Genauigkeit</td>
+      </tr>
+    </tbody>
+    <tfoot><!-- table foot - Fußbereich der Tabelle (Zusammenfassung/Nachtrag)-->
+      <tr>
+        <td>rot - wird auch negativ assoziert <br> aggressiv und gefährlich</td>
+        <td>grün - wird auch negativ assoziert <br> unreif, giftig</td>
+        <td>blau - wird auch negativ assoziert <br> kalt, ungemütlich und abweisend</td>
+      </tr>
+    </tfoot>
+  </table>
+
+</section>
+
+<footer>Tabellen in HTML</footer>
+</body>
+</html>

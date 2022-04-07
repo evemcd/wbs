@@ -1,0 +1,48 @@
+<!doctype html>  
+<html lang="de">    
+	<head>   
+		<meta charset="utf-8">
+		<title>Die Eigenschaft Float</title>
+		<link rel="stylesheet" href="start.css">  
+		<style>
+		img{float:right;}  
+		img{float:right;} 
+		p+p{float:none;width:200px;background:#ffc;}
+		
+		.info{border:3px double green;} 
+		.info dt{font-weight:bold;}
+		.info dd{font-style:italic;}  
+		</style> 
+	</head>
+	<body>
+		<header><!--Kopfbereich - Seitenkopf-->
+			<h1>Floats in HTML</h1>
+		</header>
+
+		<section><!-- Seitenabschnitt/Seitenbereich - Hauptinhaltsbereich -->
+			<h2>Umfließen von Elementen</h2>
+			<article class="info"><!-- eigenständiger Inhaltsbereich/sinnesabschnitt-->
+			<h3>Die Eigenschaft float</h3>
+			<p>
+			Mit der Eigenschaft float können wir bestimmen, dass nachfolgende Elemente das aktuelle Element(wenn das nachfolgende Element selbst einen Float aufweist)  bzw. den aktuellen Bereich(Inhalte und Inline-elemente) umfließen. Folgende Angaben sind möglich:</p>
+			<dl>
+			<dt>float:left;</dt>
+			<dd>Element steht links und wird rechts davon von nachfolgenden Elementen umflossen.</dd>
+			<dt>float:right</dt>
+			<dd>Element steht rechts und wird links davon von nachfolgenden Elementen umflossen.</dd>
+			<dt>float:none</dt>
+			<dd>Kein Umfluss (Normaleinstellung);
+			</dd>
+			</dl>
+			<p><strong>BEACHTEN SIE!!!!!</strong> Wenn Sie für ein Element eine Angabe zu float notieren, mussten Sie gemäß CSS2 auch eine Angabe zu width definieren. Gemäß CSS2.1 ist die nicht mehr erforderlich; die Breite richtet sich in diesem Fall nach dem Inhalt.(verhalten ähnlich dem Verhalten des Tabellenelementes)</p>
+			</article>
+			<p><img src="fliessen.jpg" alt="fließen" width="150" height="150"><b>Lorem</b> ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend </p>
+			
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend </p>
+			
+		</section>
+		<footer><!-- Fußbereich - Seitenfuß/Fußzeile -->
+			Floats
+		</footer>
+	</body>
+</html>

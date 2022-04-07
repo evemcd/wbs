@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Flexbox</title>
+    <style>
+        section, div {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 5px;
+        }
+        
+        section {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+    
+    </style>
+</head>    
+
+<body>
+     <section>
+<!--    die section ist hier das Elternelement, die div-container sind die Kiinderelemente. Der Flexcontainer sortiert die Kinder mit verschiedenen Angaben. Enkelkinder werden nicht angesprochen. Flexbox wirkt nur eine Ebene tief.     -->
+    <div>Element 1</div>
+    <div>Element 2</div>
+    <div>Element 3</div>
+    </section>
+    
+</body>
+</html>
+

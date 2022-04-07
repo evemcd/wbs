@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Beispiel Vorlage Lösung</title>      
+  <style>   
+    .row{clear:both;background:lime;margin-bottom:1em;}
+    .row:after{ 
+      content:"";
+      display:table;
+      clear:both;
+    } 
+    
+    .col{float:left;margin:3% 1%;background:#ccc;padding:1%;}
+    .col .col{background:#ffc;}
+    
+    .flr{float:right;}
+    
+    /* Spaltenbreiten - boxmodell beachten */
+    .span-1{width:12.6666667%;}
+    .span-2{width:29.3333%;}
+    .span-3{width:46%;}
+    .span-4{width:62.6666667%}
+    .span-5{width:79.3333%}
+    .span-6{width:96%;}
+   
+    
+    .span-2.flr{min-height:250px;}
+    
+    #wrapper{
+    max-width:1600px;
+    margin-left:auto;
+    margin-right:auto;
+    }
+ 
+    /* Bilder skalierbar*/
+    .imgscale{width:100%;height:auto;}
+    
+    /* spielerei*/
+    /* Vergrößern(zoom) und verschieben*/
+    .imgscale:hover{
+    transform:scale(3) translate(-20%);
+    }
+     
+    .imgscale{
+    transition:all 0.8s;
+    }
+    
+    /* Visualisieren der gesetzten klassen an den Containern */
+    .test [class]:before{
+    content:attr(class);
+    display:table;
+    background:teal; 
+    color:#fff;
+    font-size:12px; 
+    }
+  </style>
+</head>
+<body class="">
+<div id="wrapper">
+  <div class="row" id="header">
+    <strong class="col span-1">Logo</strong>
+    <h1 class="col span-5">Seitenüberschrift</h1>
+  </div>
+  <div class="col span-4">
+    <h2 class="col span-4">Überschrift h2</h2>
+    <div class="col span-2 flr"> 
+      Box
+    </div>
+    <div class="col span-1">
+    Box
+    </div>
+    <p class="col span-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, itaque, possimus, nihil, et officiis laudantium perspiciatis dicta tempore architecto cumque deserunt vitae quos non quam est tenetur id consectetur doloribus!</p>
+    <p class="col span-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, itaque, possimus, nihil, et officiis laudantium perspiciatis dicta tempore architecto cumque deserunt vitae quos non quam est tenetur id consectetur doloribus!</p>
+    
+  </div>
+  <div class="col span-2"> 
+    <a href="https://snuffis-web.de/rules/?h=13&pic=drill" target="_blank" class="col span-3">
+      <img src="https://snuffis-web.de/rules/?h=13" alt="Technik" class="imgscale">
+    </a>
+    <a href="https://snuffis-web.de/rules/?h=15&pic=drill" target="_blank" class="col span-3">
+      <img src="https://snuffis-web.de/rules/?h=15" alt="Sport" class="imgscale">
+    </a>
+    <p class="col span-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, eveniet, dolore, explicabo dolor vel asperiores culpa at officia aut aliquid impedit atque beatae maiores alias suscipit sint minima dolores eius.</p>
+  </div> 
+  <div class="row">
+    <div class="col span-1"> 
+      Box
+    </div>
+    <div class="col span-1"> 
+      Box
+    </div>
+    <div class="col span-1"> 
+      Box
+    </div>
+    <div class="col span-1"> 
+      Box
+    </div>
+    <div class="col span-1"> 
+      Box
+    </div>
+    <div class="col span-1"> 
+      Box
+    </div>
+  </div>
+  <div class="row">
+    Fußnote  
+  </div>
+</div>
+</body>
+</html>

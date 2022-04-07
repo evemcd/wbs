@@ -1,0 +1,264 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+	--black: #000;
+  --dark: #333;
+  --gray-blue: #96a1c0;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #e3d93d;
+  --danger: #b21f2d;
+	--purple: #AB82FF;
+	--green: #1baa3c; 
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif; 
+	font-size: 16px;
+	background-color: var(--dark);
+}
+
+#container {
+	width: 1000px;
+	background-color: var(--white);
+	padding: 20px;
+	margin: 0 auto;
+}
+
+h1 {
+	text-shadow: 0 0 10px #333;
+	text-align: center;
+	font-size: 3em;
+}
+
+.container {
+	display: flex;
+}
+
+#slider {
+	width: 600px;
+	height: 300px;
+	margin: 0 auto;
+	background-color: #ccc;
+}
+nav {
+	width: 25%;
+	background-color: var(--gray-blue);
+	padding: 10px;
+}
+
+nav ul {
+	list-style-type: none;
+	border: solid 1px var(--white);
+	padding: 5px;
+	border-radius: 5px;
+}
+/*
+nav ul li {
+	background-color: red;
+}
+*/
+nav ul a {
+	text-decoration: none;
+	background-color: var(--white);
+	color: var(--black);
+	display: block;
+	text-align: center;
+	border-bottom: solid 1px #96a1c0;
+	padding: 5px 0;
+	transition: 1.2s;
+}
+
+nav ul a:hover {
+	background-color: var(--dark);
+	color: var(--white);
+}
+
+.active a {
+	background-color: var(--purple);
+	color: var(--white);
+	font-weight: bold;
+}
+
+nav a {
+	color: var(--black);
+}
+
+nav form {
+	background-color: var(--white);
+	margin: 10px 0;
+	padding: 10px;
+}
+
+nav form input {
+	width: 100%;
+	padding: 5px;
+	font-weight: bold;
+}
+
+nav input[type="submit"], .registrierung input[type="submit"] {
+	background-color: var(--green);
+	cursor: pointer;
+	padding: 10px 0;
+	font-weight: bold;
+	color: #fff;
+	font-size: 1rem;
+	transition: 1s;
+	border-color: #169634;
+	margin: 3px 0;
+}
+nav input[type="submit"]:hover, .registrierung input[type="submit"]:hover {
+	background-color: #1c7430;
+	color: #efefef;
+}
+
+
+main {
+	width: 75%;
+	background-color: #efefef;
+	padding: 10px;
+}
+
+.registrierung {
+	width: 400px;
+	background-color: #96a1c0;
+	padding: 20px;
+	margin: 5px 0;
+	font-weight: bold;
+}
+
+.registrierung fieldset {
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+.registrierung fieldset:nth-of-type(1) {
+	border: solid 1px #dc3545;
+}
+
+.registrierung fieldset:nth-of-type(1) legend{
+	background-color: #dc3545;
+	padding: 5px 10px;
+	color: #fff;
+}
+
+.registrierung input, .registrierung textarea {
+	width: 100%;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.registrierung textarea {
+	resize: vertical;
+}
+
+
+.msg {
+	background-color: #6cf;
+	padding: 5px;
+	font-weight: bold;
+	text-align: center;
+	margin: 10px 0;
+}
+
+.error {
+	background-color: var(--danger);
+	color: #fff;
+}
+
+.logon {
+	background-color: #28a745;
+	color: #fff;
+	padding: 1rem 0;
+}
+
+.logoff {
+	background-color: var(--warning);
+}
+
+.profil {
+	padding: 10px;
+	border: solid 1px #ccc;
+}
+.profil p {
+	padding: 5px;
+}
+.header {
+	border-bottom: solid 1px #ccc;
+}
+.datum {
+	background-color: var(--warning);
+}
+.motto {
+	background-color: #6cf;
+}
+.ueber {
+	background-color: var(--white);
+}
+
+
+.btn a{
+	display: inline-block;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #fff;
+	transition: 1s;
+}
+
+.edit {
+	background-color: var(--primary);
+}
+
+a.delete {
+	background-color: var(--danger);
+}
+
+.btn a:hover{
+	opacity: 0.7;
+}
+
+.gastbook {
+	border: solid 2px #999;
+	margin: 5px;
+}
+
+.gastbook p, .gastbook h3 {
+	padding: 5px;
+}
+
+.verwaltung {
+	background-color:  var(--gray-blue);
+	margin: 10px;
+	padding: 10px;
+	list-style-type: none;
+	line-height: 1.3;
+}
+
+.verwaltung li{
+	padding: 5px;
+}
+
+#gasteintrag .page {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#gasteintrag .page a {
+	text-decoration: none;
+	display: inline-block;
+	color: #38516b;
+	padding: 0 5px;
+}
+
+#gasteintrag #current {
+	font-size: 24px;
+	text-shadow: 1px 1px 0 #000;
+	color: #cd0000;
+}
